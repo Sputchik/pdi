@@ -20,6 +20,7 @@ github_map = {
 	'ZXP Installer': ('elements-storage', 'ZXPInstaller'),
 	'Ungoogled Chromium': ('ungoogled-software', 'ungoogled-chromium-windows'),
 	'DB Browser': ('sqlitebrowser', 'sqlitebrowser'),
+	'OpenSSH': ('PowerShell', 'Win32-OpenSSH'),
 
 }
 
