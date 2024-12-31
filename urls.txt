@@ -1,6 +1,6 @@
 Categories=General_Dependencies;Messengers;Coding;Browsers;Apple;Misc;Cracked;Games
 
-General_Dependencies=.NET_Framework_3.5;DirectX_Runtimes;Git;Go;Gradle;NVCleanstall;Node.js;Python;VCRedist_2005-2022;Wireless_Bluetooth
+General_Dependencies=.NET_Framework_3.5;DirectX_Runtimes;Git;Go;Gradle;NVCleanstall;Node.js;OpenSSH;Python;VCRedist_2005-2022;Wireless_Bluetooth
 Messengers=Discord;Telegram;Telegram_Portable;Viber
 Coding=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
@@ -9,7 +9,7 @@ Misc=7-Zip;Autoruns;AviDemux;ContextMenuManager;DB_Browser;Everything;Google_Ear
 Cracked=MediaHuman;Revo_Uninstaller_Pro
 Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
 
-msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs
+msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH
 zip=Autoruns;Gradle;Gradle;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 zipm=Gradle;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=ContextMenuManager;NVCleanstall;Rufus;ThrottleStop
@@ -53,6 +53,7 @@ url_Node.js=https://nodejs.org/dist/v23.5.0/node-v23.5.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.17.0.exe
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/31.0.0/OBS-Studio-31.0.0-Windows-Installer.exe
+url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.8.1.0p1-Preview/OpenSSH-Win64-v9.8.1.0.msi
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download-cdn.jetbrains.com/python/pycharm-professional-2024.1.4.exe
 url_Python=https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe
