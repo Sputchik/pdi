@@ -157,7 +157,11 @@ def extract_versions(versions: dict[str, str]) -> str:
 	preferred_msi = None
 
 	for key in versions:
-		if key.endswith('.msi') and 'arm' not in key:
+		lowered = key.lower()
+		if 'arm' in lowered:
+			continue
+
+		if key.endswith('.msi'):
 			# Check if it's a preferred '64' version
 			if '64' in key:
 				preferred_msi = key
@@ -167,7 +171,7 @@ def extract_versions(versions: dict[str, str]) -> str:
 			elif not preferred_msi:
 				preferred_msi = key
 
-		elif key.endswith('.exe') and 'arm' not in key:
+		elif key.endswith('.exe'):
 			# Check if it's a preferred '64' version
 			if '64' in key and not selected_exe:
 				preferred_exe = key
@@ -177,8 +181,8 @@ def extract_versions(versions: dict[str, str]) -> str:
 			elif not preferred_exe:
 				preferred_exe = key
 
-	preferred_key = preferred_msi if preferred_msi else preferred_exe
-	return preferred_key
+	url = preferred_msi or preferred_exe
+	return url
 
 async def direct_from_github(owner: str, project: str) -> str:
 	url = github_latest_draft.format(owner, project)
