@@ -541,6 +541,7 @@ choice /N /M "Install Silently? (Not Recommended) [Y/N] "
 echo.
 
 if !ErrorLevel! == 2 (
+	@REM Manual Installation
 	for %%G in ("%DLPath%\*_Setup.exe") do (
 		set "progName=%%~nG"
 		set "progPath=%%G"
@@ -552,6 +553,7 @@ if !ErrorLevel! == 2 (
 	)
 
 ) else (
+	@REM Silent Installation
 	for %%G in (S quiet VerySilent) do (
 		for %%H in (!Programs_%%G!) do (
 
