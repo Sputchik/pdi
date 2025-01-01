@@ -5,7 +5,7 @@ Messengers=Discord;Telegram;Telegram_Portable;Viber
 Coding=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
 Apple=3uTools;iCloud;iMazing;iTunes
-Misc=7-Zip;Autoruns;AviDemux;ContextMenuManager;DB_Browser;Everything;Explorer^Patcher;Google_Earth_Pro;K-Lite_Codec;nomacs;OBS;Process_Hacker;qBitTorrent;RegistryFinder;Rufus;ThrottleStop;TradingView;TranslucentTB;TunnelBear;WinDirStat;WinRaR;Windhawk;X-Mouse_Button
+Misc=7-Zip;Autoruns;AviDemux;ContextMenuManager;DB_Browser;Everything;Explorer_Patcher;Google_Earth_Pro;K-Lite_Codec;nomacs;OBS;Process_Hacker;qBitTorrent;RegistryFinder;Rufus;ThrottleStop;TradingView;TranslucentTB;TunnelBear;WinDirStat;WinRaR;Windhawk;X-Mouse_Button
 Cracked=MediaHuman;Revo_Uninstaller_Pro
 Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
 
@@ -36,7 +36,7 @@ url_Discord=https://discord.com/api/downloads/distributions/app/installers/lates
 url_EdgeWebView2=https://go.microsoft.com/fwlink/?linkid=2124701
 url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi
 url_Everything=https://voidtools.com/Everything-1.4.1.1026.x64-Setup.exe
-url_Explorer^Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
+url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
 url_Git=https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe
 url_Go=https://go.dev/dl/go1.23.4.windows-amd64.msi
