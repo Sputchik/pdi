@@ -540,21 +540,9 @@ for %%G in (!pfexe!) do (
 choice /N /M "Install Silently? (Not Recommended) [Y/N] "
 echo.
 
-if !ErrorLevel! == 2 (
-	@REM Manual Installation
-	for %%G in ("%DLPath%\*_Setup.exe") do (
-		set "progName=%%~nG"
-		set "progPath=%%G"
-		set "readableName=!progName:_= !"
-		set "readableName=!readableName:~0,-6!"
-
-		echo Running !readableName!...
-		"!progPath!"
-	)
-
-) else (
-	@REM Silent Installation
-	for %%G in (S quiet VerySilent) do (
+@REM Silent Installation
+if !ErrorLevel! == 1 (
+	for %%G in (!Flags!) do (
 		for %%H in (!Programs_%%G!) do (
 
 			set "progName=%%H"
@@ -564,9 +552,22 @@ if !ErrorLevel! == 2 (
 				echo Installing !progName!...
 				echo.
 				start /wait "" "!progName!_Setup" "!Flags_%%G!"
+				move /Y "!progName!_Setup.exe" "!progName!.exe"
 			)
 		)
 	)
+
+)
+
+@REM Manual Installation
+for %%G in ("%DLPath%\*_Setup.exe") do (
+	set "progName=%%~nG"
+	set "progPath=%%G"
+	set "readableName=!progName:_= !"
+	set "readableName=!readableName:~0,-6!"
+
+	echo Running !readableName!...
+	"!progPath!"
 )
 
 set DoneAll=1
