@@ -4,7 +4,7 @@ General_Dependencies=.NET_Framework_3.5;DirectX_Runtimes;EdgeWebView2;Git;Go;Gra
 Messengers=Discord;Telegram;Telegram_Portable;Viber
 Coding=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
-Apple=3uTools;iCloud;iMazing;iTunes
+Apple=3uTools;iCloud;iMazing;iTunes;Sideloadly
 Misc=7-Zip;Autoruns;AviDemux;ContextMenuManager;DB_Browser;Everything;Explorer_Patcher;Google_Earth_Pro;K-Lite_Codec;nomacs;OBS;Process_Hacker;qBitTorrent;RegistryFinder;Rufus;ThrottleStop;TradingView;TranslucentTB;TunnelBear;WinDirStat;WinRaR;Windhawk;X-Mouse_Button
 Cracked=MediaHuman;Revo_Uninstaller_Pro
 Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
@@ -16,7 +16,7 @@ pfexe=ContextMenuManager;NVCleanstall;Rufus
 
 Programs_VerySilent=Git;iMazing;K-Lite_Codec;Process_Hacker;RegistryFinder;Resource_Hacker;Revo_Uninstaller_Pro;Sublime_Text;Telegram;VSCode
 Programs_quiet=iCloud;iTunes;Python;Wireless_Bluetooth
-Programs_S=7-Zip;Everything;Firefox;GoLand;IntelliJ_IDEA;Librewolf;OBS;PyCharm;qBitTorrent;QuteBrowser;Steam;Viber;WinDirStat;Windhawk;X-Mouse_Button;ZXP_Installer
+Programs_S=7-Zip;Everything;Firefox;GoLand;IntelliJ_IDEA;Librewolf;OBS;PyCharm;qBitTorrent;QuteBrowser;Sideloadly;Steam;Viber;WinDirStat;Windhawk;X-Mouse_Button;ZXP_Installer
 Flags_S=/S
 Flags_quiet=/quiet
 Flags_VerySilent=/VERYSILENT
@@ -66,6 +66,7 @@ url_RegistryFinder=https://registry-finder.com/bin/2.59.0.0/RegistryFinderSetup2
 url_Resource_Hacker=https://www.angusj.com/resourcehacker/reshacker_setup.exe
 url_Revo_Uninstaller_Pro=https://www.dropbox.com/scl/fi/9nc9khsw8wobjhd8rt2xk/RevoUninstallerPro.exe?rlkey=48mvmd79eazgmbqdkrnyaabjq&st=1mte3l8n&dl=1
 url_Rufus=https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe
+url_Sideloadly=https://sideloadly.io/SideloadlySetup64.exe
 url_Steam=https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe
 url_Sublime_Text=https://download.sublimetext.com/sublime_text_build_4169_x64_setup.exe
 url_Telegram=https://telegram.org/dl/desktop/win64
