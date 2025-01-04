@@ -21,6 +21,7 @@ github_map = {
 	'Ungoogled Chromium': ('ungoogled-software', 'ungoogled-chromium-windows'),
 	'DB Browser': ('sqlitebrowser', 'sqlitebrowser'),
 	'OpenSSH': ('PowerShell', 'Win32-OpenSSH'),
+	'LLVM': ('llvm', 'llvm-project'),
 
 }
 
