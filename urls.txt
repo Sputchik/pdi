@@ -9,7 +9,7 @@ Misc=7-Zip;Autoruns;AviDemux;Cloudflare_WARP;ContextMenuManager;DB_Browser;Every
 Cracked=MediaHuman;Revo_Uninstaller_Pro
 Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
 
-msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;Cloudflare_WARP;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH
+msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;Cloudflare_WARP;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH;WinDirStat
 zip=Autoruns;Gradle;Gradle;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 zipm=Gradle;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=ContextMenuManager;NVCleanstall;Rufus
