@@ -20,15 +20,18 @@ cls
 net session >nul 2>&1
 if !ErrorLevel! NEQ 0 (
 	echo Please run this script as an administrator
+	echo Though, you can continue
+	echo.
+	echo Keep in mind most ZIP installation will fail
 	pause
-	exit /b
 )
 
+call :CheckInternet
 set "origin=%~dp0"
 set "DLPath=%origin%pdi_downloads"
 set "PF=C:\Program Files"
 set FetchedURLs=0
-set "UserAgent=Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0"
+set "UserAgent=Mozilla/5.0 (X11; Linux x86_64; rv:131.1) Gecko/20100101 Firefox/131.1"
 set "URLsURL=https://raw.githubusercontent.com/Sputchik/pdi/refs/heads/main/urls.txt"
 set "ChooseFolder=powershell -Command "(new-object -ComObject Shell.Application).BrowseForFolder(0,'Please choose a folder.',0,0).Self.Path""
 set "Extensions=msi;zip"
@@ -106,7 +109,11 @@ echo Suggest program - @kufla in Telegram
 
 choice /C 123456789 /N /M "Option: "
 
-if !ErrorLevel! == 9 goto :WarmupDownload
+if !ErrorLevel! == 9 (
+	call :CheckInternet
+	cls
+	goto :DownloadAll
+)
 call :MANAGE_CATEGORY !ErrorLevel!
 
 goto :eof
@@ -207,20 +214,17 @@ for %%G in (!Categories!) do (
 set FetchedURLs=1
 goto :eof
 
-:WarmupDownload
+:CheckInternet
 
-cls
-echo Checking internet connectivity...
-echo.
-ping -n 1 google.com >nul 2>&1
+ping -n 1 -w 1000 1.1.1.1 >nul 2>&1
 
 if !ErrorLevel! == 1 (
+	cls
 	echo Woopise, no internet...
 	echo.
 	timeout /T 1 >nul
 ) else (
-	cls
-	goto :DownloadAll
+	goto :eof
 )
 
 cls
@@ -237,7 +241,7 @@ goto :eof
 
 :WaitForConnection
 
-ping -n 1 example.com >nul 2>&1
+ping -n 1 -w 1000 1.1.1.1 >nul 2>&1
 
 if !ErrorLevel! == 1 (
 	echo Retrying in 2 seconds...
@@ -245,7 +249,8 @@ if !ErrorLevel! == 1 (
 	goto :WaitForConnection
 
 ) else (
-	goto :DownloadAll
+	cls
+	goto :eof
 )
 
 goto :eof
@@ -380,7 +385,6 @@ if %DoneAll% == 1 (
 	echo [2] Go Back
 	echo [3] Clean
 	echo [4] Move programs folder
-	@REM echo.
 
 	choice /C 1234 /N /M " "
 
@@ -388,11 +392,10 @@ if %DoneAll% == 1 (
 	) else if !ErrorLevel! == 2 ( goto :Start
 	) else if !ErrorLevel! == 3 (
 		echo.
-		del /S /Q "%DLPath%\*" 2>nul
+		del /Q "%DLPath%\*" 2>nul
 
 	) else if !ErrorLevel! == 4 ( call :MovePrograms )
-
-	timeout /T 2
+	
 	goto :Pain
 )
 
@@ -431,7 +434,7 @@ if %~2 == 0 (
 	cd "%origin%"
 
 	if !ErrorLevel! == 2 del /S /Q "C:\Users\%username%\Desktop\*.lnk" 2>nul
-	timeout /T 2
+	timeout /T 1
 )
 
 goto :eof
@@ -455,7 +458,8 @@ echo Set objShell = CreateObject("WScript.Shell") > "%vbsFilePath%"
 echo Set objShortcut = objShell.CreateShortcut(objShell.SpecialFolders("Programs") ^& "\%shortcutName%.lnk") >> "%vbsFilePath%"
 echo objShortcut.TargetPath = "%exePath%" >> "%vbsFilePath%"
 echo objShortcut.Save >> "%vbsFilePath%"
-"%vbsFilePath%"
+wscript.exe "%vbsFilePath%"
+
 goto :eof
 
 :ZIP
@@ -463,14 +467,14 @@ goto :eof
 if exist "Autoruns.zip" (
 	echo Installing Autoruns...
 	call :Extract "Autoruns"
-	xcopy /E /-I /Q /Y "Autoruns\Autoruns64.exe" "C:\Program Files\Autoruns\Autoruns.exe"
+	xcopy /E /Q /Y "Autoruns\Autoruns64.exe" "C:\Program Files\Autoruns\Autoruns.*"
 	rmdir /S /Q "Autoruns"
 	call :CreateShortcut "C:\Program Files\Autoruns\Autoruns.exe" "Autoruns"
 )
 if exist "Gradle.zip" (
 	echo Installing Gradle...
 	mkdir C:\Gradle 2>nul
-	xcopy /E /I /Q /Y "Gradle\*" C:\Gradle
+	xcopy /E /Q /Y "Gradle\" C:\
 	rmdir /S /Q "Gradle"
 )
 
@@ -488,7 +492,7 @@ for %%G in (!zipm!) do (
 			set "destPath=C:\Program Files\!progName!"
 			cd "!exeDir!"
 			mkdir "!destPath!" 2>nul
-			xcopy /s /e /i /q /y "." "!destPath!\"
+			xcopy /E /I /Q /Y ".\" "!destPath!\"
 			call :CreateShortcut "!destPath!\!exeName!" "!progName!"
 			cd "%DLPath%"
 			rmdir /S /Q "!progName!"
@@ -546,12 +550,13 @@ if !ErrorLevel! == 1 (
 		for %%H in (!Programs_%%G!) do (
 
 			set "progName=%%H"
+			set "flag=%%G"
 			set "readableName=!progName:~0,-6!"
 
 			if exist "!progName!_Setup.exe" (
 				echo Installing !progName!...
 				echo.
-				start /wait "" "!progName!_Setup" "!Flags_%%G!"
+				start /wait "" "!progName!_Setup" /!flag!
 				move /Y "!progName!_Setup.exe" "!progName!.exe"
 			)
 		)
