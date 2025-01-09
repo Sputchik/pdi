@@ -3,7 +3,11 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from git import Repo
 
-import aiohttp, asyncio, json, os, time
+import aiohttp
+import asyncio
+import json
+import os
+import time
 
 cwd = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/') + '/'
 urls_path = cwd + 'urls.txt'
@@ -40,6 +44,7 @@ parse_map = {
 	'qBitTorrent': 'https://www.qbittorrent.org/download',
 	'Librewolf': 'https://librewolf.net/installation/windows/',
 	'Blender': 'https://www.blender.org/download/',
+	'OpenSSL': 'https://slproweb.com/download/win32_openssl_hashes.json'
 
 }
 
@@ -336,6 +341,16 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 			text = elem.text
 			if text and text == '64-bit Git for Windows Setup':
 				url = elem.get('href')
+				break
+
+	elif name == 'OpenSSL':
+		data = json.loads(data)
+		vers = list(data['files'].keys())
+		vers.reverse()
+
+		for i in vers:
+			if i.startswith('Win64OpenSSL-') and i.endswith('msi'):
+				url = data['files'][i]['url']
 				break
 
 	else: return
