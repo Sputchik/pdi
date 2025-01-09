@@ -237,7 +237,7 @@ echo.
 
 if !ErrorLevel! == 1 goto :WaitForConnection
 
-goto :eof
+exit /b
 
 :WaitForConnection
 
@@ -253,7 +253,7 @@ if !ErrorLevel! == 1 (
 	goto :eof
 )
 
-goto :eof
+exit /b
 
 :DownloadFile
 
