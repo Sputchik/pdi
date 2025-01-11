@@ -335,10 +335,11 @@ echo Programs downloaded ^(%DLPath%^)
 echo.
 choice /N /M "Try installing them? [Y/N] "
 
+set "DoInstall=!ErrorLevel"
 set DoneMSI=0
 set DoneZip=0
 
-if !ErrorLevel! == 1 (
+if %DoInstall% == 1 (
 	set DoneAll=0
 	goto :DirCheck
 ) else (
