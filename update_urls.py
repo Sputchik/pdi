@@ -313,7 +313,7 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 
 		for elem in a_elems:
 			if elem.text and elem.text.startswith('Download qBittorrent '):
-				version = elem.text.split(' ')[2]
+				version = elem.text.split(' ')[2].lstrip('v')
 				url = f'https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-{version}/qbittorrent_{version}_x64_setup.exe?viasf=1'
 				break
 
