@@ -333,9 +333,8 @@ if %EOF_Download% == 1 goto :eof
 :AfterDownload
 echo Programs downloaded ^(%DLPath%^)
 echo.
-choice /N /M "Try installing them? [Y/N] "
+choice /C YN /N /M "Try installing them? [Y/N] "
 
-set "DoInstall=!ErrorLevel"
 set DoneMSI=0
 set DoneZip=0
 
