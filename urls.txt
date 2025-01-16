@@ -39,7 +39,7 @@ url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/
 url_Everything=https://voidtools.com/Everything-1.4.1.1026.x64-Setup.exe
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
-url_Git=https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe
+url_Git=https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.2/Git-2.47.1.2-64-bit.exe
 url_Go=https://go.dev/dl/go1.23.4.windows-amd64.msi
 url_Google_Earth_Pro=https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe?sjid=6101201665916555278-EU
 url_Gradle=https://services.gradle.org/distributions/gradle-8.12-bin.zip
@@ -49,7 +49,7 @@ url_IntelliJ_IDEA=https://download-cdn.jetbrains.com/idea/ideaIU-2024.1.4.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1875_Standard.exe
 url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/133.0.3-1/librewolf-133.0.3-1-windows-x86_64-setup.exe
-url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.6/LLVM-19.1.6-win64.exe
+url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.7/LLVM-19.1.7-win64.exe
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe
 url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.msi
