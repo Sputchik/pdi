@@ -123,7 +123,7 @@ def parse_categories(lines):
 	return cat_map, '\n'.join(lines[ext_start:ext_end])
 
 async def parse_github_urls() -> dict:
-	response = await aio.request(urls_link, toreturn = 'text+status')
+	response = await aio.get(urls_link, toreturn = 'text+status')
 	data, status = response
 
 	if status != 200:
@@ -193,7 +193,7 @@ def extract_versions(versions: dict[str, str]) -> str:
 async def direct_from_github(owner: str, project: str) -> str:
 	url = github_latest_draft.format(owner, project)
 
-	response = await aio.request(
+	response = await aio.get(
 		url,
 		toreturn = 'json+status',
 		headers = github_headers,
@@ -225,7 +225,7 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 		params = jetbrains_params
 		params['code'] = url
 
-		response, status, url = await aio.request(jetbrains_api, params = params, toreturn = 'json+status+real_url', session = session)
+		response, status, url = await aio.get(jetbrains_api, params = params, toreturn = 'json+status+real_url', session = session)
 		print(f'{status}: {name} - {url}')
 
 		try:
@@ -235,7 +235,7 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 		except (ValueError, TypeError, IndexError, KeyError):
 			return
 
-	response = await aio.request(url, toreturn = 'text+status', session = session)
+	response = await aio.get(url, toreturn = 'text+status', session = session)
 	data, status = response
 
 	print(f'{status}: {name} - {url}')

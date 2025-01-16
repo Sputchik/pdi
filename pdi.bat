@@ -335,6 +335,7 @@ echo Programs downloaded ^(%DLPath%^)
 echo.
 choice /C YN /N /M "Try installing them? [Y/N] "
 
+set DoInstall=%ErrorLevel%
 set DoneMSI=0
 set DoneZip=0
 
