@@ -39,7 +39,7 @@ parse_map = {
 	'Python': 'https://www.python.org/downloads/',
 	'Node.js': 'https://nodejs.org/en',
 	'NVCleanstall': 'https://nvcleanstall.net/download',
-	'K-Lite Codec': 'https://www.codecguide.com/download_k-lite_codec_pack_standard.htm',
+	'K-Lite Codec': 'https://www.codecguide.com/download_k-lite_codec_pack_full.htm',
 	'Everything': 'https://www.voidtools.com/',
 	'qBitTorrent': 'https://www.qbittorrent.org/download',
 	'Librewolf': 'https://librewolf.net/installation/windows/',
