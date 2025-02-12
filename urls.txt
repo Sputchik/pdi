@@ -58,7 +58,7 @@ url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setu
 url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.17.0.exe
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/31.0.1/OBS-Studio-31.0.1-Windows-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.8.1.0p1-Preview/OpenSSH-Win64-v9.8.1.0.msi
-url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_4_0.msi
+url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_4_1.msi
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download-cdn.jetbrains.com/python/pycharm-professional-2024.1.4.exe
 url_Python=https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe
