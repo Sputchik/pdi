@@ -16,11 +16,11 @@ curl -sL https://bit.ly/PdI -o pdi.bat && pdi
 ```
 Usage: pdi.bat [--passive] [--output Path] [--select Programs]
 
-   --passive            Only Displays download process for programs defined using --select Flag
+   --passive            Jumps to a download process for programs defined using --select Flag
 
-   --no-install         Downloads programs without installing them
+   --no-install         Exits upon downloading programs
 
-   --output Path        Sets download Path
+   --output Path        Download Path
 
    --select Programs    Select Programs, Separate them by semicolon `;`.
                         Example: --select "Telegram Portable;Librewolf;Discord;Steam"
