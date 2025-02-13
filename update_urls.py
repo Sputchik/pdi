@@ -375,7 +375,7 @@ async def update_progs(progmap, session = None):
 
 	new = set()
 	for prog, url in parsed_data:
-		if progmap['urls'][prog] != url:
+		if progmap['urls'].get(prog) != url:
 			progmap['urls'][prog] = url
 			print(f'New: {prog}')
 			new.add(prog)
