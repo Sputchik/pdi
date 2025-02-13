@@ -422,19 +422,16 @@ if %~2 == 0 (
 	echo %~1 Programs
 	echo.
 	echo [1] Install with Shortcuts
-	echo [2] Opposite ^(Removes all Desktop shortcuts^)
-	echo [3] Proceed further
+	echo [2] Proceed further
 
-	choice /C 123 /N /M " "
+	choice /C 12 /N /M " "
 	echo.
 
-	if !ErrorLevel! == 3 goto :eof
+	if !ErrorLevel! == 2 goto :eof
 
 	cd "%DLPath%"
 	call :%~1
 	cd "%origin%"
-
-	if !ErrorLevel! == 2 del /S /Q "C:\Users\%username%\Desktop\*.lnk" 2>nul
 	timeout /T 1
 )
 
