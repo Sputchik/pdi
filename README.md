@@ -22,7 +22,7 @@ Usage: pdi.bat [--passive] [--output Path] [--select Programs]
 
    --output Path        Download Path
 
-   --select Programs    Select Programs, Separate them by semicolon `;`.
+   --select Programs    Select Programs, Separate them by semicolon `;`
                         Example: --select "Telegram Portable;Librewolf;Discord;Steam"
 ```
 

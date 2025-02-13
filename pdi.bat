@@ -5,13 +5,13 @@ if "%~1" == "--help" (
 	echo.
 	echo Usage: pdi.bat [--passive] [--output Path] [--select Programs]
 	echo.
-	echo    --passive            Only Displays download process for programs defined using --select Flag
+	echo    --passive            Jumps to a download process for programs defined using --select Flag
 	echo.
-	echo    --no-install         Downloads programs without installing them
+	echo    --no-install         Exits upon downloading programs
 	echo.
-	echo    --output Path        Sets download Path
+	echo    --output Path        Download Path
 	echo.
-	echo    --select Programs    Select Programs, Separate them by semicolon `;`.
+	echo    --select Programs    Select Programs, Separate them by semicolon `;`
 	echo                         Example: --select "Telegram Portable;Librewolf;Discord;Steam"
 	exit /b
 )
@@ -548,7 +548,7 @@ echo.
 @REM Silent Installation
 if !ErrorLevel! == 1 (
 	for %%G in (!Flags!) do (
-		for %%H in (!Programs_%%G!) do (
+		for %%H in (!Flagged_%%G!) do (
 
 			set "progName=%%H"
 			set "flag=%%G"
