@@ -3,11 +3,11 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from git import Repo
 
-import niquests
+import aiohttp
 import asyncio
 import json
-import time
 import os
+import time
 
 cwd = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/') + '/'
 urls_path = cwd + 'urls.txt'
@@ -26,7 +26,7 @@ github_map = {
 	'DB Browser': ('sqlitebrowser', 'sqlitebrowser'),
 	'OpenSSH': ('PowerShell', 'Win32-OpenSSH'),
 	'LLVM': ('llvm', 'llvm-project'),
-	'Ayugram': ('AyuGram', 'AyuGramDesktop'),
+	'AyuGram': ('AyuGram', 'AyuGramDesktop'),
 
 }
 
@@ -124,7 +124,7 @@ def parse_categories(lines):
 	return cat_map, '\n'.join(lines[ext_start:ext_end])
 
 async def parse_github_urls() -> dict:
-	response = await aio.get(urls_link, toreturn = 'text+status_code')
+	response = await aio.get(urls_link, toreturn = 'text+status')
 	data, status = response
 
 	if status != 200:
@@ -147,7 +147,7 @@ async def parse_github_urls() -> dict:
 
 	return progmap
 
-def progmap_to_str(progmap):
+def progmap_to_txt(progmap):
 	first_line = 'Categories=' + ';'.join(list(progmap['cats'].keys()))
 	cat_progs = '\n'.join([f"{key}={value}" for key, value in progmap['cats'].items()])
 	urls = '\n'.join([f"url_{key.replace(' ', '_')}={value}" for key, value in progmap['urls'].items()])
@@ -158,13 +158,14 @@ def progmap_to_str(progmap):
 	result = '\n\n'.join((first_line, cat_progs, *progmap.values(), urls))
 	return result
 
-def extract_ghub_vers(versions: dict[str, str]) -> str:
+def extract_versions(versions: dict[str, str]) -> str:
 	preferred_exe = None
 	selected_exe = False
 	preferred_msi = None
 
 	for key in versions:
-		if 'arm' in key.lower():
+		lowered = key.lower()
+		if 'arm' in lowered:
 			continue
 
 		if key.endswith('.msi'):
@@ -195,7 +196,7 @@ async def direct_from_github(owner: str, project: str) -> str:
 
 	response = await aio.get(
 		url,
-		toreturn = 'json+status_code',
+		toreturn = 'json+status',
 		headers = github_headers,
 	)
 	data, status = response
@@ -208,22 +209,16 @@ async def direct_from_github(owner: str, project: str) -> str:
 
 	assets = data['assets']
 	version_map = {unpack['name']: unpack['browser_download_url'] for unpack in assets}
-	key = extract_ghub_vers(version_map)
+	key = extract_versions(version_map)
 
 	if not key:
 		print(f'Fail: Github key version extraction: {url}')
 
 	return version_map[key]
 
-async def get_prog_url(
-	url: str = None,
-	name: str = None,
-	session: niquests.AsyncSession = None,
-	from_github: bool = False,
-	jetbrains: bool = False
-) -> tuple[str, str]:
+async def parse_prog(url = None, name = None, session = None, github = False, jetbrains = False):
 
-	if from_github:
+	if github:
 		author, project = github_map[name]
 		return (name, await direct_from_github(author, project))
 
@@ -231,7 +226,7 @@ async def get_prog_url(
 		params = jetbrains_params
 		params['code'] = url
 
-		response, status, url = await aio.get(jetbrains_api, params = params, toreturn = 'json+status_code+url', session = session)
+		response, status, url = await aio.get(jetbrains_api, params = params, toreturn = 'json+status+real_url', session = session)
 		print(f'{status}: {name} - {url}')
 
 		try:
@@ -241,7 +236,7 @@ async def get_prog_url(
 		except (ValueError, TypeError, IndexError, KeyError):
 			return
 
-	response = await aio.get(url, toreturn = 'text+status_code', session = session)
+	response = await aio.get(url, toreturn = 'text+status', session = session)
 	data, status = response
 
 	print(f'{status}: {name} - {url}')
@@ -363,19 +358,19 @@ async def get_prog_url(
 
 	return (name, url)
 
-async def update_progs(progmap, session: niquests.AsyncSession = None):
+async def update_progs(progmap, session = None):
 	tasks = []
 	for prog in github_map:
-		tasks.append(get_prog_url(name = prog, from_github = True))
+		tasks.append(parse_prog(name = prog, github = True))
 
 	for prog, slug in jetbrains_progs.items():
-		tasks.append(get_prog_url(slug, prog, session, jetbrains = True))
+		tasks.append(parse_prog(slug, prog, session, jetbrains = True))
 
 	for prog, url in parse_map.items():
-		tasks.append(get_prog_url(url, prog, session))
+		tasks.append(parse_prog(url, prog, session))
 
 	results = await asyncio.gather(*tasks)
-	parsed_data = ((result[0], result[1]) for result in results if isinstance(result, tuple))
+	parsed_data = [result for result in results if isinstance(result, tuple)]
 	print()
 
 	new = set()
@@ -399,7 +394,7 @@ async def main(repo: Repo):
 	# input(json.dumps(progmap, indent = 2))
 	# input(progmap_to_txt(progmap))
 
-	async with niquests.AsyncSession() as session:
+	async with aiohttp.ClientSession() as session:
 		progmap, new = await update_progs(progmap, session = session)
 	# input(json.dumps(progmap, indent = 2))
 
@@ -407,7 +402,7 @@ async def main(repo: Repo):
 		print('Everything is Up-To-Date!\n')
 		return
 
-	txt = progmap_to_str(progmap)
+	txt = progmap_to_txt(progmap)
 	# input(txt)
 
 	await aio.open(urls_path, 'write', 'w', txt)
