@@ -12,7 +12,7 @@ Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
 msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;Cloudflare_WARP;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH;OpenSSL;WinDirStat
 zip=Autoruns;Gradle;Gradle;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 zipm=Gradle;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
-pfexe=ContextMenuManager;NVCleanstall;Rufus
+pfexe=ContextMenuManager;NVCleanstall;Rufus;AyuGram
 
 Flagged_VerySilent=Git;iMazing;K-Lite_Codec;Process_Hacker;RegistryFinder;Resource_Hacker;Revo_Uninstaller_Pro;Sublime_Text;Telegram;VSCode
 Flagged_quiet=iCloud;iTunes;Python;Wireless_Bluetooth
