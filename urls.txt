@@ -26,7 +26,7 @@ url_3uTools=https://url.3u.com/zmAJjyaa
 url_7-Zip=https://github.com/ip7z/7zip/releases/download/24.09/7z2409-x64.msi
 url_Autoruns=https://download.sysinternals.com/files/Autoruns.zip
 url_Avidemux=https://www.dropbox.com/scl/fi/nzxbti6br7o7vegkegiyz/AviDemux.exe?rlkey=mfzxwa8dqai53uuc22grqtxry&st=ofqskatg&dl=1
-url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.10.3/AyuGram.exe
+url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.11.1/AyuGram.exe
 url_Blender=https://www.blender.org/download/release/Blender4.3/blender-4.3.2-windows-x64.msi/
 url_Blender_3.3.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.3/blender-3.3.20-windows-x64.msi
 url_Blender_3.6.X_LTS=https://mirrors.dotsrc.org/blender/release/Blender3.6/blender-3.6.13-windows-x64.msi
