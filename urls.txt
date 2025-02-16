@@ -1,6 +1,6 @@
 Categories=General_Dependencies;Messengers;Coding;Browsers;Apple;Misc;Cracked;Games
 
-General_Dependencies=.NET_Framework_3.5;DirectX_Runtimes;EdgeWebView2;Git;Go;Gradle;LLVM;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;Wireless_Bluetooth
+General_Dependencies=.NET_Framework_3.5;DirectX_Runtimes;EdgeWebView2;Git;Go;Gradle;LLVM;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;Bluetooth
 Messengers=AyuGram;Discord;Telegram;Telegram_Portable;Viber
 Coding=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
@@ -15,7 +15,7 @@ zipm=Gradle;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=AyuGram;ContextMenuManager;NVCleanstall;Rufus
 
 Flagged_VerySilent=Git;iMazing;K-Lite_Codec;Process_Hacker;RegistryFinder;Resource_Hacker;Revo_Uninstaller_Pro;Sublime_Text;Telegram;VSCode
-Flagged_quiet=iCloud;iTunes;Python;Wireless_Bluetooth
+Flagged_quiet=iCloud;iTunes;Python;Bluetooth
 Flagged_S=7-Zip;Everything;Firefox;GoLand;IntelliJ_IDEA;LLVM;Librewolf;OBS;PyCharm;qBitTorrent;QuteBrowser;Sideloadly;Steam;Viber;WinDirStat;Windhawk;X-Mouse_Button;ZXP_Installer
 Flagged_Q=DirectX_Runtimes
 
@@ -87,6 +87,6 @@ url_WaterFox=https://cdn1.waterfox.net/waterfox/releases/latest/windows
 url_Windhawk=https://ramensoftware.com/downloads/windhawk_setup.exe
 url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download/WinDirStat-x64.msi
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
-url_Wireless_Bluetooth=https://downloadmirror.intel.com/843147/BT-23.100.1-64UWD-Win10-Win11.exe
+url_Bluetooth=https://downloadmirror.intel.com/843147/BT-23.100.1-64UWD-Win10-Win11.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
