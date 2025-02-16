@@ -36,7 +36,8 @@ parse_map = {
 	'Gradle': 'https://gradle.org/releases/',
 	'Google_Earth_Pro': 'https://support.google.com/earth/answer/168344?hl=en#zippy=%2Cdownload-a-google-earth-pro-direct-installer',
 	'Git': 'https://git-scm.com/downloads/win',
-	'Wireless Bluetooth': 'https://www.intel.com/content/www/us/en/download/18649/intel-wireless-bluetooth-drivers-for-windows-10-and-windows-11.html',
+	'Bluetooth': 'https://www.intel.com/content/www/us/en/download/18649/intel-wireless-bluetooth-drivers-for-windows-10-and-windows-11.html',
+	'WiFi': 'https://www.intel.com/content/www/us/en/download/19351/intel-wireless-wi-fi-drivers-for-windows-10-and-windows-11.html',
 	'Python': 'https://www.python.org/downloads/',
 	'Node.js': 'https://nodejs.org/en',
 	'NVCleanstall': 'https://nvcleanstall.net/download',
@@ -264,7 +265,7 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 				url = li.find('a').get('href')
 				break
 
-	elif name == 'Wireless Bluetooth':
+	elif name == 'Bluetooth' or name == 'WiFi':
 		button = soup.find('button', {'data-wap_ref': 'download-button'})
 		url = button.get('data-href')
 

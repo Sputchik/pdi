@@ -18,8 +18,9 @@ Flagged_VerySilent=Git;iMazing;K-Lite_Codec;Process_Hacker;RegistryFinder;Resour
 Flagged_quiet=iCloud;iTunes;Python;Bluetooth
 Flagged_S=7-Zip;Everything;Firefox;GoLand;IntelliJ_IDEA;LLVM;Librewolf;OBS;PyCharm;qBitTorrent;QuteBrowser;Sideloadly;Steam;Viber;WinDirStat;Windhawk;X-Mouse_Button;ZXP_Installer
 Flagged_Q=DirectX_Runtimes
+Flagged_passive=Bluetooth;WiFi
 
-Flags=Q;quiet;S;VERYSILENT
+Flags=Q;quiet;S;VERYSILENT;passive
 
 url_.NET_Framework_3.5=http://download.microsoft.com/download/6/0/f/60fc5854-3cb8-4892-b6db-bd4f42510f28/dotnetfx35.exe
 url_3uTools=https://url.3u.com/zmAJjyaa
