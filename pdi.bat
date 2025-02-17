@@ -19,19 +19,19 @@ if "%~1" == "--help" (
 cls
 net session >nul 2>&1
 if !ErrorLevel! NEQ 0 (
-	echo Please run this script as an administrator
+	echo Run this script as an admin!
 	echo Though, you can continue
 	echo.
-	echo Keep in mind most ZIP installation will fail
+	echo Keep in mind most ZIP installation will fail ^(Access to C:\Program Files^)
 	pause
 )
 
 call :CheckInternet
-set "origin=%~dp0"
-set "DLPath=%origin%pdi_downloads"
+set "CWD=%~dp0"
+set "DLPath=%CWD%pdi_downloads"
 set "PF=C:\Program Files"
 set FetchedURLs=0
-set "UserAgent=Mozilla/5.0 (X11; Linux x86_64; rv:131.1) Gecko/20100101 Firefox/131.1"
+set "UserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"
 set "URLsURL=https://raw.githubusercontent.com/Sputchik/pdi/refs/heads/main/urls.txt"
 set "ChooseFolder=powershell -Command "(new-object -ComObject Shell.Application).BrowseForFolder(0,'Please choose a folder.',0,0).Self.Path""
 set "Extensions=msi;zip"
@@ -44,7 +44,7 @@ set "urlPath=%TempPath%\urls.txt"
 
 :Start
 
-if %FetchedURLs%==0 (
+if %FetchedURLs% == 0 (
 	call :FetchURLs
 ) else (
 	call :ClearSelected
@@ -55,39 +55,37 @@ if %FetchedURLs%==0 (
 set passive=0
 set EOF_Download=0
 
-if "%~1" NEQ "" (
-	set arg_index=0
+if "%~1" == "" goto :MAIN_MENU
 
-	for %%G in (%*) do (
-		set /a arg_index+=1
-		set "arg=%%~G"
+for %%G in (%*) do (
+	set /a arg_index+=1
+	set "arg=%%~G"
 
-		if defined selecting (
-			set "arg=!arg: =_!"
+	if defined selecting (
+		set "arg=!arg: =_!"
 
-			for %%H in (!arg!) do (
-				set "selected_%%H=1"
-			)
-
-		) else if defined outputting (
-			set "DLPath=!arg!"
-			set outputting=
-
-		) else (
-
-			if "!arg!"=="--select" (
-				set selecting=1
-
-			) else if "!arg!" == "--passive" (
-				set passive=1
-
-			) else if "!arg!" == "--output" (
-				set outputting=1
-			) else if "!arg!" == "--no-install" (
-				set EOF_Download=1
-			)
-
+		for %%H in (!arg!) do (
+			set "selected_%%H=1"
 		)
+
+	) else if defined outputting (
+		set "DLPath=!arg!"
+		set outputting=
+
+	) else (
+
+		if "!arg!"=="--select" (
+			set selecting=1
+
+		) else if "!arg!" == "--passive" (
+			set passive=1
+
+		) else if "!arg!" == "--output" (
+			set outputting=1
+		) else if "!arg!" == "--no-install" (
+			set EOF_Download=1
+		)
+
 	)
 )
 
@@ -156,30 +154,17 @@ if /I "%selection%" == "A" goto TOGGLE_ALL
 
 set /a index=1
 for %%G in (!programs!) do (
-	if "%selection%" == "!index!" (
-		set SelectValue=!selected_%%G!
-
-		if !SelectValue! == 1 (
-			set "selected_%%G=0"
-		) else (
-			set "selected_%%G=1"
-		)
+	if %selection% == !index! (
+		set /a "selected_%%G=selected_%%G ^ 1"
+		goto DISPLAY_LIST
 	)
 	set /a index+=1
 )
 
-goto DISPLAY_LIST
-
 :TOGGLE_ALL
 
 for %%G in (!programs!) do (
-	set "isSelected=!selected_%%G!"
-
-	if !isSelected! == 1 (
-		set "selected_%%G=0"
-	) else (
-		set "selected_%%G=1"
-	)
+	set /a "selected_%%G=selected_%%G ^ 1"
 )
 
 goto DISPLAY_LIST
@@ -231,12 +216,11 @@ cls
 echo You are not connected to internet :^(
 echo.
 echo [1] Retry Connection
-echo [2] Quit
+echo [2] Exit
 choice /C 12 /N /M " "
 echo.
 
 if !ErrorLevel! == 1 goto :WaitForConnection
-
 exit /b
 
 :WaitForConnection
@@ -245,7 +229,6 @@ ping -n 1 -w 1000 1.1.1.1 >nul 2>&1
 
 if !ErrorLevel! == 1 (
 	echo Retrying in 2 seconds...
-	choice /C Q /T 2 /D Q /N >nul
 	goto :WaitForConnection
 
 ) else (
@@ -261,8 +244,6 @@ set "NAME=%~1%"
 set "URL=%~2%"
 set "OUTPUT=%~3%"
 
-if exist "%OUTPUT%" del /Q "%OUTPUT%"
-
 :loop
 
 echo If download is very slow, try pressing Ctrl+C and `N` ^(Don't terminate script^)
@@ -276,7 +257,7 @@ if !ErrorLevel! NEQ 0 (
 	echo.
 	echo Download interrupted...
 	echo.
-	echo [1] Retry Download
+	echo [1] Retry
 	echo [2] Skip
 	choice /C 12 /N /M " "
 	cls
@@ -344,7 +325,7 @@ if %DoInstall% == 1 (
 	goto :DirCheck
 ) else (
 	set DoneAll=1
-	goto :Pain
+	goto :AfterInstall
 )
 
 goto :eof
@@ -375,16 +356,16 @@ if %err_zip% == 0 (
 	goto :Start
 )
 
-:Pain
+:AfterInstall
 
 if %DoneAll% == 1 (
-	cd "%origin%"
+	cd "%CWD%"
 	cls
 	echo Everything's Set Up^!
 	echo.
 	echo [1] Exit
 	echo [2] Go Back
-	echo [3] Clean
+	echo [3] Delete
 	echo [4] Move programs folder
 
 	choice /C 1234 /N /M " "
@@ -397,7 +378,7 @@ if %DoneAll% == 1 (
 
 	) else if !ErrorLevel! == 4 ( call :MovePrograms )
 
-	goto :Pain
+	goto :AfterInstall
 )
 
 call :ProcessInstallation
@@ -414,14 +395,14 @@ if %DoneMSI% == 1 (
 	call :HandleInstall "ZIP" %err_zip%
 	set DoneZip=1
 )
-goto :Pain
+goto :AfterInstall
 
 :HandleInstall
 if %~2 == 0 (
 	cls
 	echo %~1 Programs
 	echo.
-	echo [1] Install with Shortcuts
+	echo [1] Install
 	echo [2] Proceed further
 
 	choice /C 12 /N /M " "
@@ -431,7 +412,7 @@ if %~2 == 0 (
 
 	cd "%DLPath%"
 	call :%~1
-	cd "%origin%"
+	cd "%CWD%"
 	timeout /T 1
 )
 
@@ -465,14 +446,13 @@ goto :eof
 if exist "Autoruns.zip" (
 	echo Installing Autoruns...
 	call :Extract "Autoruns"
-	xcopy /E /Q /Y "Autoruns\Autoruns64.exe" "C:\Program Files\Autoruns\Autoruns.*"
+	xcopy /Q /Y "Autoruns\Autoruns64.exe" "C:\Program Files\Autoruns\"
 	rmdir /S /Q "Autoruns"
 	call :CreateShortcut "C:\Program Files\Autoruns\Autoruns.exe" "Autoruns"
 )
 if exist "Gradle.zip" (
 	echo Installing Gradle...
-	mkdir C:\Gradle 2>nul
-	xcopy /E /Q /Y "Gradle\" C:\
+	xcopy /E /I /Q /Y "Gradle\" C:\Gradle\
 	rmdir /S /Q "Gradle"
 )
 
@@ -526,14 +506,14 @@ for %%G in (!pfexe!) do (
 
 	if exist "!progName!_Setup.exe" (
 		set "readableName=!progName:_= !"
-		set "PF_EXEPath=C:\Program Files\!readableName!\!progName!.exe"
+		set "PF_Dir=C:\Program Files\!readableName!\"
 		echo Installing !readableName!...
 
 		move /Y "!progName!_Setup.exe" "!progName!.exe"
 		mkdir "%PF%\!readableName!\" 2>nul
-		xcopy /E /I /Q /Y "!progName!.exe" "!PF_EXEPath!"
+		xcopy /Q /Y "!progName!.exe" "!PF_Dir!"
 
-		call :CreateShortcut "!PF_EXEPath!" "!readableName!"
+		call :CreateShortcut "!PF_Dir!!progName!.exe" "!readableName!"
 		del /S /Q "!progName!.exe"
 		echo.
 	)
@@ -587,7 +567,7 @@ set "searchPath=%~1"
 set exeDir=0
 
 for /r "%searchPath%" %%G in (*.exe) do (
-	 set "exeName=%%~nxG"
-	 set "exeDir=%%~dpG"
-	 goto :eof
+	set "exeName=%%~nxG"
+	set "exeDir=%%~dpG"
+	goto :eof
 )
