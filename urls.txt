@@ -1,6 +1,6 @@
 Categories=General_Dependencies;Messengers;Coding;Browsers;Apple;Misc;Cracked;Games
 
-General_Dependencies=.NET_Framework_3.5;DirectX_Runtimes;EdgeWebView2;Git;Go;Gradle;LLVM;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;Bluetooth
+General_Dependencies=.NET_Framework_3.5;Bluetooth;DirectX_Runtimes;EdgeWebView2;Git;Go;Gradle;LLVM;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022
 Messengers=AyuGram;Discord;Telegram;Telegram_Portable;Viber
 Coding=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
@@ -15,12 +15,12 @@ zipm=Gradle;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=AyuGram;ContextMenuManager;NVCleanstall;Rufus
 
 Flagged_VerySilent=Git;iMazing;K-Lite_Codec;Process_Hacker;RegistryFinder;Resource_Hacker;Revo_Uninstaller_Pro;Sublime_Text;Telegram;VSCode
-Flagged_quiet=iCloud;iTunes;Python;Bluetooth
+Flagged_quiet=Bluetooth;iCloud;iTunes;Python
 Flagged_S=7-Zip;Everything;Firefox;GoLand;IntelliJ_IDEA;LLVM;Librewolf;OBS;PyCharm;qBitTorrent;QuteBrowser;Sideloadly;Steam;Viber;WinDirStat;Windhawk;X-Mouse_Button;ZXP_Installer
 Flagged_Q=DirectX_Runtimes
 Flagged_passive=Bluetooth;WiFi
 
-Flags=Q;quiet;S;VERYSILENT;passive
+Flags=passive;Q;quiet;S;VERYSILENT
 
 url_.NET_Framework_3.5=http://download.microsoft.com/download/6/0/f/60fc5854-3cb8-4892-b6db-bd4f42510f28/dotnetfx35.exe
 url_3uTools=https://url.3u.com/zmAJjyaa
@@ -31,6 +31,7 @@ url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.11.1/
 url_Blender=https://www.blender.org/download/release/Blender4.3/blender-4.3.2-windows-x64.msi/
 url_Blender_3.3.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.3/blender-3.3.20-windows-x64.msi
 url_Blender_3.6.X_LTS=https://mirrors.dotsrc.org/blender/release/Blender3.6/blender-3.6.13-windows-x64.msi
+url_Bluetooth=https://downloadmirror.intel.com/843147/BT-23.100.1-64UWD-Win10-Win11.exe
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
 url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.NET.3.5.exe
 url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-win64.msi
@@ -50,21 +51,21 @@ url_iMazing=https://downloads.imazing.com/windows/iMazing/iMazing3forWindows.exe
 url_IntelliJ_IDEA=https://download-cdn.jetbrains.com/idea/ideaIU-2024.1.4.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1880_Full.exe
-url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/135.0-1/librewolf-135.0-1-windows-x86_64-setup.exe
+url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/135.0.1-1/librewolf-135.0.1-1-windows-x86_64-setup.exe
 url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.7/LLVM-19.1.7-win64.exe
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe
 url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.msi
 url_Node.js=https://nodejs.org/dist/v23.8.0/node-v23.8.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
-url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.17.0.exe
+url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.18.0.exe
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/31.0.1/OBS-Studio-31.0.1-Windows-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.8.1.0p1-Preview/OpenSSH-Win64-v9.8.1.0.msi
 url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_4_1.msi
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download-cdn.jetbrains.com/python/pycharm-professional-2024.1.4.exe
 url_Python=https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe
-url_qBitTorrent=https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_x64_setup.exe?viasf=1
+url_qBitTorrent=https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe?viasf=1
 url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.1.0/qutebrowser-3.1.0-amd64.exe
 url_RegistryFinder=https://registry-finder.com/bin/2.59.0.0/RegistryFinderSetup2.59.exe
 url_Resource_Hacker=https://www.angusj.com/resourcehacker/reshacker_setup.exe
@@ -88,6 +89,6 @@ url_WaterFox=https://cdn1.waterfox.net/waterfox/releases/latest/windows
 url_Windhawk=https://ramensoftware.com/downloads/windhawk_setup.exe
 url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download/WinDirStat-x64.msi
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
-url_Bluetooth=https://downloadmirror.intel.com/843147/BT-23.100.1-64UWD-Win10-Win11.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
+url_WiFi=https://downloadmirror.intel.com/845660/WiFi-23.110.0-Driver64-Win10-Win11.exe
