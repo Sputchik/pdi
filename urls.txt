@@ -80,15 +80,15 @@ url_Throttlestop=https://www.dropbox.com/scl/fi/b0648d8fnmm7qtmcoe6v4/ThrottleSt
 url_TradingView=https://tvd-packages.tradingview.com/stable/latest/win32/TradingView.msix
 url_TranslucentTB=https://github.com/TranslucentTB/TranslucentTB/releases/download/2024.1/TranslucentTB-portable-x64.zip
 url_TunnelBear=https://tunnelbear.s3.amazonaws.com/downloads/pc/TunnelBear-Installer.exe
-url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/133.0.6943.98-1.1/ungoogled-chromium_133.0.6943.98-1.1_installer_x64.exe
+url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/133.0.6943.126-1.1/ungoogled-chromium_133.0.6943.126-1.1_installer_x64.exe
 url_VCRedist_2005-2022=https://github.com/abbodi1406/vcredist/releases/download/v0.87.0/VisualCppRedist_AIO_x86_x64.exe
 url_Viber=https://download.cdn.viber.com/desktop/windows/ViberSetup.exe
 url_VS_2022_Installer=https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030
 url_VSCode=https://code.visualstudio.com/sha/download?build=stable&os=win32-x64
 url_WaterFox=https://cdn1.waterfox.net/waterfox/releases/latest/windows
+url_WiFi=https://downloadmirror.intel.com/845660/WiFi-23.110.0-Driver64-Win10-Win11.exe
 url_Windhawk=https://ramensoftware.com/downloads/windhawk_setup.exe
 url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download/WinDirStat-x64.msi
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
-url_WiFi=https://downloadmirror.intel.com/845660/WiFi-23.110.0-Driver64-Win10-Win11.exe
