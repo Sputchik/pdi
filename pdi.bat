@@ -155,7 +155,11 @@ if /I "%selection%" == "A" goto TOGGLE_ALL
 set /a index=1
 for %%G in (!programs!) do (
 	if %selection% == !index! (
-		set /a "selected_%%G=selected_%%G ^ 1"
+		if !selected_%%G! == 1 (
+			set "selected_%%G=0"
+		) else (
+			set "selected_%%G=1"
+		)
 		goto DISPLAY_LIST
 	)
 	set /a index+=1
@@ -164,7 +168,11 @@ for %%G in (!programs!) do (
 :TOGGLE_ALL
 
 for %%G in (!programs!) do (
-	set /a "selected_%%G=selected_%%G ^ 1"
+	if !selected_%%G! == 1 (
+		set "selected_%%G=0"
+	) else (
+		set "selected_%%G=1"
+	)
 )
 
 goto DISPLAY_LIST
