@@ -192,7 +192,7 @@ goto :eof
 :FetchURLs
 
 curl -A "%UserAgent%" -s %URLsURL% -o "%urlPath%"
-
+:: set "urlPath=urls.txt"
 for /f "usebackq tokens=1* delims==" %%G in ("%urlPath%") do (
 	set "%%G=%%H"
 )
@@ -460,8 +460,16 @@ if exist "Autoruns.zip" (
 )
 if exist "Gradle.zip" (
 	echo Installing Gradle...
-	xcopy /E /I /Q /Y "Gradle\" C:\Gradle\
+	xcopy /E /I /Q /Y "Gradle\" "C:\Gradle\"
 	rmdir /S /Q "Gradle"
+)
+if exist "FFmpeg.zip" (
+	echo Installing FFmpeg...
+	tar -xf "FFmpeg.zip"
+	ren "ffmpeg-master-latest-win64-lgpl" "FFmpeg"
+	xcopy /E /I /Q /Y "FFmpeg\" "C:\Program Files\FFmpeg\"
+	rmdir /S /Q "FFmpeg"
+	call :SetPath "C:\Program Files\FFmpeg\bin\"
 )
 
 for %%G in (!zipm!) do (
@@ -579,3 +587,19 @@ for /r "%searchPath%" %%G in (*.exe) do (
 	set "exeDir=%%~dpG"
 	goto :eof
 )
+
+:SetPath
+set "dir=%~1"
+
+REM Retrieve the system PATH from the registry
+set "syspath="
+for /f "skip=2 tokens=2,*" %%A in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path 2^>nul') do set "syspath=%%B"
+
+REM Check if the directory is already present in the system PATH
+echo "%syspath%" | find /i "%dir%" >nul
+
+if %errorlevel% EQU 1 (
+	setx /M PATH "%syspath%%dir%;"
+)
+
+goto :eof
