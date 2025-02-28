@@ -57,7 +57,7 @@ url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.7/L
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe
 url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.msi
-url_Node.js=https://nodejs.org/dist/v23.8.0/node-v23.8.0-x64.msi
+url_Node.js=https://nodejs.org/dist/v23.9.0/node-v23.9.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.18.0.exe
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/31.0.1/OBS-Studio-31.0.1-Windows-Installer.exe
