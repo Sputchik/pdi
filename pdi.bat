@@ -456,7 +456,7 @@ if exist "Autoruns.zip" (
 	call :Extract "Autoruns"
 	xcopy /Q /Y "Autoruns\Autoruns64.exe" "C:\Program Files\Autoruns\"
 	rmdir /S /Q "Autoruns"
-	call :CreateShortcut "C:\Program Files\Autoruns\Autoruns.exe" "Autoruns"
+	call :CreateShortcut "C:\Program Files\Autoruns\Autoruns64.exe" "Autoruns"
 )
 if exist "Gradle.zip" (
 	echo Installing Gradle...
@@ -466,7 +466,7 @@ if exist "Gradle.zip" (
 if exist "FFmpeg.zip" (
 	echo Installing FFmpeg...
 	tar -xf "FFmpeg.zip"
-	ren "ffmpeg-master-latest-win64-lgpl" "FFmpeg"
+	ren "ffmpeg-master-latest-win64-gpl" "FFmpeg"
 	xcopy /E /I /Q /Y "FFmpeg\" "C:\Program Files\FFmpeg\"
 	rmdir /S /Q "FFmpeg"
 	call :SetPath "C:\Program Files\FFmpeg\bin\"
@@ -593,13 +593,28 @@ set "dir=%~1"
 
 REM Retrieve the system PATH from the registry
 set "syspath="
-for /f "skip=2 tokens=2,*" %%A in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path 2^>nul') do set "syspath=%%B"
+for /f "skip=2 tokens=2,*" %%A in (
+	'reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path 2^>nul'
+) do set "syspath=%%B"
 
 REM Check if the directory is already present in the system PATH
-echo "%syspath%" | find /i "%dir%" >nul
-
-if %errorlevel% EQU 1 (
-	setx /M PATH "%syspath%%dir%;"
+echo "!syspath!" | find /i "%dir%" >nul
+if !errorlevel! EQU 0 (
+	echo Directory "%dir%" is already in PATH.
+	goto :eof
 )
 
+REM Trim extra semicolons from the end of syspath
+:TrimSemicolons
+if "!syspath:~-1!"==";" (
+	set "syspath=!syspath:~0,-1!"
+	goto TrimSemicolons
+)
+
+REM Set the updated PATH, making sure there's exactly one semicolon
+setx /M PATH "!syspath!;%dir%;"
+
+echo Directory "%dir%" was successfully added to PATH.
+
+endlocal
 goto :eof
