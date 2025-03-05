@@ -1,6 +1,6 @@
 Categories=General_Dependencies;Messengers;Coding;Browsers;Apple;Misc;Cracked;Games
 
-General_Dependencies=.NET_Framework_3.5;Bluetooth;DirectX_Runtimes;EdgeWebView2;FFmpeg;Git;Go;Gradle;LLVM;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022
+General_Dependencies=.NET_Framework_3.5;Bluetooth;DirectX_Runtimes;EdgeWebView2;FFmpeg;Git;Go;Gradle;LLVM;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;WiFi
 Messengers=AyuGram;Discord;Telegram;Telegram_Portable;Viber
 Coding=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
