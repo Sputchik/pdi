@@ -31,7 +31,7 @@ url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.11.1/
 url_Blender=https://www.blender.org/download/release/Blender4.3/blender-4.3.2-windows-x64.msi/
 url_Blender_3.3.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.3/blender-3.3.20-windows-x64.msi
 url_Blender_3.6.X_LTS=https://mirrors.dotsrc.org/blender/release/Blender3.6/blender-3.6.13-windows-x64.msi
-url_Bluetooth=https://downloadmirror.intel.com/843147/BT-23.100.1-64UWD-Win10-Win11.exe
+url_Bluetooth=https://downloadmirror.intel.com/848565/BT-23.120.0-64UWD-Win10-Win11.exe
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
 url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.NET.3.5.exe
 url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-win64.msi
@@ -87,7 +87,7 @@ url_Viber=https://download.cdn.viber.com/desktop/windows/ViberSetup.exe
 url_VS_2022_Installer=https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030
 url_VSCode=https://code.visualstudio.com/sha/download?build=stable&os=win32-x64
 url_WaterFox=https://cdn1.waterfox.net/waterfox/releases/latest/windows
-url_WiFi=https://downloadmirror.intel.com/845660/WiFi-23.110.0-Driver64-Win10-Win11.exe
+url_WiFi=https://downloadmirror.intel.com/848619/WiFi-23.120.0-Driver64-Win10-Win11.exe
 url_Windhawk=https://ramensoftware.com/downloads/windhawk_setup.exe
 url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download/WinDirStat-x64.msi
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
