@@ -192,7 +192,7 @@ def extract_versions(versions: dict[str, str]) -> str:
 	url = preferred_msi or preferred_exe
 	return url
 
-async def direct_from_github(owner: str, project: str) -> str:
+async def direct_from_github(owner: str, project: str) -> str | None:
 	url = github_latest_draft.format(owner, project)
 
 	response = await aio.get(
@@ -212,8 +212,9 @@ async def direct_from_github(owner: str, project: str) -> str:
 	version_map = {unpack['name']: unpack['browser_download_url'] for unpack in assets}
 	key = extract_versions(version_map)
 
-	if not key:
-		print(f'Fail: Github key version extraction: {url}')
+	if not key or key not in version_map:
+		input(f'[Fail]: {owner}-{project} Github version extraction')
+		return
 
 	return version_map[key]
 
@@ -227,14 +228,14 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 		params = jetbrains_params
 		params['code'] = url
 
-		response, status, url = await aio.get(jetbrains_api, params = params, toreturn = 'json+status+real_url', session = session)
+		response, status, url = await aio.get(jetbrains_api, params = params, toreturn = 'json+status+real_url', session = session, raise_exceptions = True)
 		print(f'{status}: {name} - {url}')
 
 		try:
 			download_url = response["downloads"]["windows"]["link"]
 			return name, download_url
 
-		except (ValueError, TypeError, IndexError, KeyError):
+		except (TypeError, KeyError):
 			return
 
 	response = await aio.get(url, toreturn = 'text+status', session = session)
@@ -376,7 +377,10 @@ async def update_progs(progmap, session = None):
 
 	new = set()
 	for prog, url in parsed_data:
-		if progmap['urls'].get(prog) != url:
+		if not url:
+			print(f'Skipping: {prog}')
+
+		elif progmap['urls'].get(prog) != url:
 			progmap['urls'][prog] = url
 			print(f'New: {prog}')
 			new.add(prog)
