@@ -29,7 +29,7 @@ url_Autoruns=https://download.sysinternals.com/files/Autoruns.zip
 url_Avidemux=https://www.dropbox.com/scl/fi/nzxbti6br7o7vegkegiyz/AviDemux.exe?rlkey=mfzxwa8dqai53uuc22grqtxry&st=ofqskatg&dl=1
 url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.11.1/AyuGram.exe
 url_Blender=https://www.blender.org/download/release/Blender4.3/blender-4.3.2-windows-x64.msi/
-url_Blender_3.3.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.3/blender-3.3.20-windows-x64.msi
+url_Blender_3.3.X_LTS=https://www.blender.org/download/release/Blender3.6/blender-3.6.21-windows-x64.msi
 url_Blender_3.6.X_LTS=https://mirrors.dotsrc.org/blender/release/Blender3.6/blender-3.6.13-windows-x64.msi
 url_Bluetooth=https://downloadmirror.intel.com/848565/BT-23.120.0-64UWD-Win10-Win11.exe
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
@@ -93,4 +93,5 @@ url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
-url_Blender_3.3.X_LTS=https://www.blender.org/download/release/Blender3.6/blender-3.6.21-windows-x64.msi
+url_Blender_3.3.X_LTS=https://www.blender.org/download/release/Blender3.3/blender-3.3.21-windows-x64.msi
+url_Blender_3.6.X_LTS=https://www.blender.org/download/release/Blender3.6/blender-3.6.21-windows-x64.msi
