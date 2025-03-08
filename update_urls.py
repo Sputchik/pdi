@@ -1,13 +1,13 @@
-from sputchedtools import aio, enhance_loop
-from datetime import datetime
-from bs4 import BeautifulSoup
-from git import Repo
-
 import aiohttp
 import asyncio
 import json
 import os
 import time
+
+from sputchedtools import aio, enhance_loop
+from datetime import datetime
+from bs4 import BeautifulSoup
+from git import Repo
 
 cwd = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/') + '/'
 urls_path = cwd + 'urls.txt'
@@ -46,7 +46,9 @@ parse_map = {
 	'qBitTorrent': 'https://www.qbittorrent.org/download',
 	'Librewolf': 'https://librewolf.net/installation/windows/',
 	'Blender': 'https://www.blender.org/download/',
-	'OpenSSL': 'https://slproweb.com/download/win32_openssl_hashes.json'
+	'OpenSSL': 'https://slproweb.com/download/win32_openssl_hashes.json',
+	'Blender_3.3.X_LTS': 'https://www.blender.org/download/lts/3-3/',
+	'Blender_3.6.X_LTS': 'https://www.blender.org/download/lts/3-6/',
 
 }
 
@@ -125,6 +127,7 @@ def parse_categories(lines):
 	return cat_map, '\n'.join(lines[ext_start:ext_end])
 
 async def parse_github_urls() -> dict:
+	# data = await aio.open(cwd + 'urls.txt')
 	response = await aio.get(urls_link, toreturn = 'text+status')
 	data, status = response
 
@@ -356,6 +359,18 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 				url = data['files'][i]['url']
 				break
 
+	elif name.startswith('Blender'):
+		a_elems = soup.find_all('a')
+
+		for elem in a_elems:
+			text = elem.text
+			if text and text == 'Windows – Installer':
+				url = elem.get('href')
+				ver = url.split('blender-', 1)[1].split('-', 1)[0]
+				major = ver.rsplit('.', 1)[0]
+				url = f'https://ftp.nluug.nl/pub/graphics/blender/release/Blender{major}/blender-{ver}-windows-x64.msi'
+				break
+
 	else: return
 
 	return (name, url)
@@ -382,7 +397,6 @@ async def update_progs(progmap, session = None):
 
 		elif progmap['urls'].get(prog) != url:
 			progmap['urls'][prog] = url
-			print(f'New: {prog}')
 			new.add(prog)
 
 	return progmap, new
@@ -407,6 +421,7 @@ async def main(repo: Repo):
 		print('Everything is Up-To-Date!\n')
 		return
 
+	print('New: ' + ', '.join(new))
 	txt = progmap_to_txt(progmap)
 	# input(txt)
 
