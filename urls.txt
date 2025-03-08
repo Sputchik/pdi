@@ -93,3 +93,4 @@ url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
+url_Blender_3.3.X_LTS=https://www.blender.org/download/release/Blender3.6/blender-3.6.21-windows-x64.msi
