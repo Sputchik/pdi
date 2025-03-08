@@ -22,14 +22,14 @@ if !ErrorLevel! NEQ 0 (
 	echo Run this script as an admin!
 	echo Though, you can continue
 	echo.
-	echo Keep in mind most ZIP installation will fail ^(Access to C:\Program Files^)
+	echo Keep in mind most ZIP installation will fail ^(Access to %PF%^)
 	pause
 )
 
 call :CheckInternet
 set "CWD=%~dp0"
 set "DLPath=%CWD%pdi_downloads"
-set "PF=C:\Program Files"
+for /f "tokens=2*" %%a in ('reg query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion" /v ProgramFilesDir') do set "PF=%%b"
 set FetchedURLs=0
 set "UserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"
 set "URLsURL=https://raw.githubusercontent.com/Sputchik/pdi/refs/heads/main/urls.txt"
@@ -454,9 +454,9 @@ goto :eof
 if exist "Autoruns.zip" (
 	echo Installing Autoruns...
 	call :Extract "Autoruns"
-	xcopy /Q /Y "Autoruns\Autoruns64.exe" "C:\Program Files\Autoruns\"
+	xcopy /Q /Y "Autoruns\Autoruns64.exe" "%%PF%%\Autoruns\"
 	rmdir /S /Q "Autoruns"
-	call :CreateShortcut "C:\Program Files\Autoruns\Autoruns64.exe" "Autoruns"
+	call :CreateShortcut "%PF%\Autoruns\Autoruns64.exe" "Autoruns"
 )
 if exist "Gradle.zip" (
 	echo Installing Gradle...
@@ -467,9 +467,9 @@ if exist "FFmpeg.zip" (
 	echo Installing FFmpeg...
 	tar -xf "FFmpeg.zip"
 	ren "ffmpeg-master-latest-win64-gpl" "FFmpeg"
-	xcopy /E /I /Q /Y "FFmpeg\" "C:\Program Files\FFmpeg\"
+	xcopy /E /I /Q /Y "FFmpeg\" "%PF%\FFmpeg\"
 	rmdir /S /Q "FFmpeg"
-	call :SetPath "C:\Program Files\FFmpeg\bin\"
+	call :SetPath "%PF%\FFmpeg\bin\"
 )
 
 for %%G in (!zipm!) do (
@@ -483,7 +483,7 @@ for %%G in (!zipm!) do (
 		call :FindExe "!progName!"
 
 		if exeDir NEQ 0 (
-			set "destPath=C:\Program Files\!progName!"
+			set "destPath=%PF%\!progName!"
 			cd "!exeDir!"
 			mkdir "!destPath!" 2>nul
 			xcopy /E /I /Q /Y ".\" "!destPath!\"
@@ -522,7 +522,7 @@ for %%G in (!pfexe!) do (
 
 	if exist "!progName!_Setup.exe" (
 		set "readableName=!progName:_= !"
-		set "PF_Dir=C:\Program Files\!readableName!\"
+		set "PF_Dir=%PF%\!readableName!\"
 		echo Installing !readableName!...
 
 		move /Y "!progName!_Setup.exe" "!progName!.exe"
