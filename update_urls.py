@@ -47,8 +47,8 @@ parse_map = {
 	'Librewolf': 'https://librewolf.net/installation/windows/',
 	'Blender': 'https://www.blender.org/download/',
 	'OpenSSL': 'https://slproweb.com/download/win32_openssl_hashes.json',
-	'Blender_3.3.X_LTS': 'https://www.blender.org/download/lts/3-3/',
-	'Blender_3.6.X_LTS': 'https://www.blender.org/download/lts/3-6/',
+	'Blender 3.3.X LTS': 'https://www.blender.org/download/lts/3-3/',
+	'Blender 3.6.X LTS': 'https://www.blender.org/download/lts/3-6/',
 
 }
 
