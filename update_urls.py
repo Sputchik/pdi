@@ -49,6 +49,7 @@ parse_map = {
 	'OpenSSL': 'https://slproweb.com/download/win32_openssl_hashes.json',
 	'Blender 3.3.X LTS': 'https://www.blender.org/download/lts/3-3/',
 	'Blender 3.6.X LTS': 'https://www.blender.org/download/lts/3-6/',
+	'WinSCP': 'https://winscp.net/eng/downloads.php'
 
 }
 
@@ -371,6 +372,15 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 				url = f'https://ftp.nluug.nl/pub/graphics/blender/release/Blender{major}/blender-{ver}-windows-x64.msi'
 				break
 
+	elif name == 'WinSCP':
+		a_elems = soup.find_all('a')
+
+		for elem in a_elems:
+			url = elem.get('href')
+			if url and url.startswith('download/WinSCP'):
+				version = url.split('-', 2)[2]
+				url = f'https://deac-riga.dl.sourceforge.net/project/winscp/WinSCP/{version}/WinSCP-{version}-Setup.msi?viasf=1'
+	
 	else: return
 
 	return (name, url)
