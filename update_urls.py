@@ -378,10 +378,10 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 		for elem in a_elems:
 			url = elem.get('href')
 			if url and url.startswith('/download/WinSCP'):
-				version = url.split('-', 2)[2]
+				version = url.split('-', 2)[1]
 				url = f'https://deac-riga.dl.sourceforge.net/project/winscp/WinSCP/{version}/WinSCP-{version}-Setup.msi?viasf=1'
 				break
-	
+
 	else: return
 
 	return (name, url)
