@@ -53,11 +53,11 @@ url_IntelliJ_IDEA=https://download-cdn.jetbrains.com/idea/ideaIU-2024.1.4.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1885_Full.exe
 url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/135.0.1-1/librewolf-135.0.1-1-windows-x86_64-setup.exe
-url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.1/LLVM-20.1.1-win64.exe
+url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.2/LLVM-20.1.2-win64.exe
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe
 url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.msi
-url_Node.js=https://nodejs.org/dist/v23.10.0/node-v23.10.0-x64.msi
+url_Node.js=https://nodejs.org/dist/v23.11.0/node-v23.11.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.18.0.exe
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/31.0.3/OBS-Studio-31.0.3-Windows-Installer.exe
@@ -91,6 +91,6 @@ url_WiFi=https://downloadmirror.intel.com/848619/WiFi-23.120.0-Driver64-Win10-Wi
 url_Windhawk=https://ramensoftware.com/downloads/windhawk_setup.exe
 url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download/WinDirStat-x64.msi
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
-url_WinSCP=https://deac-riga.dl.sourceforge.net/project/winscp/WinSCP/6.3.7/WinSCP-6.3.7-Setup.msi?viasf=1
+url_WinSCP=https://deac-riga.dl.sourceforge.net/project/winscp/WinSCP/6.5/WinSCP-6.5-Setup.msi?viasf=1
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
