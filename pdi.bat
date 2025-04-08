@@ -22,7 +22,7 @@ if !ErrorLevel! NEQ 0 (
 	echo Run this script as an admin!
 	echo Though, you can continue
 	echo.
-	echo Keep in mind most ZIP installation will fail ^(Access to %PF%^)
+	echo Keep in mind most ZIP installation will fail ^(Access to C:\Program Files^)
 	pause
 )
 
@@ -454,7 +454,7 @@ goto :eof
 if exist "Autoruns.zip" (
 	echo Installing Autoruns...
 	call :Extract "Autoruns"
-	xcopy /Q /Y "Autoruns\Autoruns64.exe" "%%PF%%\Autoruns\"
+	xcopy /Q /Y "Autoruns\Autoruns64.exe" "%PF%\Autoruns\"
 	rmdir /S /Q "Autoruns"
 	call :CreateShortcut "%PF%\Autoruns\Autoruns64.exe" "Autoruns"
 )
