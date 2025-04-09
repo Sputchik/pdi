@@ -65,13 +65,13 @@ url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.8.2
 url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_4_1.msi
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download-cdn.jetbrains.com/python/pycharm-professional-2024.1.4.exe
-url_Python=https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe
+url_Python=https://www.python.org/ftp/python/3.13.3/python-3.13.3-amd64.exe
 url_qBitTorrent=https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe?viasf=1
 url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.1.0/qutebrowser-3.1.0-amd64.exe
 url_RegistryFinder=https://registry-finder.com/bin/2.59.0.0/RegistryFinderSetup2.59.exe
 url_Resource_Hacker=https://www.angusj.com/resourcehacker/reshacker_setup.exe
 url_Revo_Uninstaller_Pro=https://www.dropbox.com/scl/fi/9nc9khsw8wobjhd8rt2xk/RevoUninstallerPro.exe?rlkey=48mvmd79eazgmbqdkrnyaabjq&st=1mte3l8n&dl=1
-url_Rufus=https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe
+url_Rufus=https://github.com/pbatard/rufus/releases/download/v4.7/rufus-4.7.exe
 url_Sideloadly=https://sideloadly.io/SideloadlySetup64.exe
 url_Steam=https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe
 url_Sublime_Text=https://download.sublimetext.com/sublime_text_build_4169_x64_setup.exe
