@@ -1,14 +1,16 @@
-import aiohttp
+import niquests
 import asyncio
 import json
 import os
 import time
+# import ua_generator
 
-from sputchedtools import aio, enhance_loop
+from sputchedtools import aio, enhance_loop, setup_logger
 from datetime import datetime
 from bs4 import BeautifulSoup
 from git import Repo
 
+log = setup_logger('up', clear_file=True)
 cwd = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/') + '/'
 urls_path = cwd + 'urls.txt'
 github_latest_draft = 'https://api.github.com/repos/{}/{}/releases/latest' # Owner, Repo Slug
@@ -83,6 +85,15 @@ github_headers = {
 }
 remote_url = 'https://github.com/Sputchik/pdi.git'
 
+headers = {
+	# 'User-Agent': ua_generator.generate('desktop', 'windows', 'firefox').text,
+	'Cache-Control': 'no-cache',
+	'Pragma': 'no-cache',
+	'Accept-Language': 'en-US',
+	'Accept-Encoding': 'gzip, deflate, br',
+	'Accept': '*/*',
+}
+
 def sortify_batch_list(line: str):
 	unpack = line.split('=', 1)
 	if len(unpack) != 2: return line
@@ -127,14 +138,22 @@ def parse_categories(lines):
 
 	return cat_map, '\n'.join(lines[ext_start:ext_end])
 
-async def parse_github_urls() -> dict:
-	# data = await aio.open(cwd + 'urls.txt')
-	response = await aio.get(urls_link, toreturn = 'text+status')
-	data, status = response
+def progmap_to_txt(progmap):
+	first_line = 'Categories=' + ';'.join(progmap['cats'].keys())
+	cat_progs = '\n'.join([f"{key}={value}" for key, value in progmap['cats'].items()])
+	urls = '\n'.join([f"url_{key.replace(' ', '_')}={value}" for key, value in progmap['urls'].items()])
 
-	if status != 200:
-		print(f'Fail: Github urls fetch: {urls_link}')
-		return
+	del progmap['cats']
+	del progmap['urls']
+
+	result = '\n\n'.join([first_line, cat_progs, *progmap.values(), urls])
+	return result
+
+async def parse_github_urls(session) -> dict:
+	# data = await aio.open(cwd + 'urls.txt')
+	data = await aio.get(urls_link, session = session, toreturn = 'text')
+	if not data:
+		log.warning(f'Failed to fetch urls.txt: {data}')
 
 	lines: list[str] = data.splitlines()
 	url_index = get_line_index(lines, 'url_')
@@ -150,18 +169,8 @@ async def parse_github_urls() -> dict:
 		}.items(), key = lambda x: (x[0].lower(), x[1:])))
 	}
 
+	log.debug(f'Parsed prog map: {json.dumps(progmap, indent = 2)}')
 	return progmap
-
-def progmap_to_txt(progmap):
-	first_line = 'Categories=' + ';'.join(list(progmap['cats'].keys()))
-	cat_progs = '\n'.join([f"{key}={value}" for key, value in progmap['cats'].items()])
-	urls = '\n'.join([f"url_{key.replace(' ', '_')}={value}" for key, value in progmap['urls'].items()])
-
-	del progmap['cats']
-	del progmap['urls']
-
-	result = '\n\n'.join((first_line, cat_progs, *progmap.values(), urls))
-	return result
 
 def extract_versions(versions: dict[str, str]) -> str:
 	preferred_exe = None
@@ -196,14 +205,20 @@ def extract_versions(versions: dict[str, str]) -> str:
 	url = preferred_msi or preferred_exe
 	return url
 
-async def direct_from_github(owner: str, project: str) -> str | None:
+async def direct_from_github(owner: str, project: str, session) -> str | None:
 	url = github_latest_draft.format(owner, project)
 
 	response = await aio.get(
 		url,
-		toreturn = 'json+status',
+		toreturn = 'json+status_code',
+		session = session,
 		headers = github_headers,
 	)
+
+	if not response:
+		log.warning(f'Failed to fetch {project} latest version: {response}')
+		return
+
 	data, status = response
 
 	print(f'{status}: {project} - {url}')
@@ -220,19 +235,21 @@ async def direct_from_github(owner: str, project: str) -> str | None:
 		input(f'[Fail]: {owner}-{project} Github version extraction')
 		return
 
-	return version_map[key]
+	url = version_map[key]
+	log.debug(f'[{project}] Parsed best executable URL: {url}')
+	return url
 
 async def parse_prog(url = None, name = None, session = None, github = False, jetbrains = False):
 
 	if github:
 		author, project = github_map[name]
-		return (name, await direct_from_github(author, project))
+		return (name, await direct_from_github(author, project, session))
 
 	elif jetbrains:
 		params = jetbrains_params
 		params['code'] = url
 
-		response, status, url = await aio.get(jetbrains_api, params = params, toreturn = 'json+status+real_url', session = session, raise_exceptions = True)
+		response, status, url = await aio.get(jetbrains_api, params = params, toreturn = 'json+status_code+url', session = session, raise_exceptions = True)
 		print(f'{status}: {name} - {url}')
 
 		try:
@@ -242,11 +259,16 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 		except (TypeError, KeyError):
 			return
 
-	response = await aio.get(url, toreturn = 'text+status', session = session)
+	response = await aio.request('GET', url, toreturn = 'text+status_code', session = session, headers = headers)
+	if not response:
+		log.warning(f'Failed to fetch {name} url: {response}')
+		return
+
 	data, status = response
 
 	print(f'{status}: {name} - {url}')
 	if status != 200:
+		log.debug(f'[{name}] {response}')
 		return
 
 	if name == 'Go':
@@ -384,12 +406,13 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 
 	else: return
 
+	log.debug(f'[{name}] Parsed best executable URL: {url}')
 	return (name, url)
 
-async def update_progs(progmap, session = None):
+async def update_progs(progmap, session):
 	tasks = []
 	for prog in github_map:
-		tasks.append(parse_prog(name = prog, github = True))
+		tasks.append(parse_prog(name = prog, github = True, session = session))
 
 	for prog, slug in jetbrains_progs.items():
 		tasks.append(parse_prog(slug, prog, session, jetbrains = True))
@@ -420,12 +443,12 @@ def push(repo: Repo, file, commit_msg):
 async def main(repo: Repo):
 	repo.remotes.origin.pull()
 
-	progmap = await parse_github_urls()
 	# input(json.dumps(progmap, indent = 2))
 	# input(progmap_to_txt(progmap))
 
-	async with aiohttp.ClientSession() as session:
-		progmap, new = await update_progs(progmap, session = session)
+	async with niquests.AsyncSession(pool_connections = 100, pool_maxsize = 100) as session:
+		progmap = await parse_github_urls(session)
+		progmap, new = await update_progs(progmap, session)
 	# input(json.dumps(progmap, indent = 2))
 
 	if not new:
