@@ -221,7 +221,8 @@ async def direct_from_github(owner: str, project: str, session) -> str | None:
 
 	data, status = response
 
-	print(f'{status}: {project} - {url}')
+	prefix = '✅' if status == 200 else '⚠️'
+	print(f'{prefix} {status}: {project} - {url}')
 
 	if status != 200 or not isinstance(data, dict) or 'assets' not in data:
 		print(f'Fail: Github latest version for `{project}`: {url}')
@@ -240,36 +241,40 @@ async def direct_from_github(owner: str, project: str, session) -> str | None:
 	return url
 
 async def parse_prog(url = None, name = None, session = None, github = False, jetbrains = False):
+	params = None
 
 	if github:
 		author, project = github_map[name]
 		return (name, await direct_from_github(author, project, session))
 
 	elif jetbrains:
-		params = jetbrains_params
+		params = jetbrains_params.copy()
 		params['code'] = url
+		code = url
+		url = jetbrains_api
 
-		response, status, url = await aio.get(jetbrains_api, params = params, toreturn = 'json+status_code+url', session = session, raise_exceptions = True)
-		print(f'{status}: {name} - {url}')
-
-		try:
-			download_url = response["downloads"]["windows"]["link"]
-			return name, download_url
-
-		except (TypeError, KeyError):
-			return
-
-	response = await aio.request('GET', url, toreturn = 'text+status_code', session = session, headers = headers)
+	response = await aio.request('GET', url, toreturn = 'text+status_code', session = session, headers = headers, params = params)
 	if not response:
 		log.warning(f'Failed to fetch {name} url: {response}')
 		return
 
 	data, status = response
 
-	print(f'{status}: {name} - {url}')
+	prefix = '✅' if status == 200 else '⚠️'
+	print(f'{prefix} {status}: {name} - {url}')
 	if status != 200:
 		log.debug(f'[{name}] {response}')
 		return
+
+	if jetbrains:
+		try:
+			response = json.loads(data)[code][0]
+			download_url = response['downloads']['windows']['link']
+			return name, download_url
+
+		except (TypeError, KeyError):
+			log.warning(f'[{name}] Failed to parse JetBrains download URL: {json.dumps(response, indent = 2)}')
+			return
 
 	if name == 'Go':
 		version = json.loads(data)[0]['version'].split('go')[1]
@@ -454,10 +459,10 @@ async def main(repo: Repo):
 	# input(json.dumps(progmap, indent = 2))
 
 	if not new:
-		print('Everything is Up-To-Date!\n')
+		print('🆗 Everything is Up-To-Date!\n')
 		return
 
-	print('New: ' + ', '.join(new))
+	print('🔄️ New: ' + ', '.join(new))
 	txt = progmap_to_txt(progmap)
 	# input(txt)
 
@@ -466,7 +471,7 @@ async def main(repo: Repo):
 
 	# input('\nPress any key to push . . . ')
 	push(repo, 'urls.txt', commit_msg)
-	print('Pushed successfully\n')
+	print('✅ Pushed successfully\n')
 
 if __name__ == '__main__':
 	enhance_loop()
