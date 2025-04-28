@@ -66,7 +66,7 @@ url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_5_0.msi
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download-cdn.jetbrains.com/python/pycharm-professional-2024.1.4.exe
 url_Python=https://www.python.org/ftp/python/3.13.3/python-3.13.3-amd64.exe
-url_qBitTorrent=https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_x64_setup.exe?viasf=1
+url_qBitTorrent=https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_x64_setup.exe?viasf=1
 url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.1.0/qutebrowser-3.1.0-amd64.exe
 url_RegistryFinder=https://registry-finder.com/bin/2.59.0.0/RegistryFinderSetup2.59.exe
 url_Resource_Hacker=https://www.angusj.com/resourcehacker/reshacker_setup.exe
