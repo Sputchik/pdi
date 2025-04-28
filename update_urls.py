@@ -46,7 +46,7 @@ parse_map = {
 	'K-Lite Codec': 'https://www.codecguide.com/download_k-lite_codec_pack_full.htm',
 	'Everything': 'https://www.voidtools.com/',
 	'qBitTorrent': 'https://www.qbittorrent.org/download',
-	'Librewolf': 'https://librewolf.net/installation/windows/',
+	'Librewolf': 'https://gitlab.com/api/v4/projects/44042130/releases',
 	'Blender': 'https://www.blender.org/download/',
 	'OpenSSL': 'https://slproweb.com/download/win32_openssl_hashes.json',
 	'Blender 3.3.X LTS': 'https://www.blender.org/download/lts/3-3/',
@@ -274,6 +274,15 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 	if name == 'Go':
 		version = json.loads(data)[0]['version'].split('go')[1]
 		url = f'https://go.dev/dl/go{version}.windows-amd64.msi'
+		return (name, url)
+
+	elif name == 'Librewolf':
+		latest = json.loads(data)[0]
+		# Emulate github version map
+		version_map = {k['name']: k['url'] for k in latest['assets']['links']}
+		key = extract_versions(version_map)
+		url = version_map[key]
+		return (name, url)
 
 	soup = BeautifulSoup(data, 'lxml')
 
@@ -344,14 +353,6 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 			if elem.text and elem.text.startswith('Download qBittorrent '):
 				version = elem.text.split(' ')[2].lstrip('v')
 				url = f'https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-{version}/qbittorrent_{version}_x64_setup.exe?viasf=1'
-				break
-
-	elif name == 'Librewolf':
-		a_elems = soup.find_all('a')
-
-		for elem in a_elems:
-			url = elem.get('href')
-			if url and url.startswith('https://gitlab.com/'):
 				break
 
 	elif name == 'Blender':
@@ -449,6 +450,7 @@ async def main(repo: Repo):
 	async with niquests.AsyncSession(pool_connections = 100, pool_maxsize = 100) as session:
 		progmap = await parse_github_urls(session)
 		progmap, new = await update_progs(progmap, session)
+
 	# input(json.dumps(progmap, indent = 2))
 
 	if not new:
