@@ -29,6 +29,7 @@ github_map = {
 	'OpenSSH': ('PowerShell', 'Win32-OpenSSH'),
 	'LLVM': ('llvm', 'llvm-project'),
 	'AyuGram': ('AyuGram', 'AyuGramDesktop'),
+	'Git': ('git-for-windows', 'git')
 
 }
 
@@ -37,7 +38,6 @@ parse_map = {
 	'Go': 'https://go.dev/dl/?mode=json',
 	'Gradle': 'https://gradle.org/releases/',
 	'Google_Earth_Pro': 'https://support.google.com/earth/answer/168344?hl=en#zippy=%2Cdownload-a-google-earth-pro-direct-installer',
-	'Git': 'https://git-scm.com/downloads/win',
 	'Bluetooth': 'https://www.intel.com/content/www/us/en/download/18649/intel-wireless-bluetooth-drivers-for-windows-10-and-windows-11.html',
 	'WiFi': 'https://www.intel.com/content/www/us/en/download/19351/intel-wireless-wi-fi-drivers-for-windows-10-and-windows-11.html',
 	'Python': 'https://www.python.org/downloads/',
@@ -366,15 +366,6 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 		for elem in a_elems:
 			title = elem.get('title')
 			if title and title == 'Download Blender for Windows Installer':
-				url = elem.get('href')
-				break
-
-	elif name == 'Git':
-		a_elems = soup.find_all('a')
-
-		for elem in a_elems:
-			text = elem.text
-			if text and text == '64-bit Git for Windows Setup':
 				url = elem.get('href')
 				break
 
