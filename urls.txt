@@ -27,7 +27,7 @@ url_3uTools=https://url.3u.com/zmAJjyaa
 url_7-Zip=https://github.com/ip7z/7zip/releases/download/24.09/7z2409-x64.msi
 url_Autoruns=https://download.sysinternals.com/files/Autoruns.zip
 url_Avidemux=https://www.dropbox.com/scl/fi/nzxbti6br7o7vegkegiyz/AviDemux.exe?rlkey=mfzxwa8dqai53uuc22grqtxry&st=ofqskatg&dl=1
-url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.12.3/AyuGram.exe
+url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.14.3/AyuGram.exe
 url_Blender=https://www.blender.org/download/release/Blender4.4/blender-4.4.3-windows-x64.msi/
 url_Blender_3.3.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.3/blender-3.3.21-windows-x64.msi
 url_Blender_3.6.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.6/blender-3.6.22-windows-x64.msi
@@ -52,7 +52,7 @@ url_iMazing=https://downloads.imazing.com/windows/iMazing/iMazing3forWindows.exe
 url_IntelliJ_IDEA=https://download.jetbrains.com/idea/ideaIU-2025.1.1.1.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1890_Full.exe
-url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/138.0.3-1/librewolf-138.0.3-1-windows-x86_64-setup.exe
+url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/138.0.4-1/librewolf-138.0.4-1-windows-x86_64-setup.exe
 url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.5/LLVM-20.1.5-win64.exe
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe
