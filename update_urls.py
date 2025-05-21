@@ -73,7 +73,7 @@ if not os.path.exists('token'):
 	open('token', 'w').write(access_token)
 
 else:
-	access_token = open('token', 'r').read()
+	access_token = open('token', 'r').read().strip()
 
 remote_url = f"https://{access_token}@github.com/Sputchik/pdi.git"
 os.chdir(cwd)
