@@ -1,6 +1,6 @@
 Categories=General_Dependencies;Messengers;Coding;Browsers;Apple;Misc;Cracked;Games
 
-General_Dependencies=.NET_Framework_3.5;Bluetooth;DirectX_Runtimes;EdgeWebView2;FFmpeg;Git;Go;Gradle;LLVM;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;WiFi;WinSCP
+General_Dependencies=.NET_Framework_3.5;Bluetooth;DirectX_Runtimes;EdgeWebView2;ExifTool;FFmpeg;Git;Go;Gradle;LibAvif;LLVM;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;WiFi;WinSCP
 Messengers=AyuGram;Discord;Telegram;Telegram_Portable;Viber
 Coding=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
@@ -10,8 +10,8 @@ Cracked=MediaHuman;Revo_Uninstaller_Pro
 Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
 
 msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;Cloudflare_WARP;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH;OpenSSL;WinDirStat;WinSCP
-zip=Autoruns;FFmpeg;Gradle;Gradle;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
-zipm=Gradle;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
+zip=Autoruns;FFmpeg;Gradle;Gradle;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB;LibAvif;ExifTool
+zipm=Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=AyuGram;ContextMenuManager;NVCleanstall;Rufus
 
 Flagged_VerySilent=Git;iMazing;K-Lite_Codec;Process_Hacker;RegistryFinder;Resource_Hacker;Revo_Uninstaller_Pro;Sublime_Text;Telegram;VSCode
@@ -40,6 +40,7 @@ url_Discord=https://discord.com/api/downloads/distributions/app/installers/lates
 url_EdgeWebView2=https://go.microsoft.com/fwlink/?linkid=2124701
 url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi
 url_Everything=https://voidtools.com/Everything-1.4.1.1027.x64-Setup.exe
+url_ExifTool=https://exiftool.org/exiftool-13.30_64.zip
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
@@ -53,6 +54,7 @@ url_IntelliJ_IDEA=https://download.jetbrains.com/idea/ideaIU-2025.1.1.1.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1895_Full.exe
 url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/138.0.4-1/librewolf-138.0.4-1-windows-x86_64-setup.exe
+url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/latest/download/windows-artifacts.zip
 url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.5/LLVM-20.1.5-win64.exe
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe

@@ -9,11 +9,12 @@ from sputchedtools import aio, enhance_loop, setup_logger
 from datetime import datetime
 from bs4 import BeautifulSoup
 from git import Repo
+# from typenodes import TypeNode
 
 log = setup_logger('up', clear_file=True)
 cwd = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/') + '/'
 urls_path = cwd + 'urls.txt'
-github_latest_draft = 'https://api.github.com/repos/{}/{}/releases/latest' # Owner, Repo Slug
+github_latest_draft = 'https://api.github.com/repos/{}/{}/releases?per_page=3' # Owner, Repo Slug
 urls_link = 'https://raw.githubusercontent.com/Sputchik/pdi/refs/heads/main/urls.txt'
 
 github_map = {
@@ -29,7 +30,8 @@ github_map = {
 	'OpenSSH': ('PowerShell', 'Win32-OpenSSH'),
 	'LLVM': ('llvm', 'llvm-project'),
 	'AyuGram': ('AyuGram', 'AyuGramDesktop'),
-	'Git': ('git-for-windows', 'git')
+	'Git': ('git-for-windows', 'git'),
+	'LibAvif': ('AOMediaCodec', 'libavif')
 
 }
 
@@ -51,7 +53,8 @@ parse_map = {
 	'OpenSSL': 'https://slproweb.com/download/win32_openssl_hashes.json',
 	'Blender 3.3.X LTS': 'https://www.blender.org/download/lts/3-3/',
 	'Blender 3.6.X LTS': 'https://www.blender.org/download/lts/3-6/',
-	'WinSCP': 'https://winscp.net/eng/downloads.php'
+	'WinSCP': 'https://winscp.net/eng/downloads.php',
+	'ExifTool': 'https://exiftool.org/'
 
 }
 
@@ -84,6 +87,8 @@ github_headers = {
 	'Authorization': f'Bearer {access_token}'
 }
 remote_url = 'https://github.com/Sputchik/pdi.git'
+
+# gtihub_node = TypeNode.create(None)
 
 headers = {
 	# 'User-Agent': ua_generator.generate('desktop', 'windows', 'firefox').text,
@@ -150,8 +155,8 @@ def progmap_to_txt(progmap):
 	return result
 
 async def parse_github_urls(session) -> dict:
-	# data = await aio.open(cwd + 'urls.txt')
-	data = await aio.get(urls_link, session = session, toreturn = 'text')
+	data = await aio.open(cwd + 'urls.txt')
+	# data = await aio.get(urls_link, session = session, toreturn = 'text')
 	if not data:
 		log.warning(f'Failed to fetch urls.txt: {data}')
 
@@ -172,14 +177,16 @@ async def parse_github_urls(session) -> dict:
 	log.debug(f'Parsed prog map: {json.dumps(progmap, indent = 2)}')
 	return progmap
 
-def extract_versions(versions: dict[str, str]) -> str:
+def find_best_executable(versions: dict[str, str]) -> str:
 	preferred_exe = None
 	selected_exe = False
 	preferred_msi = None
+	fallback_zip = None
 
 	for key in versions:
 		lowered = key.lower()
 		if 'arm' in lowered:
+			log.debug(f'Armed: {lowered}')
 			continue
 
 		if key.endswith('.msi'):
@@ -201,9 +208,14 @@ def extract_versions(versions: dict[str, str]) -> str:
 				preferred_exe = key
 			elif not preferred_exe:
 				preferred_exe = key
+			
+		elif key.endswith('.zip'):
+			if 'windows' in key:
+				log.debug(f'ZIP Fallback: {key}')
+				fallback_zip = key
 
-	url = preferred_msi or preferred_exe
-	return url
+	file_name = preferred_msi or preferred_exe or fallback_zip
+	return versions.get(file_name)
 
 async def direct_from_github(owner: str, project: str, session) -> str | None:
 	url = github_latest_draft.format(owner, project)
@@ -219,25 +231,31 @@ async def direct_from_github(owner: str, project: str, session) -> str | None:
 		log.warning(f'Failed to fetch {project} latest version: {response}')
 		return
 
-	data, status = response
+	versions, status = response
 
 	prefix = '✅' if status == 200 else '⚠️'
 	print(f'{prefix} {status}: {project} - {url}')
 
-	if status != 200 or not isinstance(data, dict) or 'assets' not in data:
+	if status != 200 or not isinstance(versions, list):
 		print(f'Fail: Github latest version for `{project}`: {url}')
 		return
 
-	assets = data['assets']
-	version_map = {unpack['name']: unpack['browser_download_url'] for unpack in assets}
-	key = extract_versions(version_map)
+	url = None
+	for version in versions:
+		assets = version['assets']
+		version_map = {unpack['name']: unpack['browser_download_url'] for unpack in assets}
+		url = find_best_executable(version_map)
 
-	if not key or key not in version_map:
+		if not url:
+			continue
+
+		log.debug(f'[{project}] Parsed best executable URL: {url}')
+		break
+		
+	if url is None:
 		input(f'[Fail]: {owner}-{project} Github version extraction')
-		return
+		log.debug(f'[{project}] {versions}')
 
-	url = version_map[key]
-	log.debug(f'[{project}] Parsed best executable URL: {url}')
 	return url
 
 async def parse_prog(url = None, name = None, session = None, github = False, jetbrains = False):
@@ -285,8 +303,7 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 		latest = json.loads(data)[0]
 		# Emulate github version map
 		version_map = {k['name']: k['url'] for k in latest['assets']['links']}
-		key = extract_versions(version_map)
-		url = version_map[key]
+		url = find_best_executable(version_map)
 		return (name, url)
 
 	soup = BeautifulSoup(data, 'lxml')
@@ -401,9 +418,18 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 				url = f'https://deac-riga.dl.sourceforge.net/project/winscp/WinSCP/{version}/WinSCP-{version}-Setup.msi?viasf=1'
 				break
 
+	elif name == 'ExifTool':
+		a_elems = soup.find_all('a')
+
+		for elem in a_elems:
+			href = elem.get('href')
+			if href and url.endswith('64.zip'):
+				url = f'https://exiftool.org/{href}'
+				break
+	
 	else: return
 
-	log.debug(f'[{name}] Parsed best executable URL: {url}')
+	log.debug(f'[{name}] Parsed best URL: {url}')
 	return (name, url)
 
 async def update_progs(progmap, session):
@@ -470,4 +496,5 @@ if __name__ == '__main__':
 	while True:
 		print(f'[{datetime.now()}]')
 		asyncio.run(main(repo))
+		# print(gtihub_node.to_ready_typing())
 		time.sleep(3600)

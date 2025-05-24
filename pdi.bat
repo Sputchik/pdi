@@ -192,7 +192,7 @@ goto :eof
 :FetchURLs
 
 curl -A "%UserAgent%" -s %URLsURL% -o "%urlPath%"
-:: set "urlPath=urls.txt"
+@REM set "urlPath=urls.txt"
 for /f "usebackq tokens=1* delims==" %%G in ("%urlPath%") do (
 	set "%%G=%%H"
 )
@@ -382,7 +382,7 @@ if %DoneAll% == 1 (
 	) else if !ErrorLevel! == 2 ( goto :Start
 	) else if !ErrorLevel! == 3 (
 		echo.
-		del /Q "%DLPath%\*" 2>nul
+		del /F /Q /S "%DLPath%\*" 2>nul
 
 	) else if !ErrorLevel! == 4 ( call :MovePrograms )
 
@@ -421,7 +421,7 @@ if %~2 == 0 (
 	cd "%DLPath%"
 	call :%~1
 	cd "%CWD%"
-	timeout /T 1
+	timeout /T 5
 )
 
 goto :eof
@@ -454,24 +454,36 @@ goto :eof
 if exist "Autoruns.zip" (
 	echo Installing Autoruns...
 	call :Extract "Autoruns"
-	xcopy /Q /Y "Autoruns\Autoruns64.exe" "%PF%\Autoruns\"
+	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /MOVE "Autoruns" "%PF%\Autoruns" "Autoruns64.exe"
 	rmdir /S /Q "Autoruns"
 	call :CreateShortcut "%PF%\Autoruns\Autoruns64.exe" "Autoruns"
 )
 if exist "Gradle.zip" (
 	echo Installing Gradle...
-	xcopy /E /I /Q /Y "Gradle\" "C:\Gradle\"
-	rmdir /S /Q "Gradle"
+	call :Extract "Gradle"
+	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "Gradle" "C:\Gradle"
 )
 if exist "FFmpeg.zip" (
 	echo Installing FFmpeg...
 	tar -xf "FFmpeg.zip"
-	ren "ffmpeg-master-latest-win64-gpl" "FFmpeg"
-	xcopy /E /I /Q /Y "FFmpeg\" "%PF%\FFmpeg\"
-	rmdir /S /Q "FFmpeg"
+	move "ffmpeg-*" "FFmpeg"
+	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "FFmpeg" "%PF%\FFmpeg"
 	call :SetPath "%PF%\FFmpeg\bin\"
 )
-
+if exist "LibAvif.zip" (
+	echo Installing LibAvif...
+	call :Extract "LibAvif"
+	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "LibAvif" "%PF%\LibAvif"
+	call :SetPath "%PF%\LibAvif\"
+)
+if exist "ExifTool.zip" (
+	echo Installing ExifTool
+	tar -xf "ExifTool.zip"
+	move "exiftool-*" "exiftool"
+	move "exiftool\exiftool(-k).exe" "exiftool\exiftool.exe"
+	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "exiftool" "%PF%\ExifTool"
+	call :SetPath "%PF%\ExifTool\"
+)
 for %%G in (!zipm!) do (
 	set "progName=%%G"
 	set "progName=!progName:_= !"
