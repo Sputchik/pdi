@@ -5,7 +5,7 @@ import os
 import time
 # import ua_generator
 
-from sputchedtools import aio, enhance_loop, setup_logger
+from sputchedtools import aio, enhance_loop, setup_logger, Anim, AnimChars
 from datetime import datetime
 from bs4 import BeautifulSoup
 from git import Repo
@@ -155,8 +155,8 @@ def progmap_to_txt(progmap):
 	return result
 
 async def parse_github_urls(session) -> dict:
-	data = await aio.open(cwd + 'urls.txt')
-	# data = await aio.get(urls_link, session = session, toreturn = 'text')
+	# data = await aio.open(cwd + 'urls.txt')
+	data = await aio.get(urls_link, session = session, toreturn = 'text')
 	if not data:
 		log.warning(f'Failed to fetch urls.txt: {data}')
 
@@ -423,13 +423,17 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 
 		for elem in a_elems:
 			href = elem.get('href')
-			if href and url.endswith('64.zip'):
+			if href and href.endswith('64.zip'):
 				url = f'https://exiftool.org/{href}'
 				break
 	
 	else: return
 
-	log.debug(f'[{name}] Parsed best URL: {url}')
+	if not url:
+		log.warning(f'[{name}] Didn\'t find any URL')
+	else:
+		log.debug(f'[{name}] Parsed best URL: {url}')
+	
 	return (name, url)
 
 async def update_progs(progmap, session):
@@ -464,13 +468,17 @@ def push(repo: Repo, file, commit_msg):
 	repo.remotes.origin.push()
 
 async def main(repo: Repo):
+	a.start()
 	repo.remotes.origin.pull()
 
 	# input(json.dumps(progmap, indent = 2))
 	# input(progmap_to_txt(progmap))
 
+	a.lap('Preparing session...')
 	async with niquests.AsyncSession(pool_connections = 100, pool_maxsize = 100) as session:
+		a.lap('Fetching progmap...')
 		progmap = await parse_github_urls(session)
+		a.stop()
 		progmap, new = await update_progs(progmap, session)
 
 	# input(json.dumps(progmap, indent = 2))
@@ -492,9 +500,13 @@ async def main(repo: Repo):
 
 if __name__ == '__main__':
 	enhance_loop()
+	a = Anim('Pulling repository...', chars = AnimChars.slash, delay = 0.2)
 
 	while True:
 		print(f'[{datetime.now()}]')
 		asyncio.run(main(repo))
+		if not a.done:
+			a.stop()
+		
 		# print(gtihub_node.to_ready_typing())
 		time.sleep(3600)
