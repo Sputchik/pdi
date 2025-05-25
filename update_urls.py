@@ -451,14 +451,14 @@ async def update_progs(progmap, session):
 	parsed_data = [result for result in results if isinstance(result, tuple)]
 	print()
 
-	new = set()
+	new = []
 	for prog, url in parsed_data:
 		if not url:
 			print(f'Skipping: {prog}')
 
 		elif progmap['urls'].get(prog) != url:
 			progmap['urls'][prog] = url
-			new.add(prog)
+			new.append([prog, url])
 
 	return progmap, new
 
@@ -487,12 +487,13 @@ async def main(repo: Repo):
 		print('🆗 Everything is Up-To-Date!\n')
 		return
 
-	print('🔄️ New: ' + ', '.join(new))
+	new_read = ', '.join(f'{prog} ({ver})' for prog, ver in new)
+	print(f'🔄️ New: {new_read}' )
 	txt = progmap_to_txt(progmap)
 	# input(txt)
 
 	await aio.open(urls_path, 'write', 'w', txt)
-	commit_msg = 'Update urls.txt: ' + ', '.join(new)
+	commit_msg = f'Update urls.txt: {new_read}' 
 
 	# input('\nPress any key to push . . . ')
 	push(repo, 'urls.txt', commit_msg)
