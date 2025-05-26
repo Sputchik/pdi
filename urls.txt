@@ -73,7 +73,7 @@ url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.
 url_RegistryFinder=https://registry-finder.com/bin/2.60.0.0/RegistryFinderSetup2.60.exe
 url_Resource_Hacker=https://www.angusj.com/resourcehacker/reshacker_setup.exe
 url_Revo_Uninstaller_Pro=https://www.dropbox.com/scl/fi/9nc9khsw8wobjhd8rt2xk/RevoUninstallerPro.exe?rlkey=48mvmd79eazgmbqdkrnyaabjq&st=1mte3l8n&dl=1
-url_Rufus=https://github.com/pbatard/rufus/releases/download/v4.7/rufus-4.7.exe
+url_Rufus=https://github.com/pbatard/rufus/releases/download/v4.8_BETA/rufus-4.8_BETA.exe
 url_Sideloadly=https://sideloadly.io/SideloadlySetup64.exe
 url_Steam=https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe
 url_Sublime_Text=https://download.sublimetext.com/sublime_text_build_4169_x64_setup.exe
