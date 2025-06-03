@@ -12,8 +12,10 @@ from git import Repo
 # from typenodes import TypeNode
 
 log = setup_logger('up', clear_file=True)
-cwd = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/') + '/'
-urls_path = cwd + 'urls.txt'
+
+CWD = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/') + '/'
+urls_path = CWD + 'urls.txt'
+
 github_latest_draft = 'https://api.github.com/repos/{}/{}/releases?per_page=3' # Owner, Repo Slug
 urls_link = 'https://raw.githubusercontent.com/Sputchik/pdi/refs/heads/main/urls.txt'
 
@@ -78,15 +80,15 @@ if not os.path.exists('token'):
 else:
 	access_token = open('token', 'r').read().strip()
 
-remote_url = f"https://{access_token}@github.com/Sputchik/pdi.git"
-os.chdir(cwd)
-repo = Repo(cwd)
-repo.remotes.origin.set_url(remote_url)
+pdi_git = f"https://{access_token}@github.com/Sputchik/pdi.git"
+os.chdir(CWD)
+repo = Repo(CWD)
+repo.remotes.origin.set_url(pdi_git)
 
 github_headers = {
 	'Authorization': f'Bearer {access_token}'
 }
-remote_url = 'https://github.com/Sputchik/pdi.git'
+pdi_git = 'https://github.com/Sputchik/pdi.git'
 
 # gtihub_node = TypeNode.create(None)
 
@@ -487,8 +489,9 @@ async def main(repo: Repo):
 		print('🆗 Everything is Up-To-Date!\n')
 		return
 
-	new_read = ', '.join(f'{prog} ({ver})' for prog, ver in new)
-	print(f'🔄️ New: {new_read}' )
+	new_read = ', '.join(f'{prog}' for prog, _ in new)
+	print(f'🔄️ New: {"\n".join(f"{prog}: {url}" for prog, url in new)}\n')
+
 	txt = progmap_to_txt(progmap)
 	# input(txt)
 
