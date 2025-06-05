@@ -45,9 +45,9 @@ url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/
 url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
 url_Git=https://github.com/git-for-windows/git/releases/download/v2.50.0-rc1.windows.1/Git-2.50.0-rc1-64-bit.exe
-url_Go=https://go.dev/dl/go1.24.3.windows-amd64.msi
+url_Go=https://go.dev/dl/go1.24.4.windows-amd64.msi
 url_Google_Earth_Pro=https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe?sjid=6101201665916555278-EU
-url_Gradle=https://services.gradle.org/distributions/gradle-7.6.5-bin.zip
+url_Gradle=https://services.gradle.org/distributions/gradle-8.14.2-bin.zip
 url_iCloud=https://secure-appldnld.apple.com/windows/061-91601-20200323-974a39d0-41fc-4761-b571-318b7d9205ed/iCloudSetup.exe
 url_iMazing=https://downloads.imazing.com/windows/iMazing/iMazing3forWindows.exe
 url_IntelliJ_IDEA=https://download.jetbrains.com/idea/ideaIU-2025.1.2.exe
