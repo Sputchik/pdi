@@ -93,7 +93,7 @@ url_WiFi=https://downloadmirror.intel.com/856917/WiFi-23.140.0-Driver64-Win10-Wi
 url_Windhawk=https://ramensoftware.com/downloads/windhawk_setup.exe
 url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download/WinDirStat-x64.msi
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
-url_WinSCP=https://deac-riga.dl.sourceforge.net/project/winscp/WinSCP/6.5.1/WinSCP-6.5.1-Setup.msi?viasf=1
+url_WinSCP=https://deac-riga.dl.sourceforge.net/project/winscp/WinSCP/6.5.2/WinSCP-6.5.2-Setup.msi?viasf=1
 url_WinThumbsPreloader=https://github.com/bruhov/WinThumbsPreloader/releases/download/v1.0.1/WinThumbsPreloader-1.0.1-setup.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
