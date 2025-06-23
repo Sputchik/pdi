@@ -45,7 +45,7 @@ parse_map = {
 	'Bluetooth': 'https://www.intel.com/content/www/us/en/download/18649/intel-wireless-bluetooth-drivers-for-windows-10-and-windows-11.html',
 	'WiFi': 'https://www.intel.com/content/www/us/en/download/19351/intel-wireless-wi-fi-drivers-for-windows-10-and-windows-11.html',
 	'Python': 'https://www.python.org/downloads/',
-	'Node.js': 'https://nodejs.org/en',
+	'Node.js': 'https://nodejs.org/en/download/current',
 	'NVCleanstall': 'https://nvcleanstall.net/download',
 	'K-Lite Codec': 'https://www.codecguide.com/download_k-lite_codec_pack_full.htm',
 	'Everything': 'https://www.voidtools.com/',
@@ -344,10 +344,8 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 		a_elems = soup.find_all('b')
 
 		for elem in a_elems:
-			a = elem.find('a')
-			if a:
-				version = a.text
-				url = f'https://nodejs.org/dist/{version}/node-{version}-x64.msi'
+			url = elem.get('href')
+			if url and url.endswith('x64.msi'):
 				break
 
 	elif name == 'NVCleanstall':
