@@ -40,11 +40,11 @@ url_Discord=https://discord.com/api/downloads/distributions/app/installers/lates
 url_EdgeWebView2=https://go.microsoft.com/fwlink/?linkid=2124701
 url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi
 url_Everything=https://voidtools.com/Everything-1.4.1.1028.x64-Setup.exe
-url_ExifTool=https://exiftool.org/exiftool-13.31_64.zip
+url_ExifTool=https://exiftool.org/exiftool-13.32_64.zip
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
-url_Git=https://github.com/git-for-windows/git/releases/download/v2.50.0.windows.1/Git-2.50.0-64-bit.exe
+url_Git=https://github.com/git-for-windows/git/releases/download/v2.50.0.windows.2/Git-2.50.0.2-64-bit.exe
 url_Go=https://go.dev/dl/go1.24.4.windows-amd64.msi
 url_Google_Earth_Pro=https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe?sjid=6101201665916555278-EU
 url_Gradle=https://services.gradle.org/distributions/gradle-8.14.2-bin.zip
@@ -64,11 +64,11 @@ url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setu
 url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.19.0.exe
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/31.0.4/OBS-Studio-31.0.4-Windows-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.8.3.0p2-Preview/OpenSSH-Win64-v9.8.3.0.msi
-url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_5_0.msi
+url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_5_1.msi
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download.jetbrains.com/python/pycharm-2025.1.2.exe
 url_Python=https://www.python.org/ftp/python/3.13.5/python-3.13.5-amd64.exe
-url_qBitTorrent=https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_x64_setup.exe?viasf=1
+url_qBitTorrent=https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe?viasf=1
 url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.1.0/qutebrowser-3.1.0-amd64.exe
 url_RegistryFinder=https://registry-finder.com/bin/2.60.0.0/RegistryFinderSetup2.60.exe
 url_Resource_Hacker=https://www.angusj.com/resourcehacker/reshacker_setup.exe
