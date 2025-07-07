@@ -24,7 +24,7 @@ Flags=passive;Q;quiet;S;VERYSILENT
 
 url_.NET_Framework_3.5=http://download.microsoft.com/download/6/0/f/60fc5854-3cb8-4892-b6db-bd4f42510f28/dotnetfx35.exe
 url_3uTools=https://url.3u.com/zmAJjyaa
-url_7-Zip=https://github.com/ip7z/7zip/releases/download/24.09/7z2409-x64.msi
+url_7-Zip=https://github.com/ip7z/7zip/releases/download/25.00/7z2500-x64.msi
 url_Autoruns=https://download.sysinternals.com/files/Autoruns.zip
 url_Avidemux=https://www.dropbox.com/scl/fi/nzxbti6br7o7vegkegiyz/AviDemux.exe?rlkey=mfzxwa8dqai53uuc22grqtxry&st=ofqskatg&dl=1
 url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.14.3/AyuGram.exe
