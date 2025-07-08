@@ -62,7 +62,7 @@ url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInst
 url_Node.js=https://nodejs.org/dist/v24.2.0/node-v24.2.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.19.0.exe
-url_OBS=https://github.com/obsproject/obs-studio/releases/download/31.0.4/OBS-Studio-31.0.4-Windows-Installer.exe
+url_OBS=https://github.com/obsproject/obs-studio/releases/download/31.1.0/OBS-Studio-31.1.0-Windows-x64-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.8.3.0p2-Preview/OpenSSH-Win64-v9.8.3.0.msi
 url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_5_1.msi
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
