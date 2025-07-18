@@ -28,7 +28,7 @@ url_7-Zip=https://github.com/ip7z/7zip/releases/download/25.00/7z2500-x64.msi
 url_Autoruns=https://download.sysinternals.com/files/Autoruns.zip
 url_Avidemux=https://www.dropbox.com/scl/fi/nzxbti6br7o7vegkegiyz/AviDemux.exe?rlkey=mfzxwa8dqai53uuc22grqtxry&st=ofqskatg&dl=1
 url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.14.3/AyuGram.exe
-url_Blender=https://www.blender.org/download/release/Blender4.4/blender-4.4.3-windows-x64.msi/
+url_Blender=https://www.blender.org/download/release/Blender4.5/blender-4.5.0-windows-x64.msi/
 url_Blender_3.3.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.3/blender-3.3.21-windows-x64.msi
 url_Blender_3.6.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.6/blender-3.6.23-windows-x64.msi
 url_Bluetooth=https://downloadmirror.intel.com/856701/BT-23.140.0-64UWD-Win10-Win11.exe
@@ -54,8 +54,8 @@ url_IntelliJ_IDEA=https://download.jetbrains.com/idea/ideaIU-2025.1.3.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1905_Full.exe
 url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/download/v1.3.0/windows-artifacts.zip
-url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/140.0.2-1/librewolf-140.0.2-1-windows-x86_64-setup.exe
-url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/LLVM-20.1.8-win64.exe
+url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/140.0.4-1/librewolf-140.0.4-1-windows-x86_64-setup.exe
+url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.0-rc1/LLVM-21.1.0-rc1-win64.exe
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe
 url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.msi
@@ -93,7 +93,7 @@ url_WiFi=https://downloadmirror.intel.com/856917/WiFi-23.140.0-Driver64-Win10-Wi
 url_Windhawk=https://ramensoftware.com/downloads/windhawk_setup.exe
 url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download/WinDirStat-x64.msi
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
-url_WinSCP=https://deac-riga.dl.sourceforge.net/project/winscp/WinSCP/6.5.2/WinSCP-6.5.2-Setup.msi?viasf=1
+url_WinSCP=https://deac-riga.dl.sourceforge.net/project/winscp/WinSCP/6.5.3/WinSCP-6.5.3-Setup.msi?viasf=1
 url_WinThumbsPreloader=https://github.com/bruhov/WinThumbsPreloader/releases/download/v1.0.1/WinThumbsPreloader-1.0.1-setup.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
