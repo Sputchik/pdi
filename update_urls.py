@@ -16,7 +16,7 @@ log = setup_logger('up', clear_file=True)
 CWD = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/') + '/'
 urls_path = CWD + 'urls.txt'
 
-github_latest_draft = 'https://api.github.com/repos/{}/{}/releases?per_page=3' # Owner, Repo Slug
+github_latest_draft = 'https://api.github.com/repos/{}/{}/releases?per_page=5' # Owner, Repo Slug
 urls_link = 'https://raw.githubusercontent.com/Sputchik/pdi/refs/heads/main/urls.txt'
 
 github_map = {
@@ -210,7 +210,7 @@ def find_best_executable(versions: dict[str, str]) -> str:
 				preferred_exe = key
 			elif not preferred_exe:
 				preferred_exe = key
-			
+
 		elif key.endswith('.zip'):
 			if 'windows' in key:
 				log.debug(f'ZIP Fallback: {key}')
@@ -253,7 +253,7 @@ async def direct_from_github(owner: str, project: str, session) -> str | None:
 
 		log.debug(f'[{project}] Parsed best executable URL: {url}')
 		break
-		
+
 	if url is None:
 		input(f'[Fail]: {owner}-{project} Github version extraction')
 		log.debug(f'[{project}] {versions}')
@@ -423,17 +423,17 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 
 		for elem in a_elems:
 			href = elem.get('href')
-			if href and href.endswith('64.zip'):
+			if href and '_64.zip' in href:
 				url = f'https://exiftool.org/{href}'
 				break
-	
+
 	else: return
 
 	if not url:
 		log.warning(f'[{name}] Didn\'t find any URL')
 	else:
 		log.debug(f'[{name}] Parsed best URL: {url}')
-	
+
 	return (name, url)
 
 async def update_progs(progmap, session):
@@ -494,7 +494,7 @@ async def main(repo: Repo):
 	# input(txt)
 
 	await aio.open(urls_path, 'write', 'w', txt)
-	commit_msg = f'Update urls.txt: {new_read}' 
+	commit_msg = f'Update urls.txt: {new_read}'
 
 	# input('\nPress any key to push . . . ')
 	push(repo, 'urls.txt', commit_msg)
@@ -509,6 +509,6 @@ if __name__ == '__main__':
 		asyncio.run(main(repo))
 		if not a.done:
 			a.stop()
-		
+
 		# print(gtihub_node.to_ready_typing())
 		time.sleep(3600)
