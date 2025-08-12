@@ -31,7 +31,7 @@ url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.14.3/
 url_Blender=https://www.blender.org/download/release/Blender4.5/blender-4.5.1-windows-x64.msi/
 url_Blender_3.3.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.3/blender-3.3.21-windows-x64.msi
 url_Blender_3.6.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.6/blender-3.6.23-windows-x64.msi
-url_Bluetooth=https://downloadmirror.intel.com/860916/BT-23.150.0-64UWD-Win10-Win11.exe
+url_Bluetooth=https://downloadmirror.intel.com/862107/BT-23.160.0-64UWD-Win10-Win11.exe
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
 url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.NET.3.5.exe
 url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-win64.msi
@@ -54,7 +54,7 @@ url_IntelliJ_IDEA=https://download.jetbrains.com/idea/ideaIU-2025.2.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1910_Full.exe
 url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/download/v1.3.0/windows-artifacts.zip
-url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/141.0.2-1/librewolf-141.0.2-1-windows-x86_64-setup.exe
+url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/141.0.3-1/librewolf-141.0.3-1-windows-x86_64-setup.exe
 url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.0-rc2/LLVM-21.1.0-rc2-woa64.exe
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe
