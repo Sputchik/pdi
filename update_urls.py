@@ -1,16 +1,16 @@
 import niquests
 import asyncio
-import json
 import os
 import time
 # import ua_generator
 
-from sputchedtools import aio, enhance_loop, setup_logger, Anim, AnimChars
+from sputchedtools import aio, enhance_loop, setup_logger, Anim, AnimChars, JSON
 from datetime import datetime
 from bs4 import BeautifulSoup
 from git import Repo
 # from typenodes import TypeNode
 
+JSON = JSON()
 log = setup_logger('up', clear_file=True)
 
 CWD = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/') + '/'
@@ -45,7 +45,7 @@ parse_map = {
 	'Bluetooth': 'https://www.intel.com/content/www/us/en/download/18649/intel-wireless-bluetooth-drivers-for-windows-10-and-windows-11.html',
 	'WiFi': 'https://www.intel.com/content/www/us/en/download/19351/intel-wireless-wi-fi-drivers-for-windows-10-and-windows-11.html',
 	'Python': 'https://www.python.org/downloads/',
-	'Node.js': 'https://nodejs.org/en/download/current',
+	'Node.js': 'https://nodejs.org/dist/index.json',
 	'NVCleanstall': 'https://nvcleanstall.net/download',
 	'K-Lite Codec': 'https://www.codecguide.com/download_k-lite_codec_pack_full.htm',
 	'Everything': 'https://www.voidtools.com/',
@@ -176,7 +176,7 @@ async def parse_github_urls(session) -> dict:
 		}.items(), key = lambda x: (x[0].lower(), x[1:])))
 	}
 
-	log.debug(f'Parsed prog map: {json.dumps(progmap, indent = 2)}')
+	# log.debug(f'Parsed prog map: {json.dumps(progmap, indent = 2)}')
 	return progmap
 
 def find_best_executable(versions: dict[str, str]) -> str:
@@ -288,21 +288,21 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 
 	if jetbrains:
 		try:
-			response = json.loads(data)[code][0]
+			response = JSON.parse(data)[code][0]
 			download_url = response['downloads']['windows']['link']
 			return name, download_url
 
 		except (TypeError, KeyError):
-			log.warning(f'[{name}] Failed to parse JetBrains download URL: {json.dumps(response, indent = 2)}')
+			log.warning(f'[{name}] Failed to parse JetBrains download URL: {JSON.stringify(response, indent = 2)}')
 			return
 
 	if name == 'Go':
-		version = json.loads(data)[0]['version'].split('go')[1]
+		version = JSON.parse(data)[0]['version'].split('go')[1]
 		url = f'https://go.dev/dl/go{version}.windows-amd64.msi'
 		return (name, url)
 
 	elif name == 'Librewolf':
-		latest = json.loads(data)[0]
+		latest = JSON.parse(data)[0]
 		# Emulate github version map
 		version_map = {k['name']: k['url'] for k in latest['assets']['links']}
 		url = find_best_executable(version_map)
@@ -341,12 +341,9 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 		url = f'https://www.python.org/ftp/python/{version}/python-{version}-amd64.exe'
 
 	elif name == 'Node.js':
-		a_elems = soup.find_all('b')
-
-		for elem in a_elems:
-			url = elem.get('href')
-			if url and url.endswith('x64.msi'):
-				break
+		data = JSON.parse(data)
+		version = data[0]['version']
+		url = f'https://nodejs.org/dist/{version}/node-{version}-x64.msi'
 
 	elif name == 'NVCleanstall':
 		a = soup.find('a', class_ = 'btn btn btn-info my-5')
@@ -387,7 +384,7 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 				break
 
 	elif name == 'OpenSSL':
-		data = json.loads(data)
+		data = JSON.parse(data)
 		vers = list(data['files'].keys())
 		vers.reverse()
 
@@ -471,7 +468,7 @@ async def main(repo: Repo):
 	a.start()
 	repo.remotes.origin.pull()
 
-	# input(json.dumps(progmap, indent = 2))
+	# input(JSON.stringify(progmap, indent = 2))
 	# input(progmap_to_txt(progmap))
 
 	a.lap('Preparing session...')
@@ -481,7 +478,7 @@ async def main(repo: Repo):
 		a.stop()
 		progmap, new = await update_progs(progmap, session)
 
-	# input(json.dumps(progmap, indent = 2))
+	# input(JSON.stringify(progmap, indent = 2))
 
 	if not new:
 		print('🆗 Everything is Up-To-Date!\n')
