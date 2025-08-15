@@ -55,11 +55,11 @@ url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1915_Full.exe
 url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/download/v1.3.0/windows-artifacts.zip
 url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/141.0.3-1/librewolf-141.0.3-1-windows-x86_64-setup.exe
-url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.0-rc2/LLVM-21.1.0-rc2-woa64.exe
+url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.0-rc3/LLVM-21.1.0-rc3-woa64.exe
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe
 url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.msi
-url_Node.js=https://nodejs.org/dist/v24.5.0/node-v24.5.0-x64.msi
+url_Node.js=https://nodejs.org/dist/v24.6.0/node-v24.6.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.19.0.exe
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/31.1.2/OBS-Studio-31.1.2-Windows-x64-Installer.exe
