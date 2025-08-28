@@ -14,7 +14,7 @@ zip=Autoruns;ExifTool;FFmpeg;Gradle;Gradle;LibAvif;Telegram_Portable;ThrottleSto
 zipm=Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=AyuGram;ContextMenuManager;NVCleanstall;Rufus
 
-Flagged_VerySilent=Git;iMazing;K-Lite_Codec;Process_Hacker;RegistryFinder;Resource_Hacker;Revo_Uninstaller_Pro;Sublime_Text;Telegram;VSCode;WinThumbsPreloader
+Flagged_VerySilent=Git;iMazing;K-Lite_Codec;Process_Hacker;RegistryFinder;Resource_Hacker;Revo_Uninstaller_Pro;Sublime_Text;Telegram;VSCode;WinThumbsPreloader;WinThumbsPreloaderV2
 Flagged_quiet=iCloud;iTunes;Python
 Flagged_S=7-Zip;Everything;Firefox;GoLand;IntelliJ_IDEA;LLVM;Librewolf;OBS;PyCharm;qBitTorrent;QuteBrowser;Sideloadly;Steam;Viber;WinDirStat;Windhawk;X-Mouse_Button;ZXP_Installer
 Flagged_Q=DirectX_Runtimes
