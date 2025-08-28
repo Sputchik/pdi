@@ -33,7 +33,9 @@ github_map = {
 	'LLVM': ('llvm', 'llvm-project'),
 	'AyuGram': ('AyuGram', 'AyuGramDesktop'),
 	'Git': ('git-for-windows', 'git'),
-	'LibAvif': ('AOMediaCodec', 'libavif')
+	'LibAvif': ('AOMediaCodec', 'libavif'),
+	'WinThumbsPreloader': ('bruhov', 'WinThumbsPreloader'),
+	'WinThumbsPreloaderV2': ('Mfarooq360', 'WinThumbsPreloader-V2')
 
 }
 
@@ -208,6 +210,9 @@ def find_best_executable(versions: dict[str, str]) -> str:
 				selected_exe = True
 			elif '32' in key and not preferred_exe:
 				preferred_exe = key
+			elif 'setup' in lowered and not selected_exe:
+				preferred_exe = key
+
 			elif not preferred_exe:
 				preferred_exe = key
 
@@ -412,7 +417,7 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 			url = elem.get('href')
 			if url and url.startswith('/download/WinSCP'):
 				version = url.split('-', 2)[1]
-				url = f'https://deac-riga.dl.sourceforge.net/project/winscp/WinSCP/{version}/WinSCP-{version}-Setup.msi?viasf=1'
+				url = f'https://netix.dl.sourceforge.net/project/winscp/WinSCP/{version}/WinSCP-{version}.msi?viasf=1'
 				break
 
 	elif name == 'ExifTool':
@@ -421,7 +426,8 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 		for elem in a_elems:
 			href = elem.get('href')
 			if href and '_64.zip' in href:
-				url = f'https://exiftool.org/{href}'
+				file = elem.get_text().strip()
+				url = f'https://deac-ams.dl.sourceforge.net/project/exiftool/{file}?viasf=1'
 				break
 
 	else: return
@@ -464,6 +470,27 @@ def push(repo: Repo, file, commit_msg):
 	repo.index.commit(commit_msg)
 	repo.remotes.origin.push()
 
+async def ensure_valid_links(progmap, session):
+	log.info('Ensuring all links are valid . . . ')
+
+	async def ensure_prog(prog, url):
+		if not url:
+			log.critical(f'No URL for {prog}')
+			return
+
+		response = await aio.request('HEAD', url, session = session, toreturn = 'status_code', allow_redirects = True, timeout = 5)
+		if not response:
+			log.warning(f'⚠️  {prog} - Error making request: {response}, {url}')
+			return
+
+		if 400 <= response:
+			log.critical(f'⚠️  {response} -  Invalid URL for {prog}: {url}')
+			return
+
+	tasks = [ensure_prog(prog, url) for prog, url in progmap['urls'].items()]
+	await asyncio.gather(*tasks)
+	log.info('All links checked')
+
 async def main(repo: Repo):
 	a.start()
 	repo.remotes.origin.pull()
@@ -478,7 +505,8 @@ async def main(repo: Repo):
 		a.stop()
 		progmap, new = await update_progs(progmap, session)
 
-	# input(JSON.stringify(progmap, indent = 2))
+		# input(JSON.stringify(progmap, indent = 2))
+		await ensure_valid_links(progmap, session)
 
 	if not new:
 		print('🆗 Everything is Up-To-Date!\n')
@@ -494,7 +522,7 @@ async def main(repo: Repo):
 	commit_msg = f'Update urls.txt: {new_read}'
 
 	# input('\nPress any key to push . . . ')
-	push(repo, 'urls.txt', commit_msg)
+	# push(repo, 'urls.txt', commit_msg)
 	print('✅ Pushed successfully\n')
 
 if __name__ == '__main__':
