@@ -35,7 +35,7 @@ github_map = {
 	'Git': ('git-for-windows', 'git'),
 	'LibAvif': ('AOMediaCodec', 'libavif'),
 	'WinThumbsPreloader': ('bruhov', 'WinThumbsPreloader'),
-	'WinThumbsPreloaderV2': ('Mfarooq360', 'WinThumbsPreloader-V2')
+	'WinThumbsPreloaderV2': ('Mfarooq360', 'WinThumbsPreloader-V2'),
 
 }
 
@@ -58,7 +58,8 @@ parse_map = {
 	'Blender 3.3.X LTS': 'https://www.blender.org/download/lts/3-3/',
 	'Blender 3.6.X LTS': 'https://www.blender.org/download/lts/3-6/',
 	'WinSCP': 'https://winscp.net/eng/downloads.php',
-	'ExifTool': 'https://exiftool.org/'
+	'ExifTool': 'https://exiftool.org/',
+	'.NET DesktopRuntime 8.0': 'https://dotnet.microsoft.com/en-us/download/dotnet/8.0'
 
 }
 
@@ -159,8 +160,8 @@ def progmap_to_txt(progmap):
 	return result
 
 async def parse_github_urls(session) -> dict:
-	# data = await aio.open(cwd + 'urls.txt')
-	data = await aio.get(urls_link, session = session, toreturn = 'text')
+	data = await aio.open('urls.txt')
+	# data = await aio.get(urls_link, session = session, toreturn = 'text')
 	if not data:
 		log.warning(f'Failed to fetch urls.txt: {data}')
 
@@ -430,6 +431,16 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 				url = f'https://deac-ams.dl.sourceforge.net/project/exiftool/{file}?viasf=1'
 				break
 
+	elif name == '.NET DesktopRuntime 8.0':
+		h3_elems = soup.find_all('h3')
+
+		for elem in h3_elems:
+			text = elem.get_text()
+			if text and text.startswith('.NET Desktop Runtime '):
+				version = text.rsplit(' ', 1)[1]
+				url = f'https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/{version}/windowsdesktop-runtime-{version}-win-x64.exe'
+				break
+
 	else: return
 
 	if not url:
@@ -522,7 +533,7 @@ async def main(repo: Repo):
 	commit_msg = f'Update urls.txt: {new_read}'
 
 	# input('\nPress any key to push . . . ')
-	# push(repo, 'urls.txt', commit_msg)
+	push(repo, 'urls.txt', commit_msg)
 	print('✅ Pushed successfully\n')
 
 if __name__ == '__main__':

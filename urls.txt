@@ -1,6 +1,6 @@
 Categories=General_Dependencies;Messengers;Coding;Browsers;Apple;Misc;Cracked;Games
 
-General_Dependencies=.NET_Framework_3.5;Intel_Bluetooth;DirectX_Runtimes;EdgeWebView2;ExifTool;FFmpeg;Git;Go;Gradle;LLVM;LibAvif;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;Intel_WiFi;WinSCP
+General_Dependencies=.NET_Framework_3.5;DirectX_Runtimes;EdgeWebView2;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Git;Go;Gradle;Intel_Bluetooth;Intel_WiFi;LLVM;LibAvif;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;WinSCP
 Messengers=AyuGram;Discord;Telegram;Telegram_Portable;Viber
 Coding=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
@@ -10,7 +10,7 @@ Cracked=MediaHuman;Revo_Uninstaller_Pro
 Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
 
 msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;Cloudflare_WARP;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH;OpenSSL;WinDirStat;WinSCP
-zip=Autoruns;ExifTool;FFmpeg;Gradle;Gradle;LibAvif;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
+zip=Autoruns;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 zipm=Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=AyuGram;ContextMenuManager;NVCleanstall;Rufus
 
@@ -18,10 +18,11 @@ Flagged_VerySilent=Git;iMazing;K-Lite_Codec;Process_Hacker;RegistryFinder;Resour
 Flagged_quiet=iCloud;iTunes;Python
 Flagged_S=7-Zip;Everything;Firefox;GoLand;IntelliJ_IDEA;LLVM;Librewolf;OBS;PyCharm;qBitTorrent;QuteBrowser;Sideloadly;Steam;Viber;WinDirStat;Windhawk;X-Mouse_Button;ZXP_Installer
 Flagged_Q=DirectX_Runtimes
-Flagged_passive=Intel_Bluetooth;Intel_WiFi
+Flagged_passive=.NET_DesktopRuntime_8.0;Intel_Bluetooth;Intel_WiFi
 
 Flags=passive;Q;quiet;S;VERYSILENT
 
+url_.NET_DesktopRuntime_8.0=https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.19/windowsdesktop-runtime-8.0.19-win-x64.exe
 url_.NET_Framework_3.5=http://download.microsoft.com/download/6/0/f/60fc5854-3cb8-4892-b6db-bd4f42510f28/dotnetfx35.exe
 url_3uTools=https://url.3u.com/zmAJjyaa
 url_7-Zip=https://github.com/ip7z/7zip/releases/download/25.01/7z2501-x64.msi
@@ -31,7 +32,7 @@ url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.14.3/
 url_Blender=https://www.blender.org/download/release/Blender4.5/blender-4.5.2-windows-x64.msi/
 url_Blender_3.3.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.3/blender-3.3.21-windows-x64.msi
 url_Blender_3.6.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.6/blender-3.6.23-windows-x64.msi
-url_Intel_Bluetooth=https://downloadmirror.intel.com/862107/BT-23.160.0-64UWD-Win10-Win11.exe
+url_Bluetooth=https://downloadmirror.intel.com/862107/BT-23.160.0-64UWD-Win10-Win11.exe
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
 url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.NET.3.5.exe
 url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-win64.msi
@@ -43,6 +44,7 @@ url_Everything=https://voidtools.com/Everything-1.4.1.1028.x64-Setup.exe
 url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.34_64.zip?viasf=1
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
+url_FFmpeg_libsvt-av1-psy=https://github.com/Uranite/FFmpeg-Builds-SVT-AV1-PSY/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
 url_Git=https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.1/Git-2.51.0-64-bit.exe
 url_Go=https://go.dev/dl/go1.25.0.windows-amd64.msi
@@ -50,7 +52,9 @@ url_Google_Earth_Pro=https://dl.google.com/dl/earth/client/advanced/current/goog
 url_Gradle=https://services.gradle.org/distributions/gradle-9.0.0-bin.zip
 url_iCloud=https://secure-appldnld.apple.com/windows/061-91601-20200323-974a39d0-41fc-4761-b571-318b7d9205ed/iCloudSetup.exe
 url_iMazing=https://downloads.imazing.com/windows/iMazing/iMazing3forWindows.exe
-url_IntelliJ_IDEA=https://download.jetbrains.com/idea/ideaIU-2025.2.exe
+url_Intel_Bluetooth=https://downloadmirror.intel.com/862107/BT-23.160.0-64UWD-Win10-Win11.exe
+url_Intel_WiFi=https://downloadmirror.intel.com/863003/Intel_WiFi-23.160.0-Driver64-Win10-Win11.exe
+url_IntelliJ_IDEA=https://download.jetbrains.com/idea/ideaIU-2025.2.1.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1915_Full.exe
 url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/download/v1.3.0/windows-artifacts.zip
@@ -62,7 +66,7 @@ url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInst
 url_Node.js=https://nodejs.org/dist/v24.7.0/node-v24.7.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.19.0.exe
-url_OBS=https://github.com/obsproject/obs-studio/releases/download/31.1.2/OBS-Studio-31.1.2-Windows-x64-Installer.exe
+url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.0.0-beta1/OBS-Studio-32.0.0-beta1-Windows-x64-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.8.3.0p2-Preview/OpenSSH-Win64-v9.8.3.0.msi
 url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_5_2.msi
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
@@ -89,12 +93,12 @@ url_Viber=https://download.cdn.viber.com/desktop/windows/ViberSetup.exe
 url_VS_2022_Installer=https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030
 url_VSCode=https://code.visualstudio.com/sha/download?build=stable&os=win32-x64
 url_WaterFox=https://cdn1.waterfox.net/waterfox/releases/latest/windows
-url_Intel_WiFi=https://downloadmirror.intel.com/863003/Intel_WiFi-23.160.0-Driver64-Win10-Win11.exe
+url_WiFi=https://downloadmirror.intel.com/863003/WiFi-23.160.0-Driver64-Win10-Win11.exe
 url_Windhawk=https://ramensoftware.com/downloads/windhawk_setup.exe
 url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download/WinDirStat-x64.msi
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
 url_WinSCP=https://netix.dl.sourceforge.net/project/winscp/WinSCP/6.5.3/WinSCP-6.5.3.msi?viasf=1
 url_WinThumbsPreloader=https://github.com/bruhov/WinThumbsPreloader/releases/download/v1.0.1/WinThumbsPreloader-1.0.1-setup.exe
+url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta5/WinThumbsPreloader-2.0.0-setup.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
-url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta5/WinThumbsPreloader-2.0.0-setup.exe
