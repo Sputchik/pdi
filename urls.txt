@@ -14,7 +14,7 @@ zip=Autoruns;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;Telegra
 zipm=Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=AyuGram;ContextMenuManager;NVCleanstall;Rufus
 
-Flagged_VerySilent=Git;iMazing;K-Lite_Codec;Process_Hacker;RegistryFinder;Resource_Hacker;Revo_Uninstaller_Pro;Sublime_Text;Telegram;VSCode;WinThumbsPreloader
+Flagged_VerySilent=Git;iMazing;K-Lite_Codec;Process_Hacker;RegistryFinder;Resource_Hacker;Revo_Uninstaller_Pro;Sublime_Text;Telegram;VSCode;WinThumbsPreloader;WinThumbsPreloaderV2
 Flagged_quiet=iCloud;iTunes;Python
 Flagged_S=7-Zip;Everything;Firefox;GoLand;IntelliJ_IDEA;LLVM;Librewolf;OBS;PyCharm;qBitTorrent;QuteBrowser;Sideloadly;Steam;Viber;WinDirStat;Windhawk;X-Mouse_Button;ZXP_Installer
 Flagged_Q=DirectX_Runtimes
@@ -101,4 +101,9 @@ url_WinSCP=https://netix.dl.sourceforge.net/project/winscp/WinSCP/6.5.3/WinSCP-6
 url_WinThumbsPreloader=https://github.com/bruhov/WinThumbsPreloader/releases/download/v1.0.1/WinThumbsPreloader-1.0.1-setup.exe
 url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta5/WinThumbsPreloader-2.0.0-setup.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
+<<<<<<< HEAD
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
+=======
+url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
+url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta5/WinThumbsPreloader-2.0.0-setup.exe
+>>>>>>> c0a1de29abe7902c52b674bbbda97c5c900053f2
