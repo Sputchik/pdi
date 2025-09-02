@@ -99,6 +99,6 @@ url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
 url_WinSCP=https://netix.dl.sourceforge.net/project/winscp/WinSCP/6.5.3/WinSCP-6.5.3.msi?viasf=1
 url_WinThumbsPreloader=https://github.com/bruhov/WinThumbsPreloader/releases/download/v1.0.1/WinThumbsPreloader-1.0.1-setup.exe
-url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta5/WinThumbsPreloader-2.0.0-setup.exe
+url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta6/WinThumbsPreloader-2.0.0-setup.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
