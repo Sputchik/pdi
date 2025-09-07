@@ -35,13 +35,13 @@ url_Blender_3.6.X_LTS=https://ftp.nluug.nl/pub/graphics/blender/release/Blender3
 url_Bluetooth=https://downloadmirror.intel.com/862107/BT-23.160.0-64UWD-Win10-Win11.exe
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
 url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.NET.3.5.exe
-url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-win64.msi
+url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-20250907-x64.msi
 url_DirectX_Runtimes=https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe
 url_Discord=https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64
 url_EdgeWebView2=https://go.microsoft.com/fwlink/?linkid=2124701
 url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi
 url_Everything=https://voidtools.com/Everything-1.4.1.1028.x64-Setup.exe
-url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.34_64.zip?viasf=1
+url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.35_64.zip?viasf=1
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_FFmpeg_libsvt-av1-psy=https://github.com/Uranite/FFmpeg-Builds-SVT-AV1-PSY/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
@@ -66,7 +66,7 @@ url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInst
 url_Node.js=https://nodejs.org/dist/v24.7.0/node-v24.7.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.19.0.exe
-url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.0.0-beta1/OBS-Studio-32.0.0-beta1-Windows-x64-Installer.exe
+url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.0.0-beta2/OBS-Studio-32.0.0-beta2-Windows-x64-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.8.3.0p2-Preview/OpenSSH-Win64-v9.8.3.0.msi
 url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_5_2.msi
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
