@@ -56,7 +56,7 @@ url_Intel_Bluetooth=https://downloadmirror.intel.com/862107/BT-23.160.0-64UWD-Wi
 url_Intel_WiFi=https://downloadmirror.intel.com/863003/Intel_WiFi-23.160.0-Driver64-Win10-Win11.exe
 url_IntelliJ_IDEA=https://download.jetbrains.com/idea/ideaIU-2025.2.1.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
-url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1915_Full.exe
+url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1920_Full.exe
 url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/download/v1.3.0/windows-artifacts.zip
 url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/142.0.1-1/librewolf-142.0.1-1-windows-x86_64-setup.exe
 url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.1/LLVM-21.1.1-win64.exe
@@ -87,7 +87,7 @@ url_Throttlestop=https://www.dropbox.com/scl/fi/b0648d8fnmm7qtmcoe6v4/ThrottleSt
 url_TradingView=https://tvd-packages.tradingview.com/stable/latest/win32/TradingView.msix
 url_TranslucentTB=https://github.com/TranslucentTB/TranslucentTB/releases/download/2024.1/TranslucentTB-portable-x64.zip
 url_TunnelBear=https://tunnelbear.s3.amazonaws.com/downloads/pc/TunnelBear-Installer.exe
-url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/139.0.7258.154-1.1/ungoogled-chromium_139.0.7258.154-1.1_installer_x64.exe
+url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/140.0.7339.127-1.1/ungoogled-chromium_140.0.7339.127-1.1_installer_x64.exe
 url_VCRedist_2005-2022=https://github.com/abbodi1406/vcredist/releases/download/v1.100.0/VisualCppRedist_AIO_x86_x64.exe
 url_Viber=https://download.cdn.viber.com/desktop/windows/ViberSetup.exe
 url_VS_2022_Installer=https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030
@@ -101,3 +101,4 @@ url_WinSCP=https://netix.dl.sourceforge.net/project/winscp/WinSCP/6.5.3/WinSCP-6
 url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta6/WinThumbsPreloader-2.0.0-setup.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
+url_WinThumbsPreloader=https://github.com/bruhov/WinThumbsPreloader/releases/download/v1.0.1/WinThumbsPreloader-1.0.1-setup.exe
