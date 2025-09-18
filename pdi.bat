@@ -470,9 +470,9 @@ if exist "FFmpeg.zip" (
 	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "FFmpeg" "%PF%\FFmpeg"
 	call :SetPath "%PF%\FFmpeg\bin\"
 )
-if exist "FFmpeg_libsvt-av1-psy.zip" (
+if exist "FFmpeg libsvt-av1-psy.zip" (
 	echo Installing FFmpeg...
-	tar -xf "FFmpeg_libsvt-av1-psy.zip"
+	tar -xf "FFmpeg libsvt-av1-psy.zip"
 	move "ffmpeg-*" "FFmpeg"
 	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "FFmpeg" "%PF%\FFmpeg"
 	call :SetPath "%PF%\FFmpeg\bin\"
