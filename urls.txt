@@ -41,12 +41,12 @@ url_Discord=https://discord.com/api/downloads/distributions/app/installers/lates
 url_EdgeWebView2=https://go.microsoft.com/fwlink/?linkid=2124701
 url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi
 url_Everything=https://voidtools.com/Everything-1.4.1.1028.x64-Setup.exe
-url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.37_64.zip?viasf=1
+url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.38_64.zip?viasf=1
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_FFmpeg_libsvt-av1-psy=https://github.com/Uranite/FFmpeg-Builds-SVT-AV1-PSY/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
-url_Git=https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.1/Git-2.51.0-64-bit.exe
+url_Git=https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.2/Git-2.51.0.2-64-bit.exe
 url_Go=https://go.dev/dl/go1.25.1.windows-amd64.msi
 url_Google_Earth_Pro=https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe?sjid=6101201665916555278-EU
 url_Gradle=https://services.gradle.org/distributions/gradle-9.1.0-bin.zip
@@ -58,7 +58,7 @@ url_IntelliJ_IDEA=https://download.jetbrains.com/idea/ideaIU-2025.2.2.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1920_Full.exe
 url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/download/v1.3.0/windows-artifacts.zip
-url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/143.0.1-1/librewolf-143.0.1-1-windows-x86_64-setup.exe
+url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/143.0.3-1/librewolf-143.0.3-1-windows-x86_64-setup.exe
 url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.2/LLVM-21.1.2-win64.exe
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe
@@ -68,7 +68,7 @@ url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setu
 url_NVCleanstall=https://nvcleanstall.net/file/NVCleanstall_1.19.0.exe
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.0.1/OBS-Studio-32.0.1-Windows-x64-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.8.3.0p2-Preview/OpenSSH-Win64-v9.8.3.0.msi
-url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_5_3.msi
+url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_5_4.msi
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download.jetbrains.com/python/pycharm-2025.2.2.exe
 url_Python=https://www.python.org/ftp/python/3.13.7/python-3.13.7-amd64.exe
