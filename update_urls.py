@@ -1,3 +1,4 @@
+import re
 import niquests
 import asyncio
 import os
@@ -8,6 +9,7 @@ from sputchedtools import aio, enhance_loop, setup_logger, Anim, AnimChars, JSON
 from datetime import datetime
 from bs4 import BeautifulSoup
 from git import Repo
+from typing import Optional
 # from typenodes import TypeNode
 
 JSON = JSON()
@@ -48,15 +50,15 @@ parse_map = {
 	'WiFi': 'https://www.intel.com/content/www/us/en/download/19351/intel-wireless-wi-fi-drivers-for-windows-10-and-windows-11.html',
 	'Python': 'https://www.python.org/downloads/',
 	'Node.js': 'https://nodejs.org/dist/index.json',
-	'NVCleanstall': 'https://nvcleanstall.net/download',
+	# 'NVCleanstall': 'https://nvcleanstall.net/download',
 	'K-Lite Codec': 'https://www.codecguide.com/download_k-lite_codec_pack_full.htm',
 	'Everything': 'https://www.voidtools.com/',
 	'qBitTorrent': 'https://www.qbittorrent.org/download',
 	'Librewolf': 'https://gitlab.com/api/v4/projects/44042130/releases',
-	'Blender': 'https://www.blender.org/download/',
+	'Blender': 'https://download.blender.org/release/',
 	'OpenSSL': 'https://slproweb.com/download/win32_openssl_hashes.json',
-	'Blender 3.3.X LTS': 'https://www.blender.org/download/lts/3-3/',
-	'Blender 3.6.X LTS': 'https://www.blender.org/download/lts/3-6/',
+	'Blender 3.3.X LTS': 'https://download.blender.org/release/Blender3.3/',
+	'Blender 3.6.X LTS': 'https://download.blender.org/release/Blender3.6/',
 	'WinSCP': 'https://winscp.net/eng/downloads.php',
 	'ExifTool': 'https://exiftool.org/',
 	'.NET DesktopRuntime 8.0': 'https://dotnet.microsoft.com/en-us/download/dotnet/8.0'
@@ -266,7 +268,8 @@ async def direct_from_github(owner: str, project: str, session) -> str | None:
 
 	return url
 
-async def parse_prog(url = None, name = None, session = None, github = False, jetbrains = False):
+async def parse_prog(url = None, name = None, session = None, github = False, jetbrains = False) -> tuple[str, Optional[str]] | None:
+	request_url = url
 	params = None
 
 	if github:
@@ -302,17 +305,20 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 			log.warning(f'[{name}] Failed to parse JetBrains download URL: {JSON.stringify(response, indent = 2)}')
 			return
 
+	return name, await parse_prog_url(name, data, request_url, session)
+
+async def parse_prog_url(name: str, data: str, request_url: str, session) -> str | None:
 	if name == 'Go':
 		version = JSON.parse(data)[0]['version'].split('go')[1]
 		url = f'https://go.dev/dl/go{version}.windows-amd64.msi'
-		return (name, url)
+		return url
 
 	elif name == 'Librewolf':
 		latest = JSON.parse(data)[0]
 		# Emulate github version map
 		version_map = {k['name']: k['url'] for k in latest['assets']['links']}
 		url = find_best_executable(version_map)
-		return (name, url)
+		return url
 
 	soup = BeautifulSoup(data, 'lxml')
 
@@ -351,10 +357,6 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 		version = data[0]['version']
 		url = f'https://nodejs.org/dist/{version}/node-{version}-x64.msi'
 
-	elif name == 'NVCleanstall':
-		a = soup.find('a', class_ = 'btn btn btn-info my-5')
-		url = a.get('href')
-
 	elif name == 'K-Lite Codec':
 		a_elems = soup.find_all('a')
 
@@ -381,13 +383,23 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 				break
 
 	elif name == 'Blender':
+		# Find highest <Major>.<Minor> version
 		a_elems = soup.find_all('a')
+		highest_ver = (0, 0)
+		regex = re.compile(r'Blender(\d+\.\d+)/')
 
 		for elem in a_elems:
-			title = elem.get('title')
-			if title and title == 'Download Blender for Windows Installer':
-				url = elem.get('href')
-				break
+			text = elem.text
+			if not regex.match(text):
+				continue
+
+			version = text.split('Blender', 1)[1].rstrip('/')
+			version = tuple(int(part) for part in version.split('.')[:2])
+			if version > highest_ver:
+				highest_ver = version
+
+		read_ver = f'{highest_ver[0]}.{highest_ver[1]}'
+		_, url = await parse_prog(f'https://download.blender.org/release/Blender{read_ver}/', f'Blender{read_ver}', session)
 
 	elif name == 'OpenSSL':
 		data = JSON.parse(data)
@@ -401,15 +413,21 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 
 	elif name.startswith('Blender'):
 		a_elems = soup.find_all('a')
-
+		highest_ver = (0, 0, 0)
+		highest_url = None
 		for elem in a_elems:
-			text = elem.text
-			if text and text == 'Windows – Installer':
-				url = elem.get('href')
-				ver = url.split('blender-', 1)[1].split('-', 1)[0]
-				major = ver.rsplit('.', 1)[0]
-				url = f'https://ftp.nluug.nl/pub/graphics/blender/release/Blender{major}/blender-{ver}-windows-x64.msi'
-				break
+			_url = elem.get('href')
+			if not _url or not _url.endswith('x64.msi'):
+				continue
+
+			ver_str = _url.split('blender-', 1)[1].split('-windows', 1)[0]
+			ver_parts = ver_str.split('.')
+			ver_tuple = tuple(int(part) for part in ver_parts)
+			if ver_tuple > highest_ver:
+				highest_ver = ver_tuple
+				highest_url = f'{request_url}{_url}'
+
+		url = highest_url
 
 	elif name == 'WinSCP':
 		a_elems = soup.find_all('a')
@@ -448,7 +466,7 @@ async def parse_prog(url = None, name = None, session = None, github = False, je
 	else:
 		log.debug(f'[{name}] Parsed best URL: {url}')
 
-	return (name, url)
+	return url
 
 async def update_progs(progmap, session):
 	tasks = []
@@ -529,10 +547,11 @@ async def main(repo: Repo):
 	txt = progmap_to_txt(progmap)
 	# input(txt)
 
-	await aio.open(urls_path, 'write', 'w', txt)
-	commit_msg = f'Update urls.txt: {new_read}'
+	input('\nPress any key to push . . . ')
 
-	# input('\nPress any key to push . . . ')
+	commit_msg = f'Update urls.txt: {new_read}'
+	await aio.open(urls_path, 'write', 'w', txt)
+
 	push(repo, 'urls.txt', commit_msg)
 	print('✅ Pushed successfully\n')
 
