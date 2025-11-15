@@ -22,7 +22,7 @@ Flagged_passive=.NET_DesktopRuntime_8.0;Intel_Bluetooth;Intel_WiFi
 
 Flags=passive;Q;quiet;S;VERYSILENT
 
-url_.NET_DesktopRuntime_8.0=https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.21/windowsdesktop-runtime-8.0.21-win-x64.exe
+url_.NET_DesktopRuntime_8.0=https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.22/windowsdesktop-runtime-8.0.22-win-x64.exe
 url_.NET_Framework_3.5=http://download.microsoft.com/download/6/0/f/60fc5854-3cb8-4892-b6db-bd4f42510f28/dotnetfx35.exe
 url_3uTools=https://url.3u.com/zmAJjyaa
 url_7-Zip=https://github.com/ip7z/7zip/releases/download/25.01/7z2501-x64.msi
@@ -46,7 +46,7 @@ url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/
 url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_FFmpeg_libsvt-av1-psy=https://github.com/Uranite/FFmpeg-Builds-SVT-AV1-PSY/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
-url_Git=https://github.com/git-for-windows/git/releases/download/v2.52.0-rc1.windows.1/Git-2.52.0-rc1-64-bit.exe
+url_Git=https://github.com/git-for-windows/git/releases/download/v2.52.0-rc2.windows.1/Git-2.52.0-rc2-64-bit.exe
 url_Go=https://go.dev/dl/go1.25.4.windows-amd64.msi
 url_Google_Earth_Pro=https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe?sjid=6101201665916555278-EU
 url_Gradle=https://services.gradle.org/distributions/gradle-9.2.0-bin.zip
@@ -63,7 +63,7 @@ url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.5/L
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe
 url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.msi
-url_Node.js=https://nodejs.org/dist/v25.1.0/node-v25.1.0-x64.msi
+url_Node.js=https://nodejs.org/dist/v25.2.0/node-v25.2.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://www.dropbox.com/scl/fi/de6nw7v1qsfcghl08equu/NVCleanstall_1.19.0.exe?rlkey=wr2tttka9os2t5pd9wabgofbc&st=06616we8&dl=1
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.0.2/OBS-Studio-32.0.2-Windows-x64-Installer.exe
@@ -72,7 +72,7 @@ url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_6_0.msi
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download.jetbrains.com/python/pycharm-2025.2.4.exe
 url_Python=https://www.python.org/ftp/python/3.14.0/python-3.14.0-amd64.exe
-url_qBitTorrent=https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe?viasf=1
+url_qBitTorrent=https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_x64_setup.exe?viasf=1
 url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.1.0/qutebrowser-3.1.0-amd64.exe
 url_RegistryFinder=https://registry-finder.com/bin/2.60.0.0/RegistryFinderSetup2.60.exe
 url_Resource_Hacker=https://www.angusj.com/resourcehacker/reshacker_setup.exe
@@ -87,7 +87,7 @@ url_Throttlestop=https://www.dropbox.com/scl/fi/b0648d8fnmm7qtmcoe6v4/ThrottleSt
 url_TradingView=https://tvd-packages.tradingview.com/stable/latest/win32/TradingView.msix
 url_TranslucentTB=https://github.com/TranslucentTB/TranslucentTB/releases/download/2024.1/TranslucentTB-portable-x64.zip
 url_TunnelBear=https://tunnelbear.s3.amazonaws.com/downloads/pc/TunnelBear-Installer.exe
-url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/142.0.7444.59-1.1/ungoogled-chromium_142.0.7444.59-1.1_installer_x64.exe
+url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/142.0.7444.134-1.1/ungoogled-chromium_142.0.7444.134-1.1_installer_x64.exe
 url_VCRedist_2005-2022=https://github.com/abbodi1406/vcredist/releases/download/v0.102.0/VisualCppRedist_AIO_x86_x64.exe
 url_Viber=https://download.cdn.viber.com/desktop/windows/ViberSetup.exe
 url_VS_2022_Installer=https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030
