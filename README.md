@@ -1,5 +1,5 @@
 <div>
-  <img src="images\pdi2.png"  style="width: 40%; height: 40%">
+  <img src="images\pdi2.avif"  style="width: 40%; height: 40%">
 </div>
 
 ## Install
@@ -29,10 +29,10 @@ Usage: pdi.bat [--passive] [--output Path] [--select Programs]
 ## Preview
 
 <div>
-  <img src="images\preview1.png" alt="Main Menu">
-  <img src="images\preview2.png" alt="Selecion Menu">
+  <img src="images\preview1.avif" alt="Main Menu">
+  <img src="images\preview2.avif" alt="Selecion Menu">
 </div>
 <div class="image-row">
-  <img src="images\preview3.png" alt="Download Process">
-  <img src="images\preview4.png" alt="Install Process">
+  <img src="images\preview3.avif" alt="Download Process">
+  <img src="images\preview4.avif" alt="Install Process">
 </div>
