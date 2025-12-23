@@ -39,6 +39,7 @@ github_map = {
 	'WinThumbsPreloader': ('bruhov', 'WinThumbsPreloader'),
 	'WinThumbsPreloaderV2': ('Mfarooq360', 'WinThumbsPreloader-V2'),
 	'CMake': ('Kitware', 'CMake'),
+	'Ninja': ('ninja-build', 'ninja'),
 }
 
 parse_map = {

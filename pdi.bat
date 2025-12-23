@@ -484,13 +484,21 @@ if exist "LibAvif.zip" (
 	call :SetPath "%PF%\LibAvif\"
 )
 if exist "ExifTool.zip" (
-	echo Installing ExifTool
+	echo Installing ExifTool...
 	tar -xf "ExifTool.zip"
 	move "exiftool-*" "exiftool"
 	move "exiftool\exiftool(-k).exe" "exiftool\exiftool.exe"
 	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "exiftool" "%PF%\ExifTool"
 	call :SetPath "%PF%\ExifTool\"
 )
+if exist "Ninja.zip" (
+	echo Installing Ninja...
+	tar -xf "Ninja.zip"
+	mkdir Ninja
+	move ninja.exe Ninja
+	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "Ninja" "%PF%\Ninja"
+)
+
 for %%G in (!zipm!) do (
 	set "progName=%%G"
 	set "progName=!progName:_= !"

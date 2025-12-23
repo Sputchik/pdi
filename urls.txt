@@ -1,6 +1,6 @@
 Categories=General_Dependencies;Messengers;Coding;Browsers;Apple;Misc;Cracked;Games
 
-General_Dependencies=.NET_Framework_3.5;CMake;DirectX_Runtimes;EdgeWebView2;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Git;Go;Gradle;Intel_Bluetooth;Intel_WiFi;LLVM;LibAvif;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;WinSCP
+General_Dependencies=.NET_Framework_3.5;CMake;DirectX_Runtimes;EdgeWebView2;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Git;Go;Gradle;Intel_Bluetooth;Intel_WiFi;LLVM;LibAvif;Ninja;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;WinSCP
 Messengers=AyuGram;Discord;Telegram;Telegram_Portable;Viber
 Developing=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
@@ -10,7 +10,7 @@ Cracked=MediaHuman;Revo_Uninstaller_Pro
 Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
 
 msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;Cloudflare_WARP;CMake;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH;OpenSSL;WinDirStat;WinSCP
-zip=Autoruns;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
+zip=Autoruns;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB;Ninja
 zipm=Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=AyuGram;ContextMenuManager;NVCleanstall;Rufus
 
