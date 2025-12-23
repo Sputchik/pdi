@@ -40,6 +40,7 @@ github_map = {
 	'WinThumbsPreloaderV2': ('Mfarooq360', 'WinThumbsPreloader-V2'),
 	'CMake': ('Kitware', 'CMake'),
 	'Ninja': ('ninja-build', 'ninja'),
+	'StrawberryPerl': ('StrawberryPerl', 'Perl-Dist-Strawberry')
 }
 
 parse_map = {
@@ -221,7 +222,7 @@ def find_best_executable(versions: dict[str, str]) -> str:
 				preferred_exe = key
 
 		elif key.endswith('.zip'):
-			if 'windows' in key:
+			if 'windows' in key or 'win' in key:
 				log.debug(f'ZIP Fallback: {key}')
 				fallback_zip = key
 
@@ -264,7 +265,7 @@ async def direct_from_github(owner: str, project: str, session) -> str | None:
 		break
 
 	if url is None:
-		input(f'[Fail]: {owner}-{project} Github version extraction')
+		input(f'[Fail]: {owner} - {project} Github version extraction')
 		log.debug(f'[{project}] {versions}')
 
 	return url
