@@ -38,7 +38,7 @@ github_map = {
 	'LibAvif': ('AOMediaCodec', 'libavif'),
 	'WinThumbsPreloader': ('bruhov', 'WinThumbsPreloader'),
 	'WinThumbsPreloaderV2': ('Mfarooq360', 'WinThumbsPreloader-V2'),
-
+	'CMake': ('Kitware', 'CMake'),
 }
 
 parse_map = {
@@ -61,7 +61,7 @@ parse_map = {
 	'Blender 3.6.X LTS': 'https://download.blender.org/release/Blender3.6/',
 	'WinSCP': 'https://winscp.net/eng/downloads.php',
 	'ExifTool': 'https://exiftool.org/',
-	'.NET DesktopRuntime 8.0': 'https://dotnet.microsoft.com/en-us/download/dotnet/8.0'
+	'.NET DesktopRuntime 8.0': 'https://dotnet.microsoft.com/en-us/download/dotnet/8.0',
 
 }
 
