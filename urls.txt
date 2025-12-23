@@ -102,3 +102,4 @@ url_WinThumbsPreloader=https://github.com/bruhov/WinThumbsPreloader/releases/dow
 url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta6/WinThumbsPreloader-2.0.0-setup.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
+url_CMake=https://github.com/Kitware/CMake/releases/download/v4.2.1/cmake-4.2.1-windows-x86_64.msi
