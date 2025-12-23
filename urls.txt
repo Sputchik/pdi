@@ -1,6 +1,6 @@
-Categories=General_Dependencies;Messengers;Coding;Browsers;Apple;Misc;Cracked;Games
+Categories=General_Dependencies;Messengers;Developing;Browsers;Apple;Misc;Cracked;Games
 
-General_Dependencies=.NET_Framework_3.5;CMake;DirectX_Runtimes;EdgeWebView2;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Git;Go;Gradle;Intel_Bluetooth;Intel_WiFi;LLVM;LibAvif;Ninja;NVCleanstall;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;WinSCP
+General_Dependencies=.NET_Framework_3.5;CMake;DirectX_Runtimes;EdgeWebView2;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Git;Go;Gradle;Intel_Bluetooth;Intel_WiFi;LLVM;LibAvif;NVCleanstall;Ninja;Node.js;OpenSSH;OpenSSL;Python;VCRedist_2005-2022;WinSCP
 Messengers=AyuGram;Discord;Telegram;Telegram_Portable;Viber
 Developing=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
@@ -9,8 +9,8 @@ Misc=7-Zip;Autoruns;AviDemux;Cloudflare_WARP;ContextMenuManager;DB_Browser;Every
 Cracked=MediaHuman;Revo_Uninstaller_Pro
 Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
 
-msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;Cloudflare_WARP;CMake;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH;OpenSSL;WinDirStat;WinSCP
-zip=Autoruns;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB;Ninja
+msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;CMake;Cloudflare_WARP;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH;OpenSSL;WinDirStat;WinSCP
+zip=Autoruns;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;Ninja;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 zipm=Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=AyuGram;ContextMenuManager;NVCleanstall;Rufus
 
@@ -34,6 +34,7 @@ url_Blender_3.3.X_LTS=https://download.blender.org/release/Blender3.3/blender-3.
 url_Blender_3.6.X_LTS=https://download.blender.org/release/Blender3.6/blender-3.6.23-windows-x64.msi
 url_Bluetooth=https://downloadmirror.intel.com/871690/BT-24.10.0-64UWD-Win10-Win11.exe
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
+url_CMake=https://github.com/Kitware/CMake/releases/download/v4.2.1/cmake-4.2.1-windows-x86_64.msi
 url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.NET.3.5.exe
 url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-20251217-x64.msi
 url_DirectX_Runtimes=https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe
@@ -102,4 +103,4 @@ url_WinThumbsPreloader=https://github.com/bruhov/WinThumbsPreloader/releases/dow
 url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta6/WinThumbsPreloader-2.0.0-setup.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
-url_CMake=https://github.com/Kitware/CMake/releases/download/v4.2.1/cmake-4.2.1-windows-x86_64.msi
+url_Ninja=https://github.com/ninja-build/ninja/releases/download/v1.13.2/ninja-win.zip
