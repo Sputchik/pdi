@@ -36,13 +36,13 @@ url_Bluetooth=https://downloadmirror.intel.com/871690/BT-24.10.0-64UWD-Win10-Win
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
 url_CMake=https://github.com/Kitware/CMake/releases/download/v4.2.1/cmake-4.2.1-windows-x86_64.msi
 url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.NET.3.5.exe
-url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-20251217-x64.msi
+url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-20251229-x64.msi
 url_DirectX_Runtimes=https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe
 url_Discord=https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64
 url_EdgeWebView2=https://go.microsoft.com/fwlink/?linkid=2124701
 url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi
 url_Everything=https://voidtools.com/Everything-1.4.1.1030.x64-Setup.exe
-url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.44_64.zip?viasf=1
+url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.45_64.zip?viasf=1
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_FFmpeg_libsvt-av1-psy=https://github.com/Uranite/FFmpeg-Builds-SVT-AV1-PSY/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
@@ -82,6 +82,7 @@ url_Revo_Uninstaller_Pro=https://www.dropbox.com/scl/fi/9nc9khsw8wobjhd8rt2xk/Re
 url_Rufus=https://github.com/pbatard/rufus/releases/download/v4.11/rufus-4.11.exe
 url_Sideloadly=https://sideloadly.io/SideloadlySetup64.exe
 url_Steam=https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe
+url_StrawberryPerl=https://github.com/StrawberryPerl/Perl-Dist-Strawberry/releases/download/SP_54201_64bit/strawberry-perl-5.42.0.1-64bit.msi
 url_Sublime_Text=https://download.sublimetext.com/sublime_text_build_4169_x64_setup.exe
 url_Telegram=https://telegram.org/dl/desktop/win64
 url_Telegram_Portable=https://telegram.org/dl/desktop/win64_portable
@@ -104,4 +105,3 @@ url_WinThumbsPreloader=https://github.com/bruhov/WinThumbsPreloader/releases/dow
 url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta6/WinThumbsPreloader-2.0.0-setup.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
-url_StrawberryPerl=https://github.com/StrawberryPerl/Perl-Dist-Strawberry/releases/download/SP_54201_64bit/strawberry-perl-5.42.0.1-64bit.msi
