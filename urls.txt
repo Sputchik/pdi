@@ -20,7 +20,7 @@ Flagged_S=7-Zip;Everything;Firefox;GoLand;IntelliJ_IDEA;LLVM;Librewolf;OBS;PyCha
 Flagged_Q=DirectX_Runtimes
 Flagged_passive=.NET_DesktopRuntime_8.0;Intel_Bluetooth;Intel_WiFi
 
-Flags=passive;Q;quiet;S;VERYSILENT
+Flags=passive;quiet;S;VERYSILENT;Q
 
 url_.NET_DesktopRuntime_8.0=https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.22/windowsdesktop-runtime-8.0.22-win-x64.exe
 url_.NET_Framework_3.5=http://download.microsoft.com/download/6/0/f/60fc5854-3cb8-4892-b6db-bd4f42510f28/dotnetfx35.exe
