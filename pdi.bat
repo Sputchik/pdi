@@ -192,7 +192,7 @@ goto :eof
 :FetchURLs
 
 curl -A "%UserAgent%" -s %URLsURL% -o "%urlPath%"
-@REM set "urlPath=urls.txt"
+set "urlPath=urls.txt"
 for /f "usebackq tokens=1* delims==" %%G in ("%urlPath%") do (
 	set "%%G=%%H"
 )
@@ -497,6 +497,15 @@ if exist "Ninja.zip" (
 	mkdir Ninja
 	move ninja.exe Ninja
 	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "Ninja" "%PF%\Ninja"
+	call :SetPath "%PF%\Ninja\"
+)
+if exist "ect.zip" (
+	echo Installing Effecient-Compression-Tool ^(AVX2-Optimized^)...
+	tar -xf "ect.zip"
+	mkdir ect
+	move ect.exe ect
+	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "ect" "%PF%\ect"
+	call :SetPath "%PF%\ect\"
 )
 
 for %%G in (!zipm!) do (

@@ -1,6 +1,6 @@
 Categories=General_Dependencies;Messengers;Developing;Browsers;Apple;Misc;Cracked;Games
 
-General_Dependencies=.NET_Framework_3.5;CMake;DirectX_Runtimes;EdgeWebView2;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Git;Go;Gradle;Intel_Bluetooth;Intel_WiFi;LLVM;LibAvif;NVCleanstall;Ninja;Node.js;OpenSSH;OpenSSL;Python;StrawberryPerl;VCRedist_2005-2022;WinSCP
+General_Dependencies=.NET_Framework_3.5;CMake;DirectX_Runtimes;ect;EdgeWebView2;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Git;Go;Gradle;Intel_Bluetooth;Intel_WiFi;LLVM;LibAvif;NVCleanstall;Ninja;Node.js;OpenSSH;OpenSSL;Python;StrawberryPerl;VCRedist_2005-2022;WinSCP
 Messengers=AyuGram;Discord;Telegram;Telegram_Portable;Viber
 Developing=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
@@ -10,7 +10,7 @@ Cracked=MediaHuman;Revo_Uninstaller_Pro
 Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
 
 msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;CMake;Cloudflare_WARP;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH;OpenSSL;StrawberryPerl;WinDirStat;WinSCP
-zip=Autoruns;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;Ninja;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
+zip=Autoruns;ect;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;Ninja;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 zipm=Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=AyuGram;ContextMenuManager;NVCleanstall;Rufus
 
@@ -39,6 +39,7 @@ url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/rele
 url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-20251229-x64.msi
 url_DirectX_Runtimes=https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe
 url_Discord=https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64
+url_ect=https://github.com/Sputchik/Efficient-Compression-Tool/releases/download/v0.9.5/ect_avx2+pgo.zip
 url_EdgeWebView2=https://go.microsoft.com/fwlink/?linkid=2124701
 url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi
 url_Everything=https://voidtools.com/Everything-1.4.1.1030.x64-Setup.exe
