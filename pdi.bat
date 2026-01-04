@@ -192,7 +192,7 @@ goto :eof
 :FetchURLs
 
 curl -A "%UserAgent%" -s %URLsURL% -o "%urlPath%"
-set "urlPath=urls.txt"
+@REM set "urlPath=urls.txt"
 for /f "usebackq tokens=1* delims==" %%G in ("%urlPath%") do (
 	set "%%G=%%H"
 )
