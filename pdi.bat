@@ -511,7 +511,7 @@ if exist "Pingo.zip" (
 	echo Installing Effecient-Compression-Tool ^(AVX2-Optimized^)...
 	tar -xf "Pingo.zip"
 	mkdir Pingo
-	move pingo.exe ect
+	move pingo.exe Pingo
 	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "Pingo" "%PF%\Pingo"
 	call :SetPath "%PF%\Pingo\"
 )
