@@ -507,6 +507,14 @@ if exist "ect.zip" (
 	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "ect" "%PF%\ect"
 	call :SetPath "%PF%\ect\"
 )
+if exist "Pingo.zip" (
+	echo Installing Effecient-Compression-Tool ^(AVX2-Optimized^)...
+	tar -xf "Pingo.zip"
+	mkdir Pingo
+	move pingo.exe ect
+	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "Pingo" "%PF%\Pingo"
+	call :SetPath "%PF%\Pingo\"
+)
 
 for %%G in (!zipm!) do (
 	set "progName=%%G"

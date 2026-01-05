@@ -1,6 +1,6 @@
 Categories=General_Dependencies;Messengers;Developing;Browsers;Apple;Misc;Cracked;Games
 
-General_Dependencies=.NET_Framework_3.5;CMake;DirectX_Runtimes;ect;EdgeWebView2;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Git;Go;Gradle;Intel_Bluetooth;Intel_WiFi;LLVM;LibAvif;NVCleanstall;Ninja;Node.js;OpenSSH;OpenSSL;Python;StrawberryPerl;VCRedist_2005-2022;WinSCP
+General_Dependencies=.NET_Framework_3.5;CMake;DirectX_Runtimes;ect;EdgeWebView2;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Git;Go;Gradle;Intel_Bluetooth;Intel_WiFi;LLVM;LibAvif;NVCleanstall;Ninja;Node.js;OpenSSH;OpenSSL;Pingo;Python;StrawberryPerl;VCRedist_2005-2022;WinSCP
 Messengers=AyuGram;Discord;Telegram;Telegram_Portable;Viber
 Developing=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
@@ -10,7 +10,7 @@ Cracked=MediaHuman;Revo_Uninstaller_Pro
 Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
 
 msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;CMake;Cloudflare_WARP;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH;OpenSSL;StrawberryPerl;WinDirStat;WinSCP
-zip=Autoruns;ect;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;Ninja;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
+zip=Autoruns;ect;ExifTool;FFmpeg;Pingo;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;Ninja;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 zipm=Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=AyuGram;ContextMenuManager;NVCleanstall;Rufus
 
@@ -72,6 +72,7 @@ url_NVCleanstall=https://www.dropbox.com/scl/fi/de6nw7v1qsfcghl08equu/NVCleansta
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.0.4/OBS-Studio-32.0.4-Windows-x64-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/10.0.0.0p2-Preview/OpenSSH-Win64-v10.0.0.0.msi
 url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_6_0.msi
+url_Pingo=https://css-ig.net/bin/pingo-win64.zip
 url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download.jetbrains.com/python/pycharm-2025.3.1.exe
 url_Python=https://www.python.org/ftp/python/3.14.2/python-3.14.2-amd64.exe
