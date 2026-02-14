@@ -22,10 +22,10 @@ Flagged_passive=.NET_DesktopRuntime_8.0;Intel_Bluetooth;Intel_WiFi
 
 Flags=passive;Q;quiet;S;VERYSILENT
 
-url_.NET_DesktopRuntime_8.0=https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.23/windowsdesktop-runtime-8.0.23-win-x64.exe
+url_.NET_DesktopRuntime_8.0=https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.24/windowsdesktop-runtime-8.0.24-win-x64.exe
 url_.NET_Framework_3.5=http://download.microsoft.com/download/6/0/f/60fc5854-3cb8-4892-b6db-bd4f42510f28/dotnetfx35.exe
 url_3uTools=https://url.3u.com/zmAJjyaa
-url_7-Zip=https://github.com/ip7z/7zip/releases/download/25.01/7z2501-x64.msi
+url_7-Zip=https://github.com/ip7z/7zip/releases/download/26.00/7z2600-x64.msi
 url_Autoruns=https://download.sysinternals.com/files/Autoruns.zip
 url_Avidemux=https://www.dropbox.com/scl/fi/nzxbti6br7o7vegkegiyz/AviDemux.exe?rlkey=mfzxwa8dqai53uuc22grqtxry&st=ofqskatg&dl=1
 url_AyuGram=https://github.com/AyuGram/AyuGramDesktop/releases/download/v5.14.3/AyuGram.exe
@@ -43,13 +43,13 @@ url_ect=https://github.com/Sputchik/Efficient-Compression-Tool/releases/download
 url_EdgeWebView2=https://go.microsoft.com/fwlink/?linkid=2124701
 url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi
 url_Everything=https://voidtools.com/Everything-1.4.1.1032.x64-Setup.exe
-url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.49_64.zip?viasf=1
+url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.50_64.zip?viasf=1
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_FFmpeg_libsvt-av1-psy=https://github.com/Uranite/FFmpeg-Builds-SVT-AV1-PSY/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
 url_Git=https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.1/Git-2.53.0-64-bit.exe
-url_Go=https://go.dev/dl/go1.25.7.windows-amd64.msi
+url_Go=https://go.dev/dl/go1.26.0.windows-amd64.msi
 url_Google_Earth_Pro=https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe?sjid=6101201665916555278-EU
 url_Gradle=https://services.gradle.org/distributions/gradle-9.3.1-bin.zip
 url_iCloud=https://secure-appldnld.apple.com/windows/061-91601-20200323-974a39d0-41fc-4761-b571-318b7d9205ed/iCloudSetup.exe
@@ -61,15 +61,15 @@ url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1945_Full.exe
 url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/download/v1.3.0/windows-artifacts.zip
 url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/146.0.1-1/librewolf-146.0.1-1-windows-x86_64-setup.exe
-url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0-rc2/LLVM-22.1.0-rc2-win64.exe
+url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0-rc3/LLVM-22.1.0-rc3-win64.exe
 url_MediaHuman=https://www.dropbox.com/scl/fi/70ujd33uqs3s1st5g9xdi/MediaHuman.exe?rlkey=b7wworqsaslvcgekg260tr5ff&st=ud61lb4o&dl=1
 url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.exe
 url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.msi
 url_Ninja=https://github.com/ninja-build/ninja/releases/download/v1.13.2/ninja-win.zip
-url_Node.js=https://nodejs.org/dist/v25.6.0/node-v25.6.0-x64.msi
+url_Node.js=https://nodejs.org/dist/v25.6.1/node-v25.6.1-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://www.dropbox.com/scl/fi/de6nw7v1qsfcghl08equu/NVCleanstall_1.19.0.exe?rlkey=wr2tttka9os2t5pd9wabgofbc&st=06616we8&dl=1
-url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.1.0-beta2/OBS-Studio-32.1.0-beta2-Windows-x64-Installer.exe
+url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.1.0-rc1/OBS-Studio-32.1.0-rc1-Windows-x64-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/10.0.0.0p2-Preview/OpenSSH-Win64-v10.0.0.0.msi
 url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_6_1.msi
 url_Pingo=https://css-ig.net/bin/pingo-win64.zip
@@ -92,13 +92,13 @@ url_Throttlestop=https://www.dropbox.com/scl/fi/b0648d8fnmm7qtmcoe6v4/ThrottleSt
 url_TradingView=https://tvd-packages.tradingview.com/stable/latest/win32/TradingView.msix
 url_TranslucentTB=https://github.com/TranslucentTB/TranslucentTB/releases/download/2024.1/TranslucentTB-portable-x64.zip
 url_TunnelBear=https://tunnelbear.s3.amazonaws.com/downloads/pc/TunnelBear-Installer.exe
-url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/144.0.7559.109-1.1/ungoogled-chromium_144.0.7559.109-1.1_installer_x64.exe
+url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/144.0.7559.132-1.1/ungoogled-chromium_144.0.7559.132-1.1_installer_x64.exe
 url_VCRedist_2005-2022=https://github.com/abbodi1406/vcredist/releases/download/v0.103.0/VisualCppRedist_AIO_x86_x64.exe
 url_Viber=https://download.cdn.viber.com/desktop/windows/ViberSetup.exe
 url_VS_2022_Installer=https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030
 url_VSCode=https://code.visualstudio.com/sha/download?build=stable&os=win32-x64
 url_WaterFox=https://cdn1.waterfox.net/waterfox/releases/latest/windows
-url_WiFi=https://downloadmirror.intel.com/872296/WiFi-24.10.0-Driver64-Win10-Win11.exe
+url_WiFi=https://downloadmirror.intel.com/874133/WiFi-24.20.0-Driver64-Win10-Win11.exe
 url_Windhawk=https://ramensoftware.com/downloads/windhawk_setup.exe
 url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download/WinDirStat-x64.msi
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
