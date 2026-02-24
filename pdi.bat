@@ -508,7 +508,7 @@ if exist "ect.zip" (
 	call :SetPath "%PF%\ect\"
 )
 if exist "Pingo.zip" (
-	echo Installing Effecient-Compression-Tool ^(AVX2-Optimized^)...
+	echo Installing Pingo...
 	tar -xf "Pingo.zip"
 	mkdir Pingo
 	move pingo.exe Pingo

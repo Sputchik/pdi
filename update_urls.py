@@ -40,7 +40,8 @@ github_map = {
 	'WinThumbsPreloaderV2': ('Mfarooq360', 'WinThumbsPreloader-V2'),
 	'CMake': ('Kitware', 'CMake'),
 	'Ninja': ('ninja-build', 'ninja'),
-	'StrawberryPerl': ('StrawberryPerl', 'Perl-Dist-Strawberry')
+	'StrawberryPerl': ('StrawberryPerl', 'Perl-Dist-Strawberry'),
+	# 'FFmpeg': ('BtbN', 'FFmpeg-Builds')
 }
 
 parse_map = {
