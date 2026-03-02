@@ -65,6 +65,7 @@ parse_map = {
 	'WinSCP': 'https://winscp.net/eng/downloads.php',
 	'ExifTool': 'https://exiftool.org/',
 	'.NET DesktopRuntime 8.0': 'https://dotnet.microsoft.com/en-us/download/dotnet/8.0',
+	'NASM': 'https://www.nasm.us/pub/nasm/releasebuilds/',
 
 }
 
@@ -465,6 +466,12 @@ async def parse_prog_url(name: str, data: str, request_url: str, session) -> str
 				url = f'https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/{version}/windowsdesktop-runtime-{version}-win-x64.exe'
 				break
 
+	elif name == 'NASM':
+		tr_elem = soup.select_one('tr.even-parentdir + tr, tr.odd-dir, tr.even-dir')
+		a_elem = tr_elem.select_one('a')
+		version = a_elem.get_text().rstrip('/')
+		url = f'https://www.nasm.us/pub/nasm/releasebuilds/{version}/win64/nasm-{version}-win64.zip'
+
 	else: return
 
 	if not url:
@@ -515,7 +522,8 @@ async def ensure_valid_links(progmap, session):
 
 		response = await aio.request('HEAD', url, session = session, toreturn = 'status_code', allow_redirects = True, timeout = 5)
 		if not response:
-			log.warning(f'⚠️  {prog} - Error making request: {response}, {url}')
+			if 'dropbox' not in url:
+				log.warning(f'⚠️  {prog} - Error making request: {response}, {url}')
 			return
 
 		if 400 <= response:

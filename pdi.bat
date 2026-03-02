@@ -192,7 +192,7 @@ goto :eof
 :FetchURLs
 
 curl -A "%UserAgent%" -s %URLsURL% -o "%urlPath%"
-@REM set "urlPath=urls.txt"
+set "urlPath=urls.txt"
 for /f "usebackq tokens=1* delims==" %%G in ("%urlPath%") do (
 	set "%%G=%%H"
 )
@@ -514,6 +514,13 @@ if exist "Pingo.zip" (
 	move pingo.exe Pingo
 	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "Pingo" "%PF%\Pingo"
 	call :SetPath "%PF%\Pingo\"
+)
+if exist "NASM.zip" (
+	tar -xf "NASM.zip"
+	del NASM.zip
+	move "nasm-*" "NASM"
+	robocopy /NJH /NJS /NFL /NDL /NP /NS /NC /COPYALL /E /MOVE "NASM" "%PF%\NASM"
+	call :SetPath "%PF%\NASM\"
 )
 
 for %%G in (!zipm!) do (
