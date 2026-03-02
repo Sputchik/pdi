@@ -18,7 +18,7 @@ log = setup_logger('up', clear_file=True)
 CWD = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/') + '/'
 urls_path = CWD + 'urls.txt'
 
-github_latest_draft = 'https://api.github.com/repos/{}/{}/releases?per_page=5' # Owner, Repo Slug
+github_latest_draft = 'https://api.github.com/repos/{}/{}/releases?per_page=25' # Owner, Repo Slug
 urls_link = 'https://raw.githubusercontent.com/Sputchik/pdi/refs/heads/main/urls.txt'
 
 github_map = {
@@ -41,7 +41,7 @@ github_map = {
 	'CMake': ('Kitware', 'CMake'),
 	'Ninja': ('ninja-build', 'ninja'),
 	'StrawberryPerl': ('StrawberryPerl', 'Perl-Dist-Strawberry'),
-	# 'FFmpeg': ('BtbN', 'FFmpeg-Builds')
+	'FFmpeg': ('BtbN', 'FFmpeg-Builds')
 }
 
 parse_map = {
@@ -224,6 +224,9 @@ def find_best_executable(versions: dict[str, str]) -> str:
 
 		elif key.endswith('.zip'):
 			if 'windows' in key or 'win' in key:
+				if 'ffmpeg' in key and 'win64-gpl.zip' not in key:
+					continue
+
 				log.debug(f'ZIP Fallback: {key}')
 				fallback_zip = key
 
@@ -382,7 +385,7 @@ async def parse_prog_url(name: str, data: str, request_url: str, session) -> str
 		for elem in a_elems:
 			if elem.text and elem.text.startswith('Download qBittorrent '):
 				version = elem.text.split(' ')[2].lstrip('v')
-				url = f'https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-{version}/qbittorrent_{version}_x64_setup.exe?viasf=1'
+				url = f'https://unlimited.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-{version}/qbittorrent_{version}_x64_setup.exe?viasf=1'
 				break
 
 	elif name == 'Blender':
