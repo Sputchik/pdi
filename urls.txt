@@ -1,6 +1,6 @@
 Categories=General_Dependencies;Messengers;Developing;Browsers;Apple;Misc;Cracked;Games
 
-General_Dependencies=.NET_Framework_3.5;CMake;DirectX_Runtimes;ect;EdgeWebView2;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Git;Go;Gradle;Intel_Bluetooth;Intel_WiFi;LLVM;LibAvif;NVCleanstall;Ninja;Node.js;OpenSSH;OpenSSL;Pingo;Python;StrawberryPerl;VCRedist_2005-2022;WinSCP
+General_Dependencies=.NET_Framework_3.5;CMake;DirectX_Runtimes;ect;EdgeWebView2;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Git;Go;Gradle;Intel_Bluetooth;Intel_WiFi;LLVM;LibAvif;NASM;NVCleanstall;Ninja;Node.js;OpenSSH;OpenSSL;Pingo;Python;StrawberryPerl;VCRedist_2005-2022;WinSCP
 Messengers=AyuGram;Discord;Telegram;Telegram_Portable;Viber
 Developing=Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;IntelliJ_IDEA;PyCharm;Resource_Hacker;Sublime_Text;VSCode;VS_2022_Installer
 Browsers=Firefox;Librewolf;QuteBrowser;Ungoogled_Chromium;WaterFox
@@ -10,7 +10,7 @@ Cracked=MediaHuman;Revo_Uninstaller_Pro
 Games=Epic_Games;Minecraft_Launcher;Minecraft_Legacy_Launcher;Steam
 
 msi=7-Zip;Blender;Blender_3.3.X_LTS;Blender_3.6.X_LTS;CMake;Cloudflare_WARP;DB_Browser;Epic_Games;Go;Minecraft_Legacy_Launcher;Node.js;nomacs;OpenSSH;OpenSSL;StrawberryPerl;WinDirStat;WinSCP
-zip=Autoruns;ect;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;Ninja;Pingo;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
+zip=Autoruns;ect;ExifTool;FFmpeg;FFmpeg_libsvt-av1-psy;Gradle;Gradle;LibAvif;NASM;Ninja;Pingo;Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 zipm=Telegram_Portable;ThrottleStop;TradingView;TranslucentTB
 pfexe=AyuGram;ContextMenuManager;NVCleanstall;Rufus
 
@@ -45,7 +45,7 @@ url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/
 url_Everything=https://voidtools.com/Everything-1.4.1.1032.x64-Setup.exe
 url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.52_64.zip?viasf=1
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
-url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-03-02-13-06/ffmpeg-N-123103-g5315d12139-win64-gpl.zip
+url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip
 url_FFmpeg_libsvt-av1-psy=https://github.com/Uranite/FFmpeg-Builds-SVT-AV1-PSY/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
 url_Git=https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.1/Git-2.53.0-64-bit.exe
@@ -92,7 +92,7 @@ url_Throttlestop=https://www.dropbox.com/scl/fi/b0648d8fnmm7qtmcoe6v4/ThrottleSt
 url_TradingView=https://tvd-packages.tradingview.com/stable/latest/win32/TradingView.msix
 url_TranslucentTB=https://github.com/TranslucentTB/TranslucentTB/releases/download/2024.1/TranslucentTB-portable-x64.zip
 url_TunnelBear=https://tunnelbear.s3.amazonaws.com/downloads/pc/TunnelBear-Installer.exe
-url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/145.0.7632.75-1.2/ungoogled-chromium_145.0.7632.75-1.1_installer_x64.exe
+url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/145.0.7632.116-1.1/ungoogled-chromium_145.0.7632.116-1.1_installer_x64.exe
 url_VCRedist_2005-2022=https://github.com/abbodi1406/vcredist/releases/download/v0.103.0/VisualCppRedist_AIO_x86_x64.exe
 url_Viber=https://download.cdn.viber.com/desktop/windows/ViberSetup.exe
 url_VS_2022_Installer=https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030
@@ -107,3 +107,4 @@ url_WinThumbsPreloader=https://github.com/bruhov/WinThumbsPreloader/releases/dow
 url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta6/WinThumbsPreloader-2.0.0-setup.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
+url_NASM=https://www.nasm.us/pub/nasm/releasebuilds/3.01rc9//win64/nasm-3.01rc9/-win64.zip
