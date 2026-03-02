@@ -45,7 +45,7 @@ url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/
 url_Everything=https://voidtools.com/Everything-1.4.1.1032.x64-Setup.exe
 url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.52_64.zip?viasf=1
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
-url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
+url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-03-02-13-06/ffmpeg-N-123103-g5315d12139-win64-gpl.zip
 url_FFmpeg_libsvt-av1-psy=https://github.com/Uranite/FFmpeg-Builds-SVT-AV1-PSY/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
 url_Git=https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.1/Git-2.53.0-64-bit.exe
@@ -73,10 +73,10 @@ url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.1.0-rc2/OB
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/10.0.0.0p2-Preview/OpenSSH-Win64-v10.0.0.0.msi
 url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_6_1.msi
 url_Pingo=https://css-ig.net/bin/pingo-win64.zip
-url_Process_Hacker=https://netcologne.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
+url_Process_Hacker=https://unlimited.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download.jetbrains.com/python/pycharm-2025.3.3.exe
 url_Python=https://www.python.org/ftp/python/3.14.3/python-3.14.3-amd64.exe
-url_qBitTorrent=https://netcologne.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe?viasf=1
+url_qBitTorrent=https://unlimited.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe?viasf=1
 url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.1.0/qutebrowser-3.1.0-amd64.exe
 url_RegistryFinder=https://registry-finder.com/bin/2.61.1.0/RegistryFinderSetup2.61.1.exe
 url_Resource_Hacker=https://www.angusj.com/resourcehacker/reshacker_setup.exe
@@ -97,7 +97,7 @@ url_VCRedist_2005-2022=https://github.com/abbodi1406/vcredist/releases/download/
 url_Viber=https://download.cdn.viber.com/desktop/windows/ViberSetup.exe
 url_VS_2022_Installer=https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030
 url_VSCode=https://code.visualstudio.com/sha/download?build=stable&os=win32-x64
-url_WaterFox=https://cdn1.waterfox.net/waterfox/releases/latest/windows
+url_WaterFox=https://cdn.waterfox.com/waterfox/releases/6.6.9/WINNT_x86_64/Waterfox%20Setup%206.6.9.exe
 url_WiFi=https://downloadmirror.intel.com/874133/WiFi-24.20.0-Driver64-Win10-Win11.exe
 url_Windhawk=https://ramensoftware.com/downloads/windhawk_setup.exe
 url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download/WinDirStat-x64.msi
