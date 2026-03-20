@@ -43,7 +43,7 @@ url_ect=https://github.com/Sputchik/Efficient-Compression-Tool/releases/download
 url_EdgeWebView2=https://go.microsoft.com/fwlink/?linkid=2124701
 url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi
 url_Everything=https://voidtools.com/Everything-1.4.1.1032.x64-Setup.exe
-url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.52_64.zip?viasf=1
+url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.53_64.zip?viasf=1
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip
 url_FFmpeg_libsvt-av1-psy=https://github.com/Uranite/FFmpeg-Builds-SVT-AV1-PSY/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
@@ -51,14 +51,14 @@ url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
 url_Git=https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.2/Git-2.53.0.2-64-bit.exe
 url_Go=https://go.dev/dl/go1.26.1.windows-amd64.msi
 url_Google_Earth_Pro=https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe?sjid=6101201665916555278-EU
-url_Gradle=https://services.gradle.org/distributions/gradle-9.4.0-bin.zip
+url_Gradle=https://services.gradle.org/distributions/gradle-9.4.1-bin.zip
 url_iCloud=https://secure-appldnld.apple.com/windows/061-91601-20200323-974a39d0-41fc-4761-b571-318b7d9205ed/iCloudSetup.exe
 url_iMazing=https://downloads.imazing.com/windows/iMazing/iMazing3forWindows.exe
 url_Intel_Bluetooth=https://downloadmirror.intel.com/867930/BT-23.170.0-64UWD-Win10-Win11.exe
 url_Intel_WiFi=https://downloadmirror.intel.com/867870/WiFi-23.170.0-Driver64-Win10-Win11.exe
 url_IntelliJ_IDEA=https://download.jetbrains.com/idea/idea-2025.3.4.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
-url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1955_Full.exe
+url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1960_Full.exe
 url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/download/v1.4.0/windows-artifacts.zip
 url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/146.0.1-1/librewolf-146.0.1-1-windows-x86_64-setup.exe
 url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.1/LLVM-22.1.1-win64.exe
