@@ -36,7 +36,7 @@ url_Bluetooth=https://downloadmirror.intel.com/915506/BT-24.30.1-64UWD-Win10-Win
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
 url_CMake=https://github.com/Kitware/CMake/releases/download/v4.3.1/cmake-4.3.1-windows-x86_64.msi
 url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.NET.3.5.exe
-url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/continuous/DB.Browser.for.SQLite-dev-fa9c02a-x64.msi
+url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-20260413-x64.msi
 url_DirectX_Runtimes=https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe
 url_Discord=https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64
 url_ect=https://github.com/Sputchik/Efficient-Compression-Tool/releases/download/v0.9.5/ect_avx2+pgo.zip
