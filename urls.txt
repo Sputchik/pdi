@@ -34,7 +34,7 @@ url_Blender_3.3.X_LTS=https://download.blender.org/release/Blender3.3/blender-3.
 url_Blender_3.6.X_LTS=https://download.blender.org/release/Blender3.6/blender-3.6.23-windows-x64.msi
 url_Bluetooth=https://downloadmirror.intel.com/915506/BT-24.30.1-64UWD-Win10-Win11.exe
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
-url_CMake=https://github.com/Kitware/CMake/releases/download/v4.3.1/cmake-4.3.1-windows-x86_64.msi
+url_CMake=https://github.com/Kitware/CMake/releases/download/v4.1.6/cmake-4.1.6-windows-x86_64.msi
 url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.NET.3.5.exe
 url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-20260413-x64.msi
 url_DirectX_Runtimes=https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe
@@ -43,12 +43,12 @@ url_ect=https://github.com/Sputchik/Efficient-Compression-Tool/releases/download
 url_EdgeWebView2=https://go.microsoft.com/fwlink/?linkid=2124701
 url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi
 url_Everything=https://voidtools.com/Everything-1.4.1.1032.x64-Setup.exe
-url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.56_64.zip?viasf=1
+url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.57_64.zip?viasf=1
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip
 url_FFmpeg_libsvt-av1-psy=https://github.com/Uranite/FFmpeg-Builds-SVT-AV1-PSY/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
-url_Git=https://github.com/git-for-windows/git/releases/download/v2.54.0-rc2.windows.1/Git-2.54.0-rc2-64-bit.exe
+url_Git=https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.exe
 url_Go=https://go.dev/dl/go1.26.2.windows-amd64.msi
 url_Google_Earth_Pro=https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe?sjid=6101201665916555278-EU
 url_Gradle=https://services.gradle.org/distributions/gradle-9.4.1-bin.zip
@@ -58,7 +58,7 @@ url_Intel_Bluetooth=https://downloadmirror.intel.com/867930/BT-23.170.0-64UWD-Wi
 url_Intel_WiFi=https://downloadmirror.intel.com/867870/WiFi-23.170.0-Driver64-Win10-Win11.exe
 url_IntelliJ_IDEA=https://download.jetbrains.com/idea/idea-2026.1.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
-url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1966_Full.exe
+url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1968_Full.exe
 url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/download/v1.4.1/windows-artifacts.zip
 url_Librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/146.0.1-1/librewolf-146.0.1-1-windows-x86_64-setup.exe
 url_LLVM=https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.3/LLVM-22.1.3-win64.exe
@@ -72,7 +72,7 @@ url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setu
 url_NVCleanstall=https://www.dropbox.com/scl/fi/de6nw7v1qsfcghl08equu/NVCleanstall_1.19.0.exe?rlkey=wr2tttka9os2t5pd9wabgofbc&st=06616we8&dl=1
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.1.1/OBS-Studio-32.1.1-Windows-x64-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/10.0.0.0p2-Preview/OpenSSH-Win64-v10.0.0.0.msi
-url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-3_6_2.msi
+url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-4_0_0.msi
 url_Pingo=https://css-ig.net/bin/pingo-win64.zip
 url_Process_Hacker=https://unlimited.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download.jetbrains.com/python/pycharm-2026.1.exe
@@ -93,8 +93,8 @@ url_Throttlestop=https://www.dropbox.com/scl/fi/b0648d8fnmm7qtmcoe6v4/ThrottleSt
 url_TradingView=https://tvd-packages.tradingview.com/stable/latest/win32/TradingView.msix
 url_TranslucentTB=https://github.com/TranslucentTB/TranslucentTB/releases/download/2024.1/TranslucentTB-portable-x64.zip
 url_TunnelBear=https://tunnelbear.s3.amazonaws.com/downloads/pc/TunnelBear-Installer.exe
-url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/147.0.7727.55-1.1/ungoogled-chromium_147.0.7727.55-1.1_installer_x64.exe
-url_VCRedist_2005-2022=https://github.com/abbodi1406/vcredist/releases/download/v0.103.0/VisualCppRedist_AIO_x86_x64.exe
+url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/147.0.7727.101-1.1/ungoogled-chromium_147.0.7727.101-1.1_installer_x64.exe
+url_VCRedist_2005-2022=https://github.com/abbodi1406/vcredist/releases/download/v0.104.0/VisualCppRedist_AIO_x86_x64.exe
 url_Viber=https://download.cdn.viber.com/desktop/windows/ViberSetup.exe
 url_VS_2022_Installer=https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030
 url_VSCode=https://code.visualstudio.com/sha/download?build=stable&os=win32-x64
