@@ -22,7 +22,7 @@ Flagged_passive=.NET_DesktopRuntime_8.0;Intel_Bluetooth;Intel_WiFi
 
 Flags=passive;Q;quiet;S;VERYSILENT
 
-url_.NET_DesktopRuntime_8.0=https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.26/windowsdesktop-runtime-8.0.26-win-x64.exe
+url_.NET_DesktopRuntime_8.0=https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.27/windowsdesktop-runtime-8.0.27-win-x64.exe
 url_.NET_Framework_3.5=http://download.microsoft.com/download/6/0/f/60fc5854-3cb8-4892-b6db-bd4f42510f28/dotnetfx35.exe
 url_3uTools=https://url.3u.com/zmAJjyaa
 url_7-Zip=https://github.com/ip7z/7zip/releases/download/26.01/7z2601-x64.msi
@@ -51,12 +51,12 @@ url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
 url_Git=https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.exe
 url_Go=https://go.dev/dl/go1.26.3.windows-amd64.msi
 url_Google_Earth_Pro=https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe?sjid=6101201665916555278-EU
-url_Gradle=https://services.gradle.org/distributions/gradle-8.14.5-bin.zip
+url_Gradle=https://services.gradle.org/distributions/gradle-9.5.1-bin.zip
 url_iCloud=https://secure-appldnld.apple.com/windows/061-91601-20200323-974a39d0-41fc-4761-b571-318b7d9205ed/iCloudSetup.exe
 url_iMazing=https://downloads.imazing.com/windows/iMazing/iMazing3forWindows.exe
 url_Intel_Bluetooth=https://downloadmirror.intel.com/867930/BT-23.170.0-64UWD-Win10-Win11.exe
 url_Intel_WiFi=https://downloadmirror.intel.com/867870/WiFi-23.170.0-Driver64-Win10-Win11.exe
-url_IntelliJ_IDEA=https://download.jetbrains.com/idea/idea-2026.1.1.exe
+url_IntelliJ_IDEA=https://download.jetbrains.com/idea/idea-2026.1.2.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1970_Full.exe
 url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/download/v1.4.1/windows-artifacts.zip
@@ -75,7 +75,7 @@ url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/10.0.0
 url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-4_0_0.msi
 url_Pingo=https://css-ig.net/bin/pingo-win64.zip
 url_Process_Hacker=https://unlimited.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
-url_PyCharm=https://download.jetbrains.com/python/pycharm-2026.1.1.exe
+url_PyCharm=https://download.jetbrains.com/python/pycharm-2026.1.2.exe
 url_Python=https://www.python.org/ftp/python/3.14.5/python-3.14.5-amd64.exe
 url_qBitTorrent=https://unlimited.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe?viasf=1
 url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.1.0/qutebrowser-3.1.0-amd64.exe
