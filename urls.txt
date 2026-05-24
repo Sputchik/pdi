@@ -34,7 +34,7 @@ url_Blender_3.3.X_LTS=https://download.blender.org/release/Blender3.3/blender-3.
 url_Blender_3.6.X_LTS=https://download.blender.org/release/Blender3.6/blender-3.6.23-windows-x64.msi
 url_Bluetooth=https://downloadmirror.intel.com/918120/BT-24.40.0-64UWD-Win10-Win11.exe
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
-url_CMake=https://github.com/Kitware/CMake/releases/download/v4.3.2/cmake-4.3.2-windows-x86_64.msi
+url_CMake=https://github.com/Kitware/CMake/releases/download/v4.3.3/cmake-4.3.3-windows-x86_64.msi
 url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.NET.3.5.exe
 url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-20260518-win-x64.msi
 url_DirectX_Runtimes=https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe
@@ -67,7 +67,7 @@ url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.e
 url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.msi
 url_NASM=https://www.nasm.us/pub/nasm/releasebuilds/3.02rc7/win64/nasm-3.02rc7-win64.zip
 url_Ninja=https://github.com/ninja-build/ninja/releases/download/v1.13.2/ninja-win.zip
-url_Node.js=https://nodejs.org/dist/v26.1.0/node-v26.1.0-x64.msi
+url_Node.js=https://nodejs.org/dist/v26.2.0/node-v26.2.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://www.dropbox.com/scl/fi/de6nw7v1qsfcghl08equu/NVCleanstall_1.19.0.exe?rlkey=wr2tttka9os2t5pd9wabgofbc&st=06616we8&dl=1
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.1.2/OBS-Studio-32.1.2-Windows-x64-Installer.exe
