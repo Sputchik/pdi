@@ -79,7 +79,7 @@ url_PyCharm=https://download.jetbrains.com/python/pycharm-2026.1.2.exe
 url_Python=https://www.python.org/ftp/python/3.14.5/python-3.14.5-amd64.exe
 url_qBitTorrent=https://unlimited.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe?viasf=1
 url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.1.0/qutebrowser-3.1.0-amd64.exe
-url_RegistryFinder=https://registry-finder.com/bin/2.61.1.0/RegistryFinderSetup2.61.1.exe
+url_RegistryFinder=https://registry-finder.com/bin/2.62.0.0/RegistryFinderSetup2.62.exe
 url_Resource_Hacker=https://www.angusj.com/resourcehacker/reshacker_setup.exe
 url_Revo_Uninstaller_Pro=https://www.dropbox.com/scl/fi/9nc9khsw8wobjhd8rt2xk/RevoUninstallerPro.exe?rlkey=48mvmd79eazgmbqdkrnyaabjq&st=1mte3l8n&dl=1
 url_Rufus=https://github.com/pbatard/rufus/releases/download/v4.14/rufus-4.14.exe
