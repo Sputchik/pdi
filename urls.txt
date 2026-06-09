@@ -72,7 +72,7 @@ url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setu
 url_NVCleanstall=https://www.dropbox.com/scl/fi/de6nw7v1qsfcghl08equu/NVCleanstall_1.19.0.exe?rlkey=wr2tttka9os2t5pd9wabgofbc&st=06616we8&dl=1
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.1.2/OBS-Studio-32.1.2-Windows-x64-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/10.0.0.0p2-Preview/OpenSSH-Win64-v10.0.0.0.msi
-url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-4_0_0.msi
+url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-4_0_1.msi
 url_Pingo=https://css-ig.net/bin/pingo-win64.zip
 url_Process_Hacker=https://unlimited.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download.jetbrains.com/python/pycharm-2026.1.2.exe
