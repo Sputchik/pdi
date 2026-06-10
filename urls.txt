@@ -76,7 +76,7 @@ url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-4_0_1.msi
 url_Pingo=https://css-ig.net/bin/pingo-win64.zip
 url_Process_Hacker=https://unlimited.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
 url_PyCharm=https://download.jetbrains.com/python/pycharm-2026.1.2.exe
-url_Python=https://www.python.org/ftp/python/3.14.5/python-3.14.5-amd64.exe
+url_Python=https://www.python.org/ftp/python/3.14.6/python-3.14.6-amd64.exe
 url_qBitTorrent=https://unlimited.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_x64_setup.exe?viasf=1
 url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.1.0/qutebrowser-3.1.0-amd64.exe
 url_RegistryFinder=https://registry-finder.com/bin/2.62.0.0/RegistryFinderSetup2.62.exe
