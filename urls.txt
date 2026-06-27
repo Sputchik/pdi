@@ -45,7 +45,7 @@ url_Epic_Games=https://launcher-public-service-prod06.ol.epicgames.com/launcher/
 url_Everything=https://voidtools.com/Everything-1.4.1.1032.x64-Setup.exe
 url_ExifTool=https://deac-ams.dl.sourceforge.net/project/exiftool/exiftool-13.59_64.zip?viasf=1
 url_Explorer_Patcher=https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
-url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip
+url_FFmpeg=https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-06-27-13-21/ffmpeg-N-125328-g8512161c81-win64-gpl.zip
 url_FFmpeg_libsvt-av1-psy=https://github.com/Uranite/FFmpeg-Builds-SVT-AV1-PSY/releases/latest/download/ffmpeg-master-latest-win64-gpl.zip
 url_Firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
 url_Git=https://github.com/git-for-windows/git/releases/download/v2.55.0-rc2.windows.1/Git-2.55.0-rc2-64-bit.exe
