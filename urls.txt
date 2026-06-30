@@ -82,7 +82,7 @@ url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.
 url_RegistryFinder=https://registry-finder.com/bin/2.62.0.0/RegistryFinderSetup2.62.exe
 url_Resource_Hacker=https://www.angusj.com/resourcehacker/reshacker_setup.exe
 url_Revo_Uninstaller_Pro=https://www.dropbox.com/scl/fi/9nc9khsw8wobjhd8rt2xk/RevoUninstallerPro.exe?rlkey=48mvmd79eazgmbqdkrnyaabjq&st=1mte3l8n&dl=1
-url_Rufus=https://github.com/pbatard/rufus/releases/download/v4.15_BETA2/rufus-4.15_BETA2.exe
+url_Rufus=https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15.exe
 url_Sideloadly=https://sideloadly.io/SideloadlySetup64.exe
 url_Steam=https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe
 url_StrawberryPerl=https://github.com/StrawberryPerl/Perl-Dist-Strawberry/releases/download/SP_54221_64bit/strawberry-perl-5.42.2.1-64bit.msi
