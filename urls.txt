@@ -67,7 +67,7 @@ url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.e
 url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.msi
 url_NASM=https://www.nasm.us/pub/nasm/releasebuilds/3.02rc13/win64/nasm-3.02rc13-win64.zip
 url_Ninja=https://github.com/ninja-build/ninja/releases/download/v1.13.2/ninja-win.zip
-url_Node.js=https://nodejs.org/dist/v26.4.0/node-v26.4.0-x64.msi
+url_Node.js=https://nodejs.org/dist/v26.5.0/node-v26.5.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://www.dropbox.com/scl/fi/de6nw7v1qsfcghl08equu/NVCleanstall_1.19.0.exe?rlkey=wr2tttka9os2t5pd9wabgofbc&st=06616we8&dl=1
 url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.2.0-beta3/OBS-Studio-32.2.0-beta3-Windows-x64-Installer.exe
