@@ -70,7 +70,7 @@ url_Ninja=https://github.com/ninja-build/ninja/releases/download/v1.13.2/ninja-w
 url_Node.js=https://nodejs.org/dist/v26.5.0/node-v26.5.0-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://www.dropbox.com/scl/fi/de6nw7v1qsfcghl08equu/NVCleanstall_1.19.0.exe?rlkey=wr2tttka9os2t5pd9wabgofbc&st=06616we8&dl=1
-url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.2.0-beta3/OBS-Studio-32.2.0-beta3-Windows-x64-Installer.exe
+url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.2.0-rc1/OBS-Studio-32.2.0-rc1-Windows-x64-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/10.0.0.0p2-Preview/OpenSSH-Win64-v10.0.0.0.msi
 url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-4_0_1.msi
 url_Pingo=https://css-ig.net/bin/pingo-win64.zip
@@ -93,7 +93,7 @@ url_Throttlestop=https://www.dropbox.com/scl/fi/b0648d8fnmm7qtmcoe6v4/ThrottleSt
 url_TradingView=https://tvd-packages.tradingview.com/stable/latest/win32/TradingView.msix
 url_TranslucentTB=https://github.com/TranslucentTB/TranslucentTB/releases/download/2024.1/TranslucentTB-portable-x64.zip
 url_TunnelBear=https://tunnelbear.s3.amazonaws.com/downloads/pc/TunnelBear-Installer.exe
-url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/150.0.7871.46-1.1/ungoogled-chromium_150.0.7871.46-1.1_installer_x64.exe
+url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/150.0.7871.114-1.1/ungoogled-chromium_150.0.7871.114-1.1_installer_x64.exe
 url_VCRedist_2005-2022=https://github.com/abbodi1406/vcredist/releases/download/v0.105.0/VisualCppRedist_AIO_x86_x64.exe
 url_Viber=https://download.cdn.viber.com/desktop/windows/ViberSetup.exe
 url_VS_2022_Installer=https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030
