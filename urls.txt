@@ -34,9 +34,9 @@ url_Blender_3.3.X_LTS=https://download.blender.org/release/Blender3.3/blender-3.
 url_Blender_3.6.X_LTS=https://download.blender.org/release/Blender3.6/blender-3.6.23-windows-x64.msi
 url_Bluetooth=https://downloadmirror.intel.com/922635/BT-24.50.0-64UWD-Win10-Win11.exe
 url_Cloudflare_WARP=https://1111-releases.cloudflareclient.com/win/latest
-url_CMake=https://github.com/Kitware/CMake/releases/download/v4.4.0/cmake-4.4.0-windows-x86_64.msi
+url_CMake=https://github.com/Kitware/CMake/releases/download/v4.4.2/cmake-4.4.2-windows-x86_64.msi
 url_ContextMenuManager=https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.NET.3.5.exe
-url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-20260622-win-x64.msi
+url_DB_Browser=https://github.com/sqlitebrowser/sqlitebrowser/releases/download/continuous/DB.Browser.for.SQLite-dev-1644fd5-win-x64.msi
 url_DirectX_Runtimes=https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe
 url_Discord=https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64
 url_ect=https://github.com/Sputchik/Efficient-Compression-Tool/releases/download/v0.9.5/ect_avx2+pgo.zip
@@ -56,7 +56,7 @@ url_iCloud=https://secure-appldnld.apple.com/windows/061-91601-20200323-974a39d0
 url_iMazing=https://downloads.imazing.com/windows/iMazing/iMazing3forWindows.exe
 url_Intel_Bluetooth=https://downloadmirror.intel.com/867930/BT-23.170.0-64UWD-Win10-Win11.exe
 url_Intel_WiFi=https://downloadmirror.intel.com/867870/WiFi-23.170.0-Driver64-Win10-Win11.exe
-url_IntelliJ_IDEA=https://download.jetbrains.com/idea/idea-2026.2.exe
+url_IntelliJ_IDEA=https://download.jetbrains.com/idea/idea-2026.2.0.1.exe
 url_iTunes=https://www.apple.com/itunes/download/win64
 url_K-Lite_Codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1985_Full.exe
 url_LibAvif=https://github.com/AOMediaCodec/libavif/releases/download/v1.4.2/windows-artifacts.zip
@@ -67,15 +67,15 @@ url_Minecraft_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.e
 url_Minecraft_Legacy_Launcher=https://launcher.mojang.com/download/MinecraftInstaller.msi
 url_NASM=https://www.nasm.us/pub/nasm/releasebuilds/3.02rc13/win64/nasm-3.02rc13-win64.zip
 url_Ninja=https://github.com/ninja-build/ninja/releases/download/v1.13.2/ninja-win.zip
-url_Node.js=https://nodejs.org/dist/v26.5.0/node-v26.5.0-x64.msi
+url_Node.js=https://nodejs.org/dist/v26.5.1/node-v26.5.1-x64.msi
 url_nomacs=https://github.com/nomacs/nomacs/releases/latest/download/nomacs-setup-x64.msi
 url_NVCleanstall=https://www.dropbox.com/scl/fi/de6nw7v1qsfcghl08equu/NVCleanstall_1.19.0.exe?rlkey=wr2tttka9os2t5pd9wabgofbc&st=06616we8&dl=1
-url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.2.0/OBS-Studio-32.2.0-Windows-x64-Installer.exe
+url_OBS=https://github.com/obsproject/obs-studio/releases/download/32.2.1/OBS-Studio-32.2.1-Windows-x64-Installer.exe
 url_OpenSSH=https://github.com/PowerShell/Win32-OpenSSH/releases/download/10.0.0.0p2-Preview/OpenSSH-Win64-v10.0.0.0.msi
 url_OpenSSL=https://slproweb.com/download/Win64OpenSSL-4_0_1.msi
 url_Pingo=https://css-ig.net/bin/pingo-win64.zip
 url_Process_Hacker=https://unlimited.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe?viasf=1
-url_PyCharm=https://download.jetbrains.com/python/pycharm-2026.2.exe
+url_PyCharm=https://download.jetbrains.com/python/pycharm-2026.2.0.1.exe
 url_Python=https://www.python.org/ftp/python/3.14.6/python-3.14.6-amd64.exe
 url_qBitTorrent=https://unlimited.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe?viasf=1
 url_QuteBrowser=https://github.com/qutebrowser/qutebrowser/releases/download/v3.1.0/qutebrowser-3.1.0-amd64.exe
@@ -93,7 +93,7 @@ url_Throttlestop=https://www.dropbox.com/scl/fi/b0648d8fnmm7qtmcoe6v4/ThrottleSt
 url_TradingView=https://tvd-packages.tradingview.com/stable/latest/win32/TradingView.msix
 url_TranslucentTB=https://github.com/TranslucentTB/TranslucentTB/releases/download/2024.1/TranslucentTB-portable-x64.zip
 url_TunnelBear=https://tunnelbear.s3.amazonaws.com/downloads/pc/TunnelBear-Installer.exe
-url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/150.0.7871.128-1.1/ungoogled-chromium_150.0.7871.128-1.1_installer_x64.exe
+url_Ungoogled_Chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/150.0.7871.186-1.1/ungoogled-chromium_150.0.7871.186-1.1_installer_x64.exe
 url_VCRedist_2005-2022=https://github.com/abbodi1406/vcredist/releases/download/v0.105.0/VisualCppRedist_AIO_x86_x64.exe
 url_Viber=https://download.cdn.viber.com/desktop/windows/ViberSetup.exe
 url_VS_2022_Installer=https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030
@@ -105,6 +105,6 @@ url_WinDirStat=https://github.com/windirstat/windirstat/releases/latest/download
 url_WinRaR=https://www.dropbox.com/scl/fi/96vx5v6m2w407me6gonzw/WinRaR.exe?rlkey=m443jfy5o5tqdofxqblneetbc&st=emqrl1aq&dl=1
 url_WinSCP=https://netix.dl.sourceforge.net/project/winscp/WinSCP/6.5.6/WinSCP-6.5.6.msi?viasf=1
 url_WinThumbsPreloader=https://github.com/bruhov/WinThumbsPreloader/releases/download/v1.0.1/WinThumbsPreloader-1.0.1-setup.exe
-url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta6/WinThumbsPreloader-2.0.0-setup.exe
+url_WinThumbsPreloaderV2=https://github.com/Mfarooq360/WinThumbsPreloader-V2/releases/download/v2.0.0-beta7/WinThumbsPreloader-2.0.0-setup.exe
 url_X-Mouse_Button=https://www.highrez.co.uk/scripts/download.asp?package=XMouse
 url_ZXP_Installer=https://github.com/elements-storage/ZXPInstaller/releases/download/v1.8.2/ZXPInstaller-Setup-1.8.2.exe
